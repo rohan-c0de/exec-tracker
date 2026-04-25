@@ -1,0 +1,57 @@
+{
+  "ticker": "ZS",
+  "slug": "mike-rich",
+  "name": "Mike Rich",
+  "role": "Chief Revenue Officer",
+  "bio": "Mike Rich is Chief Revenue Officer at Zscaler. He joined the company in November 2023, which is reflected in a hefty FY2024 disclosure: a $550,000 sign-on bonus, a $550,000 consulting fee for prior services, and over $37 million of new-hire equity. He was not an NEO during FY2023, so only two fiscal years are disclosed.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-07-31",
+      "salaryCents": 47000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 675552200,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 47423100,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 0,
+      "totalCents": 769975300,
+      "footnotes": [
+        "Stock Awards comprise time-based RSUs plus PSUs valued at the probable outcome of the FY2025 performance condition (grant-date fair value). Per the proxy, the maximum-performance value of his PSU portion would be $6,755,520.",
+        "Non-Equity Incentive payout under the Executive Incentive Compensation Plan based on FY2025 ARR targets."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-07-31",
+      "salaryCents": 33750000,
+      "bonusCents": 55000000,
+      "stockAwardsCents": 3167054200,
+      "optionAwardsCents": 587030500,
+      "nonEquityIncentiveCents": 37424900,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 55000000,
+      "totalCents": 3935259600,
+      "footnotes": [
+        "Bonus reflects a one-time $550,000 sign-on bonus paid in November 2023 pursuant to the Rich Offer Letter.",
+        "Stock Awards comprise time-based RSUs plus PSUs valued at the probable outcome of the FY2024 performance condition. Per the proxy, the maximum-performance value of his PSU portion would be $17,034,541.",
+        "Option Awards: a stock option granted on December 1, 2023 with one-fourth vesting on his start date and the remainder monthly through November 1, 2027.",
+        "All Other Compensation reflects a $550,000 consulting fee paid in November 2023 for services rendered prior to his employment, pursuant to a consulting agreement entered in September 2023."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    }
+  ]
+}

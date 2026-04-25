@@ -1,0 +1,32 @@
+{
+  "ticker": "ZS",
+  "slug": "raj-judge",
+  "name": "Raj Judge",
+  "role": "Executive Vice President of Corporate Strategy",
+  "bio": "Raj Judge was appointed Executive Vice President of Corporate Strategy and a director, effective May 20, 2025. His FY2025 SCT figures cover only the partial-year period from his appointment through fiscal year-end on July 31, 2025; the bulk of the total is a June 3, 2025 equity grant of RSUs and PSUs that vest over four years.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-07-31",
+      "salaryCents": 13522700,
+      "bonusCents": 0,
+      "stockAwardsCents": 2452112300,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 16080900,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 0,
+      "totalCents": 2481715900,
+      "footnotes": [
+        "Stock Awards comprise time-based RSUs plus PSUs valued at the probable outcome of the FY2025 performance condition (grant-date fair value). Per the proxy, the maximum-performance value of his PSU portion would be $3,550,981.",
+        "Salary, Non-Equity Incentive payout, and disclosed compensation generally reflect the partial-year period from his May 20, 2025 appointment through fiscal year-end."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    }
+  ]
+}

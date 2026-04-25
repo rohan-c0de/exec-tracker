@@ -1,0 +1,33 @@
+{
+  "ticker": "ZS",
+  "slug": "adam-geller",
+  "name": "Adam Geller",
+  "role": "Chief Product Officer",
+  "bio": "Adam Geller was appointed Chief Product Officer on September 30, 2024 and named an executive officer in November 2024. His FY2025 disclosure is dominated by a December 5, 2024 equity grant tied to his promotion — a mix of time-based RSUs, performance-based PSUs, and stock options that together account for roughly $28 million of grant-date fair value.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-07-31",
+      "salaryCents": 37670500,
+      "bonusCents": 0,
+      "stockAwardsCents": 2194352200,
+      "optionAwardsCents": 594038000,
+      "nonEquityIncentiveCents": 38002000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 0,
+      "totalCents": 2864062700,
+      "footnotes": [
+        "Stock Awards comprise time-based RSUs plus PSUs valued at the probable outcome of the FY2025 performance condition (grant-date fair value). Per the proxy, the maximum-performance value of his PSU portion would be $21,943,522.",
+        "Option Awards: a stock option granted on December 5, 2024 with one-fourth vesting on September 30, 2025 and the remainder monthly through September 30, 2028.",
+        "Non-Equity Incentive Plan Compensation reflects payout under Zscaler's Executive Incentive Compensation Plan, pro-rated for his partial-year service as an executive officer."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    }
+  ]
+}

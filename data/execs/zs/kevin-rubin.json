@@ -1,0 +1,34 @@
+{
+  "ticker": "ZS",
+  "slug": "kevin-rubin",
+  "name": "Kevin Rubin",
+  "role": "Chief Financial Officer",
+  "bio": "Kevin Rubin was appointed Chief Financial Officer on May 26, 2025, succeeding Remo Canessa. His FY2025 disclosure reflects only the partial-year period from his appointment through fiscal year-end July 31, 2025, which is why his $87,235 salary is well below the $470,000 annualized rate paid to a Zscaler CFO. The vast majority of his FY2025 total is the equity grant made on his start date — RSUs, PSUs at probable performance, and stock options that vest over four years.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-07-31",
+      "salaryCents": 8723500,
+      "bonusCents": 0,
+      "stockAwardsCents": 2155135100,
+      "optionAwardsCents": 851786500,
+      "nonEquityIncentiveCents": 9006700,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 4243000,
+      "totalCents": 3028894800,
+      "footnotes": [
+        "Stock Awards comprise time-based RSUs plus PSUs valued at the probable outcome of the FY2025 performance condition (grant-date fair value). Per the proxy, the maximum-performance value of his PSU portion would be $12,783,650.",
+        "Option Awards: a stock option granted on his start date with one-fourth vesting on May 26, 2026 and the remainder monthly through May 26, 2029.",
+        "All Other Compensation reflects relocation benefits per the Rubin Offer Letter: a $25,000 relocation cash allowance, $7,013 of temporary housing fees, and an associated $10,417 tax gross-up.",
+        "Salary reflects only the partial-year period from his May 26, 2025 appointment through July 31, 2025 fiscal year-end."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    }
+  ]
+}

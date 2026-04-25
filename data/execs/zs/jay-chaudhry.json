@@ -1,0 +1,78 @@
+{
+  "ticker": "ZS",
+  "slug": "jay-chaudhry",
+  "name": "Jay Chaudhry",
+  "role": "Founder, Chairman & CEO",
+  "photoPath": "/execs/zs/jay-chaudhry.png",
+  "photoCredit": "Wikimedia Commons / BluBayou (CC0)",
+  "bio": "Jay Chaudhry founded Zscaler in 2007 and has served as CEO and Chairman since inception. His Summary Compensation Table totals are dominated by a single multi-year equity grant made in fiscal 2023 designed to cover roughly four fiscal years of pay; in FY24 and FY25 he received only base salary and de minimis benefits because no new equity was granted.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-07-31",
+      "salaryCents": 2366000,
+      "bonusCents": 0,
+      "stockAwardsCents": 0,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 0,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 609300,
+      "totalCents": 2975300,
+      "footnotes": [
+        "All Other Compensation for FY25 reflects executive benefits (e.g., financial planning, executive medical) and associated tax gross-ups, per footnote 2 of the Summary Compensation Table."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-07-31",
+      "salaryCents": 2366000,
+      "bonusCents": 0,
+      "stockAwardsCents": 0,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 0,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 150200,
+      "totalCents": 2516200,
+      "footnotes": [
+        "All Other Compensation for FY24 reflects an accrued vacation payout, per footnote 3 of the Summary Compensation Table."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-07-31",
+      "salaryCents": 2366000,
+      "bonusCents": 0,
+      "stockAwardsCents": 5775182300,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 0,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 0,
+      "totalCents": 5777548300,
+      "footnotes": [
+        "Stock Awards reflect the grant-date fair value of a single multi-year RSU + PSU grant intended to cover roughly four fiscal years of equity compensation. Per footnote 4, the maximum-performance value of the PSU portion would be $64,681,951.",
+        "Grant-date fair value is an accounting figure, not realized pay. Realized pay from vesting in this period was substantially different."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    }
+  ]
+}

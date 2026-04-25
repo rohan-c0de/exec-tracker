@@ -1,0 +1,77 @@
+{
+  "ticker": "ZS",
+  "slug": "remo-canessa",
+  "name": "Remo Canessa",
+  "role": "Former Chief Financial Officer",
+  "bio": "Remo Canessa served as Chief Financial Officer of Zscaler until Kevin Rubin succeeded him on May 26, 2025. He is included in the FY2025 proxy as a former officer per SEC rules — his FY2025 SCT total of $957K reflects salary and short-term incentive only, with no new equity grant in his final year as an NEO. Canessa's FY2023 and FY2024 disclosures show the more typical mix of salary, equity, and bonus.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-07-31",
+      "salaryCents": 47000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 0,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 47423100,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 1251300,
+      "totalCents": 95674400,
+      "footnotes": [
+        "No new equity granted in FY2025 — Canessa was succeeded as CFO on May 26, 2025.",
+        "All Other Compensation reflects eligible executive benefits paid by the Company and associated tax gross-ups."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-07-31",
+      "salaryCents": 45000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 616575100,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 48919500,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 2790900,
+      "totalCents": 713285500,
+      "footnotes": [
+        "Stock Awards comprise time-based RSUs plus PSUs valued at the probable outcome of the FY2024 performance condition. Per the proxy, the maximum-performance value of his PSU portion was $6,165,751.",
+        "All Other Compensation reflects eligible executive benefits paid by the Company and associated tax gross-ups."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-07-31",
+      "salaryCents": 43000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 538382000,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 26854800,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 0,
+      "totalCents": 608236800,
+      "footnotes": [
+        "Stock Awards comprise time-based RSUs plus PSUs valued at the probable outcome of the FY2023 performance condition. Per the proxy, the maximum-performance value of his PSU portion was $1,884,419."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    }
+  ]
+}
