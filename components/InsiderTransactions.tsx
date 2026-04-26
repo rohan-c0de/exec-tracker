@@ -46,7 +46,7 @@ export function InsiderTransactions({ data }: { data: InsiderTransactionsFile })
         />
         <SummaryCard
           label="Currently held"
-          value={`${formatShares(heldShares)} sh`}
+          value={`${formatShares(heldShares)} shares`}
           sub="As of most recent Form 4"
         />
         <SummaryCard
@@ -87,7 +87,7 @@ export function InsiderTransactions({ data }: { data: InsiderTransactionsFile })
                       <div className="flex items-center justify-end gap-3">
                         <div
                           aria-hidden
-                          className="hidden h-1.5 w-24 overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-900 sm:block"
+                          className="h-1.5 w-16 overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-900 sm:w-24"
                         >
                           <div
                             className={`h-full rounded-full ${isPeak ? "bg-emerald-500 dark:bg-emerald-400" : "bg-zinc-400 dark:bg-zinc-600"}`}
