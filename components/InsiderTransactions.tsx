@@ -28,6 +28,13 @@ export function InsiderTransactions({ data }: { data: InsiderTransactionsFile })
     .map((t) => t.transactionDate)
     .sort()[0];
 
+  // Peak year by $ realized — anchors the abstract lifetime number
+  const peakYear = annual.reduce<typeof annual[number] | null>(
+    (acc, row) => (acc === null || row.centsDisposed > acc.centsDisposed ? row : acc),
+    null,
+  );
+  const maxYearCents = annual.reduce((m, r) => Math.max(m, r.centsDisposed), 0);
+
   return (
     <div className="space-y-8">
       {/* Headline summary */}
@@ -35,7 +42,7 @@ export function InsiderTransactions({ data }: { data: InsiderTransactionsFile })
         <SummaryCard
           label="Realized from sales"
           value={formatUsdAbbrev(totalDisposedCents)}
-          sub={`${formatShares(totalDisposedShares)} shares since ${lifetimeStart?.slice(0, 4) ?? "—"}`}
+          sub={`${formatShares(totalDisposedShares)} shares since ${lifetimeStart?.slice(0, 4) ?? "—"}${peakYear && peakYear.centsDisposed > 0 ? ` · peak year ${peakYear.year} (${formatUsdAbbrev(peakYear.centsDisposed)})` : ""}`}
         />
         <SummaryCard
           label="Currently held"
@@ -64,20 +71,37 @@ export function InsiderTransactions({ data }: { data: InsiderTransactionsFile })
               </tr>
             </thead>
             <tbody className="font-mono tabular-nums">
-              {annual.map((row, i) => (
-                <tr
-                  key={row.year}
-                  className={i % 2 === 1 ? "bg-zinc-50/50 dark:bg-zinc-900/40" : undefined}
-                >
-                  <Td className="font-sans">{row.year}</Td>
-                  <Td align="right">{row.filingsCount}</Td>
-                  <Td align="right">{formatShares(row.sharesAcquired)}</Td>
-                  <Td align="right">{formatShares(row.sharesDisposed)}</Td>
-                  <Td align="right">
-                    {row.centsDisposed > 0 ? formatUsdAbbrev(row.centsDisposed) : "—"}
-                  </Td>
-                </tr>
-              ))}
+              {annual.map((row, i) => {
+                const isPeak = peakYear !== null && row.year === peakYear.year && row.centsDisposed > 0;
+                const barPct = maxYearCents > 0 ? (row.centsDisposed / maxYearCents) * 100 : 0;
+                return (
+                  <tr
+                    key={row.year}
+                    className={i % 2 === 1 ? "bg-zinc-50/50 dark:bg-zinc-900/40" : undefined}
+                  >
+                    <Td className="font-sans">{row.year}</Td>
+                    <Td align="right">{row.filingsCount}</Td>
+                    <Td align="right">{formatShares(row.sharesAcquired)}</Td>
+                    <Td align="right">{formatShares(row.sharesDisposed)}</Td>
+                    <Td align="right">
+                      <div className="flex items-center justify-end gap-3">
+                        <div
+                          aria-hidden
+                          className="hidden h-1.5 w-24 overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-900 sm:block"
+                        >
+                          <div
+                            className={`h-full rounded-full ${isPeak ? "bg-emerald-500 dark:bg-emerald-400" : "bg-zinc-400 dark:bg-zinc-600"}`}
+                            style={{ width: `${barPct}%` }}
+                          />
+                        </div>
+                        <span className={isPeak ? "font-semibold text-zinc-900 dark:text-zinc-50" : undefined}>
+                          {row.centsDisposed > 0 ? formatUsdAbbrev(row.centsDisposed) : "—"}
+                        </span>
+                      </div>
+                    </Td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
