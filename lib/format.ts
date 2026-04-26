@@ -7,11 +7,15 @@ export function formatUsdFull(cents: number): string {
 }
 
 export function formatUsdAbbrev(cents: number): string {
-  const dollars = cents / 100;
-  if (dollars >= 1_000_000_000) return `$${(dollars / 1_000_000_000).toFixed(2)}B`;
-  if (dollars >= 1_000_000) return `$${(dollars / 1_000_000).toFixed(2)}M`;
-  if (dollars >= 10_000) return `$${(dollars / 1_000).toFixed(0)}K`;
-  return formatUsdFull(cents);
+  const negative = cents < 0;
+  const abs = Math.abs(cents);
+  const dollars = abs / 100;
+  let body: string;
+  if (dollars >= 1_000_000_000) body = `$${(dollars / 1_000_000_000).toFixed(2)}B`;
+  else if (dollars >= 1_000_000) body = `$${(dollars / 1_000_000).toFixed(2)}M`;
+  else if (dollars >= 10_000) body = `$${(dollars / 1_000).toFixed(0)}K`;
+  else body = formatUsdFull(abs);
+  return negative ? `−${body}` : body;
 }
 
 export function formatCellOrDash(cents: number): string {

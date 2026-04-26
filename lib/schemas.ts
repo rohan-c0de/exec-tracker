@@ -48,6 +48,7 @@ export const CompRecordSchema = z
     pensionAndNqdcCents: Cents,
     allOtherCompCents: Cents,
     totalCents: Cents,
+    compActuallyPaidCents: z.number().int().optional(),
     footnotes: z.array(z.string()).default([]),
     allOtherBreakdown: z.array(PerkItemSchema).optional(),
     badges: z.array(BadgeSchema).default([]),

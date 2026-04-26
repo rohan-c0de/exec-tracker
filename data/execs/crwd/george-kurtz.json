@@ -17,6 +17,7 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 101955500,
       "totalCents": 3519530000,
+      "compActuallyPaidCents": 14850480600,
       "allOtherBreakdown": [
         { "label": "Personal use of private aircraft", "cents": 89842600 },
         { "label": "Personal security at residences", "cents": 10427900 },
@@ -46,6 +47,7 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 70210900,
       "totalCents": 4698385500,
+      "compActuallyPaidCents": 34368977500,
       "footnotes": [
         "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay."
       ],
@@ -68,6 +70,7 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 120903700,
       "totalCents": 3653268100,
+      "compActuallyPaidCents": -11165303600,
       "footnotes": [
         "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay."
       ],
