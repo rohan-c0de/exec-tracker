@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import { Avatar } from "@/components/Avatar";
 import { BadgeRow } from "@/components/Badge";
 import { PerksBreakdown } from "@/components/PerksBreakdown";
+import { ViewToggle } from "@/components/ViewToggle";
 import { execBadges, recordBadges } from "@/lib/badges";
+import { effectiveTotal, parseView, withView, type View } from "@/lib/comp";
 import { loadCompany, loadExec } from "@/lib/data";
 import { formatCellOrDash, formatUsdAbbrev, formatUsdFull } from "@/lib/format";
 import type { CompRecord } from "@/lib/schemas";
@@ -23,8 +25,15 @@ export async function generateMetadata({ params }: { params: Promise<RouteParams
   }
 }
 
-export default async function ExecPage({ params }: { params: Promise<RouteParams> }) {
+export default async function ExecPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<RouteParams>;
+  searchParams: Promise<{ view?: string | string[] }>;
+}) {
   const { ticker, slug } = await params;
+  const view = parseView(await searchParams);
   let exec, company;
   try {
     [exec, company] = await Promise.all([loadExec(ticker, slug), loadCompany(ticker)]);
@@ -40,13 +49,17 @@ export default async function ExecPage({ params }: { params: Promise<RouteParams
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
-      <nav className="mb-12 text-sm">
+      <nav className="mb-12 flex items-center justify-between text-sm">
         <Link
-          href="/"
+          href={withView("/", view)}
           className="text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
         >
           ← All executives
         </Link>
+        <ViewToggle
+          view={view}
+          basePath={`/execs/${ticker.toLowerCase()}/${slug}`}
+        />
       </nav>
 
       <header className="flex flex-col gap-8 border-b border-zinc-200 pb-10 dark:border-zinc-800 sm:flex-row sm:items-end sm:justify-between">
@@ -85,24 +98,41 @@ export default async function ExecPage({ params }: { params: Promise<RouteParams
       <section className="mt-16">
         <SectionHeading
           eyebrow="Summary"
-          title={`Total compensation, FY${records[records.length - 1].fiscalYear}–FY${latest.fiscalYear}`}
+          title={`${view === "cap" ? "Compensation actually paid" : "Total compensation"}, FY${records[records.length - 1].fiscalYear}–FY${latest.fiscalYear}`}
         />
         <div className="mt-6 grid gap-px overflow-hidden rounded-xl border border-zinc-200 bg-zinc-200 dark:border-zinc-800 dark:bg-zinc-800 sm:grid-cols-3">
-          {records.map((r) => (
-            <div key={r.fiscalYear} className="bg-white p-6 dark:bg-zinc-950">
-              <p className="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-                FY{r.fiscalYear}
-              </p>
-              <p className="mt-2 font-mono text-3xl font-semibold tabular-nums tracking-tight text-zinc-900 dark:text-zinc-50">
-                {formatUsdAbbrev(r.totalCents)}
-              </p>
-              <p className="mt-1 font-mono text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
-                {formatUsdFull(r.totalCents)}
-              </p>
-              <BadgeRow badges={recordBadges(r)} size="sm" className="mt-3" />
-            </div>
-          ))}
+          {records.map((r) => {
+            const eff = effectiveTotal(r, view);
+            return (
+              <div key={r.fiscalYear} className="bg-white p-6 dark:bg-zinc-950">
+                <p className="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                  FY{r.fiscalYear}
+                </p>
+                <p className="mt-2 font-mono text-3xl font-semibold tabular-nums tracking-tight text-zinc-900 dark:text-zinc-50">
+                  {formatUsdAbbrev(eff.cents)}
+                  {eff.isFallback ? (
+                    <span
+                      title="Compensation Actually Paid not disclosed individually for non-PEO NEOs."
+                      className="ml-1 align-middle font-mono text-[10px] font-normal text-zinc-400 dark:text-zinc-500"
+                    >
+                      (SCT)
+                    </span>
+                  ) : null}
+                </p>
+                <p className="mt-1 font-mono text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
+                  {formatUsdFull(eff.cents)}
+                </p>
+                <BadgeRow badges={recordBadges(r)} size="sm" className="mt-3" />
+              </div>
+            );
+          })}
         </div>
+        {view === "cap" ? (
+          <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">
+            Compensation Actually Paid per the SEC&apos;s Pay vs. Performance rule. The Summary
+            Compensation Table breakdown below remains in reported (grant-date) values.
+          </p>
+        ) : null}
       </section>
 
       <section className="mt-16">

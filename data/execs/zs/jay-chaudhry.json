@@ -19,6 +19,7 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 609300,
       "totalCents": 2975300,
+      "compActuallyPaidCents": 4744452600,
       "footnotes": [
         "All Other Compensation for FY25 reflects executive benefits (e.g., financial planning, executive medical) and associated tax gross-ups, per footnote 2 of the Summary Compensation Table."
       ],
@@ -41,6 +42,7 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 150200,
       "totalCents": 2516200,
+      "compActuallyPaidCents": 952972800,
       "footnotes": [
         "All Other Compensation for FY24 reflects an accrued vacation payout, per footnote 3 of the Summary Compensation Table."
       ],
@@ -69,6 +71,7 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 0,
       "totalCents": 5777548300,
+      "compActuallyPaidCents": 8583852300,
       "footnotes": [
         "Stock Awards reflect the grant-date fair value of a single multi-year RSU + PSU grant intended to cover roughly four fiscal years of equity compensation. Per footnote 4, the maximum-performance value of the PSU portion would be $64,681,951.",
         "Grant-date fair value is an accounting figure, not realized pay. Realized pay from vesting in this period was substantially different."

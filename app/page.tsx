@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { Avatar } from "@/components/Avatar";
 import { Badge } from "@/components/Badge";
+import { ViewToggle } from "@/components/ViewToggle";
 import { execBadges, recordBadges, topBadge } from "@/lib/badges";
-import { latestRecord } from "@/lib/comp";
+import { effectiveTotal, latestRecord, parseView, withView, type View } from "@/lib/comp";
 import { listCompanies, listExecsForCompany } from "@/lib/data";
 import { formatUsdAbbrev } from "@/lib/format";
 import type { Company, Exec } from "@/lib/schemas";
@@ -11,12 +12,18 @@ type ExecRow = {
   company: Company;
   exec: Exec;
   latestFiscalYear: number;
-  latestTotalCents: number;
+  effectiveCents: number;
+  isFallback: boolean;
 };
 
 const LEADERBOARD_LIMIT = 5;
 
-export default async function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ view?: string | string[] }>;
+}) {
+  const view = parseView(await searchParams);
   const companies = await listCompanies();
   const perCompany = await Promise.all(
     companies.map(async (company) => ({
@@ -28,17 +35,19 @@ export default async function Home() {
   const allRows: ExecRow[] = perCompany.flatMap(({ company, execs }) =>
     execs.map((exec) => {
       const latest = latestRecord(exec.compRecords);
+      const eff = effectiveTotal(latest, view);
       return {
         company,
         exec,
         latestFiscalYear: latest.fiscalYear,
-        latestTotalCents: latest.totalCents,
+        effectiveCents: eff.cents,
+        isFallback: eff.isFallback,
       };
     }),
   );
 
   const topExecs = [...allRows]
-    .sort((a, b) => b.latestTotalCents - a.latestTotalCents)
+    .sort((a, b) => b.effectiveCents - a.effectiveCents)
     .slice(0, LEADERBOARD_LIMIT);
 
   const totalExecs = allRows.length;
@@ -57,15 +66,20 @@ export default async function Home() {
       </header>
 
       <section className="mt-20">
-        <SectionHeading
-          eyebrow="Top paid"
-          title="Highest-compensated executives"
-          aside={`${totalExecs} tracked`}
-        />
+        <div className="flex items-end justify-between gap-4">
+          <SectionHeading
+            eyebrow="Top paid"
+            title="Highest-compensated executives"
+            aside={`${totalExecs} tracked`}
+          />
+        </div>
+        <div className="mt-4 flex justify-end">
+          <ViewToggle view={view} basePath="/" />
+        </div>
         <ol className="mt-6 divide-y divide-zinc-200 dark:divide-zinc-800">
           {topExecs.map((row, i) => (
             <li key={`${row.exec.ticker}-${row.exec.slug}`}>
-              <LeaderboardRow rank={i + 1} row={row} />
+              <LeaderboardRow rank={i + 1} row={row} view={view} />
             </li>
           ))}
         </ol>
@@ -78,7 +92,7 @@ export default async function Home() {
         />
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {perCompany.map(({ company, execs }) => (
-            <CompanyCard key={company.ticker} company={company} execs={execs} />
+            <CompanyCard key={company.ticker} company={company} execs={execs} view={view} />
           ))}
         </div>
       </section>
@@ -93,13 +107,13 @@ export default async function Home() {
   );
 }
 
-function LeaderboardRow({ rank, row }: { rank: number; row: ExecRow }) {
-  const { company, exec, latestFiscalYear, latestTotalCents } = row;
+function LeaderboardRow({ rank, row, view }: { rank: number; row: ExecRow; view: View }) {
+  const { company, exec, latestFiscalYear, effectiveCents, isFallback } = row;
   const latest = latestRecord(exec.compRecords);
   const top = topBadge([...execBadges(exec), ...recordBadges(latest)]);
   return (
     <Link
-      href={`/execs/${exec.ticker.toLowerCase()}/${exec.slug}`}
+      href={withView(`/execs/${exec.ticker.toLowerCase()}/${exec.slug}`, view)}
       className="group -mx-3 flex items-center gap-4 rounded-lg px-3 py-5 transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/50"
     >
       <span className="w-6 shrink-0 font-mono text-sm tabular-nums text-zinc-400 dark:text-zinc-500">
@@ -120,7 +134,15 @@ function LeaderboardRow({ rank, row }: { rank: number; row: ExecRow }) {
       <div className="flex shrink-0 items-center gap-4">
         <div className="text-right">
           <p className="font-mono text-sm font-medium tabular-nums text-zinc-900 dark:text-zinc-50">
-            {formatUsdAbbrev(latestTotalCents)}
+            {formatUsdAbbrev(effectiveCents)}
+            {isFallback ? (
+              <span
+                title="Compensation Actually Paid not disclosed individually for non-PEO NEOs; showing reported SCT total."
+                className="ml-1 font-mono text-[10px] font-normal text-zinc-400 dark:text-zinc-500"
+              >
+                (SCT)
+              </span>
+            ) : null}
           </p>
           <p className="font-mono text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
             FY{latestFiscalYear}
@@ -137,15 +159,27 @@ function LeaderboardRow({ rank, row }: { rank: number; row: ExecRow }) {
   );
 }
 
-function CompanyCard({ company, execs }: { company: Company; execs: Exec[] }) {
+function CompanyCard({
+  company,
+  execs,
+  view,
+}: {
+  company: Company;
+  execs: Exec[];
+  view: View;
+}) {
   const topExec = [...execs].sort((a, b) => {
-    return latestRecord(b.compRecords).totalCents - latestRecord(a.compRecords).totalCents;
+    return (
+      effectiveTotal(latestRecord(b.compRecords), view).cents -
+      effectiveTotal(latestRecord(a.compRecords), view).cents
+    );
   })[0]!;
   const topLatest = latestRecord(topExec.compRecords);
+  const topEff = effectiveTotal(topLatest, view);
 
   return (
     <Link
-      href={`/companies/${company.ticker.toLowerCase()}`}
+      href={withView(`/companies/${company.ticker.toLowerCase()}`, view)}
       className="group block rounded-xl border border-zinc-200 bg-white p-6 transition-colors hover:border-zinc-300 hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50"
     >
       <div className="flex items-start justify-between gap-4">
@@ -182,7 +216,12 @@ function CompanyCard({ company, execs }: { company: Company; execs: Exec[] }) {
           </div>
           <div className="shrink-0 text-right">
             <p className="font-mono text-sm font-medium tabular-nums text-zinc-900 dark:text-zinc-50">
-              {formatUsdAbbrev(topLatest.totalCents)}
+              {formatUsdAbbrev(topEff.cents)}
+              {topEff.isFallback ? (
+                <span className="ml-1 font-mono text-[10px] font-normal text-zinc-400 dark:text-zinc-500">
+                  (SCT)
+                </span>
+              ) : null}
             </p>
             <p className="font-mono text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
               FY{topLatest.fiscalYear}

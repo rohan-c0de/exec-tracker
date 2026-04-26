@@ -17,6 +17,7 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 267849800,
       "totalCents": 9973633600,
+      "compActuallyPaidCents": 26747429000,
       "allOtherBreakdown": [
         { "label": "Personal security", "cents": 140240400 },
         { "label": "Personal use of private aircraft", "cents": 87027500 },
@@ -49,6 +50,7 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 168652200,
       "totalCents": 5803687500,
+      "compActuallyPaidCents": 10527581100,
       "footnotes": [
         "Stock Awards reflect grant-date fair value under ASC Topic 718. Per the proxy footnote, the FY24 figure includes ~16% of the PSUs legally granted in FY22, one-third of FY23 PSUs, and one-third of FY24 PSUs — because performance metrics for those tranches were set in FY24."
       ],
@@ -78,6 +80,7 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 380088500,
       "totalCents": 15142520300,
+      "compActuallyPaidCents": 26636875500,
       "footnotes": [
         "Salary of $750,000 (vs. $1,000,000 in FY24/FY25) reflects Mr. Arora's election to forego salary from November 1, 2021 to October 31, 2022, which spans most of fiscal 2022 and the first three months of fiscal 2023.",
         "Stock Awards of $145.4M reflect grant-date fair value under ASC Topic 718 and include ~42% of PSUs legally granted in FY22, one-third of PSUs legally granted in August 2022, and all PSUs legally granted to Mr. Arora in June 2023 — because the performance metrics for those tranches were set in FY23. This is an accounting figure, not realized pay."
