@@ -1,0 +1,77 @@
+{
+  "ticker": "PANW",
+  "slug": "bj-jenkins",
+  "name": "BJ Jenkins",
+  "role": "President",
+  "bio": "William \"BJ\" Jenkins serves as President of Palo Alto Networks. His Stock Awards line reflects the same multi-year PSU recognition mechanic as the rest of the executive team but with a different proration: per the proxy, Jenkins's FY23 figure includes ~28% of his FY22 PSUs (vs. ~42% for the other NEOs) and his FY24 figure includes ~11%, reflecting a different award structure for his role.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-07-31",
+      "salaryCents": 75000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 2529174700,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 90000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 1765500,
+      "totalCents": 2695940200,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under ASC Topic 718. Per the proxy, the maximum-performance value of FY25 PSU grants would be $71,178,030.",
+        "Non-Equity Incentive reflects the cash bonus paid under the executive cash incentive plan for FY25 performance.",
+        "All Other Compensation reflects $720 life insurance premiums, $1,000 in 401(k) plan matching contributions, and $15,935 for taxes associated with the reimbursement of taxable expenses from participation at Company events (on the same terms as other participants)."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-07-31",
+      "salaryCents": 75000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 1636523000,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 90000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 1528500,
+      "totalCents": 1803051500,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-07-31",
+      "salaryCents": 75000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 1211656800,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 112500000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 3183600,
+      "totalCents": 1402340400,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    }
+  ]
+}

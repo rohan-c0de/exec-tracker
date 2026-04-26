@@ -1,0 +1,79 @@
+{
+  "ticker": "PANW",
+  "slug": "nir-zuk",
+  "name": "Nir Zuk",
+  "role": "Founder Emeritus and Former Chief Technology Officer",
+  "bio": "Nir Zuk is the co-founder of Palo Alto Networks and pioneered the next-generation firewall that defined the company. He announced his retirement in connection with the FY25 proxy and transitioned the CTO role to Lee Klarich. His FY25 compensation was paid in Israeli New Shekels for the period August 1, 2024 through June 30, 2025 and converted to USD using an average rate of 0.27 USD per ILS over that window; he permanently relocated from Israel to the United States during fiscal 2025.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-07-31",
+      "salaryCents": 40802600,
+      "bonusCents": 0,
+      "stockAwardsCents": 1485271400,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 20301400,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 24384400,
+      "totalCents": 1570759800,
+      "footnotes": [
+        "Salary, Non-Equity Incentive and All Other Compensation for FY25 were paid in Israeli New Shekels from August 1, 2024 through June 30, 2025; converted to USD at an average exchange rate of approximately 0.27 USD per ILS over that period.",
+        "Stock Awards reflect grant-date fair value under ASC Topic 718. Per the proxy, the maximum-performance value of FY25 PSU grants would be $44,558,141.",
+        "All Other Compensation of $243,844 includes $65,835 contributed for social security and pension benefits under Israeli government schemes, $33,822 for severance benefits under Israeli schemes, $38,450 for accrued vacation paid out in connection with his permanent relocation from Israel to the United States, a $105,000 fee for a regulatory filing related to the acquisition and ownership of Company common stock, plus small life insurance, gift, and health-insurance tax items."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-07-31",
+      "salaryCents": 40014000,
+      "bonusCents": 0,
+      "stockAwardsCents": 1134978500,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 48016800,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 7208600,
+      "totalCents": 1230217900,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay.",
+        "Mr. Zuk was based in Israel during fiscal 2024; his cash compensation was paid in Israeli New Shekels and converted to USD."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-07-31",
+      "salaryCents": 41951500,
+      "bonusCents": 0,
+      "stockAwardsCents": 696133400,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 62927200,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 7609100,
+      "totalCents": 808621200,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay.",
+        "Mr. Zuk was based in Israel during fiscal 2023; his cash compensation was paid in Israeli New Shekels and converted to USD."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    }
+  ]
+}

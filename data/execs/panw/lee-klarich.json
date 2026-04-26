@@ -1,0 +1,77 @@
+{
+  "ticker": "PANW",
+  "slug": "lee-klarich",
+  "name": "Lee Klarich",
+  "role": "Chief Product and Technology Officer",
+  "bio": "Lee Klarich serves as Chief Product and Technology Officer of Palo Alto Networks and joined the Board following Nir Zuk's announced retirement. Per the Lead Independent Director's letter, Klarich has been the chief architect of the company's product strategy for nearly as long as Zuk and was elevated to CPTO and the Board to ensure continuity of the product vision.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-07-31",
+      "salaryCents": 55000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 2465451700,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 66000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 10672000,
+      "totalCents": 2597123700,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under ASC Topic 718. Per the proxy, the maximum-performance value of FY25 PSU grants would be $72,157,209.",
+        "Non-Equity Incentive reflects the cash bonus paid under the executive cash incentive plan for FY25 performance.",
+        "All Other Compensation of $106,720 includes $720 life insurance, $1,000 401(k) plan matching contribution, and a $105,000 fee for a regulatory filing related to the acquisition and ownership of Company common stock."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-07-31",
+      "salaryCents": 55000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 1912615600,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 66000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 216200,
+      "totalCents": 2033831800,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-07-31",
+      "salaryCents": 55000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 1568534700,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 82500000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 3202300,
+      "totalCents": 1709237000,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    }
+  ]
+}
