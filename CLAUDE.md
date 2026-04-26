@@ -64,6 +64,13 @@ Directory names are convention — Claude understands them because they're descr
 5. **Store currency unambiguously.** Use integer cents (`salaryCents: 125000000`) or an explicit `{ amount, currency }` pair. Never store floating-point dollars.
 6. **Fiscal year, not calendar year.** Record `fiscalYear: 2023` alongside `fiscalYearEnd: "2023-09-30"` where relevant.
 
+## Common pitfalls
+
+Patterns that have already burned us. Add to this section only when a session reveals a trap that would have changed Claude's earlier behavior in that same session — don't run end-of-session retros for their own sake, and don't add speculative or "nice to have" entries.
+
+- **Anomalous data is usually the story, not a bug.** Before flagging a record as wrong (e.g. a CEO's $30K total, a $0 stock awards line, a salary that looks too low), check the bio/footnote first, then the cited proxy. Only flag if both contradict the data. Founder-CEOs taking symbolic salaries, voluntary salary forgo, multi-year cliff grants, partial-year hires, and former-officer transitions all produce numbers that look broken but aren't.
+- **For comparing two views of the same data, prefer always-show-both over a toggle.** Toggles hide one of the two numbers behind a click and force comparison-by-flipping. The Reported vs Compensation Actually Paid feature went through this exact iteration: built as a URL-driven toggle, redesigned to inline dual-line display, immediately more legible.
+
 ## Environment variables
 
 Source of truth: `.env.example`. Local dev uses `.env.local` (gitignored). Vercel holds production values.
