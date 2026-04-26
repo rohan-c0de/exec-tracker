@@ -16,6 +16,11 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 101955500,
       "totalCents": 3519530000,
+      "allOtherBreakdown": [
+        { "label": "Personal use of private aircraft", "cents": 89842600 },
+        { "label": "Personal security at residences", "cents": 10427900 },
+        { "label": "Standard benefits & insurance", "cents": 1685000 }
+      ],
       "footnotes": [
         "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay. Mr. Kurtz's multi-year PSU award is valued via Monte-Carlo simulation; the maximum-performance value of his FY25 PSU grants would be $31,850,681.",
         "Non-Equity Incentive reflects the cash bonus paid under the Corporate Incentive Plan (CIP) for fiscal 2025 performance.",

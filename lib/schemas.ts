@@ -14,20 +14,36 @@ export const SourceSchema = z.object({
   periodOfReport: IsoDate,
 });
 
-export const CompRecordSchema = z.object({
-  fiscalYear: z.number().int().min(1990).max(2100),
-  fiscalYearEnd: IsoDate,
-  salaryCents: Cents,
-  bonusCents: Cents,
-  stockAwardsCents: Cents,
-  optionAwardsCents: Cents,
-  nonEquityIncentiveCents: Cents,
-  pensionAndNqdcCents: Cents,
-  allOtherCompCents: Cents,
-  totalCents: Cents,
-  footnotes: z.array(z.string()).default([]),
-  source: SourceSchema,
+export const PerkItemSchema = z.object({
+  label: z.string().min(1),
+  cents: Cents,
 });
+
+export const CompRecordSchema = z
+  .object({
+    fiscalYear: z.number().int().min(1990).max(2100),
+    fiscalYearEnd: IsoDate,
+    salaryCents: Cents,
+    bonusCents: Cents,
+    stockAwardsCents: Cents,
+    optionAwardsCents: Cents,
+    nonEquityIncentiveCents: Cents,
+    pensionAndNqdcCents: Cents,
+    allOtherCompCents: Cents,
+    totalCents: Cents,
+    footnotes: z.array(z.string()).default([]),
+    allOtherBreakdown: z.array(PerkItemSchema).optional(),
+    source: SourceSchema,
+  })
+  .refine(
+    (r) =>
+      r.allOtherBreakdown === undefined ||
+      r.allOtherBreakdown.reduce((s, i) => s + i.cents, 0) === r.allOtherCompCents,
+    {
+      message: "allOtherBreakdown items must sum exactly to allOtherCompCents",
+      path: ["allOtherBreakdown"],
+    },
+  );
 
 export const ExecSchema = z.object({
   ticker: Ticker,
@@ -52,6 +68,7 @@ export const CompanySchema = z.object({
 });
 
 export type Source = z.infer<typeof SourceSchema>;
+export type PerkItem = z.infer<typeof PerkItemSchema>;
 export type CompRecord = z.infer<typeof CompRecordSchema>;
 export type Exec = z.infer<typeof ExecSchema>;
 export type Company = z.infer<typeof CompanySchema>;

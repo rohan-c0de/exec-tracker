@@ -16,6 +16,15 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 24384400,
       "totalCents": 1570759800,
+      "allOtherBreakdown": [
+        { "label": "Regulatory filing fee", "cents": 10500000 },
+        { "label": "Israeli social security & pension contributions", "cents": 6583500 },
+        { "label": "Accrued vacation payout (relocation from Israel)", "cents": 3845000 },
+        { "label": "Israeli severance benefit contributions", "cents": 3382200 },
+        { "label": "Tax gross-up (employer health insurance)", "cents": 38700 },
+        { "label": "Tax gross-up (Company event gifts)", "cents": 29000 },
+        { "label": "Life insurance", "cents": 6000 }
+      ],
       "footnotes": [
         "Salary, Non-Equity Incentive and All Other Compensation for FY25 were paid in Israeli New Shekels from August 1, 2024 through June 30, 2025; converted to USD at an average exchange rate of approximately 0.27 USD per ILS over that period.",
         "Stock Awards reflect grant-date fair value under ASC Topic 718. Per the proxy, the maximum-performance value of FY25 PSU grants would be $44,558,141.",
