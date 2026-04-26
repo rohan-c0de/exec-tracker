@@ -1,4 +1,4 @@
-import type { TransactionCode } from "./schemas";
+import type { InsiderTransaction, TransactionCode } from "./schemas";
 
 type CodeDef = {
   label: string;
@@ -93,3 +93,145 @@ export const TRANSACTION_CODES: Record<TransactionCode, CodeDef> = {
     description: "Deposit into or withdrawal from voting trust.",
   },
 };
+
+// ---------- aggregation ----------
+
+export type YearAggregate = {
+  year: string;
+  filingsCount: number;
+  sharesAcquired: number;
+  sharesDisposed: number;
+  centsAcquired: number;   // sum of A-side cents (most are 0 — grants have no price)
+  centsDisposed: number;   // sum of D-side cents
+};
+
+/**
+ * Per-calendar-year totals across a transaction list. Calendar year (transaction
+ * date), not fiscal year — matches how Form 4 / liquidity events are usually
+ * reasoned about.
+ */
+export function aggregateByYear(txns: InsiderTransaction[]): YearAggregate[] {
+  const byYear = new Map<string, YearAggregate>();
+  for (const tx of txns) {
+    const year = tx.transactionDate.slice(0, 4);
+    let entry = byYear.get(year);
+    if (!entry) {
+      entry = {
+        year,
+        filingsCount: 0,
+        sharesAcquired: 0,
+        sharesDisposed: 0,
+        centsAcquired: 0,
+        centsDisposed: 0,
+      };
+      byYear.set(year, entry);
+    }
+    const value = tx.pricePerShareCents !== null ? tx.shares * tx.pricePerShareCents : 0;
+    if (tx.acquiredOrDisposed === "A") {
+      entry.sharesAcquired += tx.shares;
+      entry.centsAcquired += value;
+    } else {
+      entry.sharesDisposed += tx.shares;
+      entry.centsDisposed += value;
+    }
+  }
+  // filingsCount needs unique accession per year
+  const uniqueAccessionsByYear = new Map<string, Set<string>>();
+  for (const tx of txns) {
+    const year = tx.transactionDate.slice(0, 4);
+    let s = uniqueAccessionsByYear.get(year);
+    if (!s) {
+      s = new Set();
+      uniqueAccessionsByYear.set(year, s);
+    }
+    s.add(tx.source.accessionNumber);
+  }
+  for (const [year, set] of uniqueAccessionsByYear) {
+    byYear.get(year)!.filingsCount = set.size;
+  }
+  return [...byYear.values()].sort((a, b) => b.year.localeCompare(a.year));
+}
+
+export type FilingGroup = {
+  accessionNumber: string;
+  filingUrl: string;
+  transactionDate: string;
+  filedDate: string;
+  code: TransactionCode;
+  acquiredOrDisposed: "A" | "D";
+  securityTitle: string;
+  isDerivative: boolean;
+  shares: number;
+  weightedAvgPriceCents: number | null;
+  totalCents: number;
+  postTransactionShares: number;
+  ownershipNature: "D" | "I";
+};
+
+/**
+ * Collapse multi-tranche 10b5-1 sales (and similar same-filing transactions)
+ * into one user-visible row per (accession, code) pair. Weighted-average price
+ * is computed across the group when prices exist.
+ *
+ * Without this aggregation, an active CEO's transaction list shows 10+ rows
+ * per trading day — same accession, same code, different fill prices.
+ */
+export function aggregateByFilingAndCode(txns: InsiderTransaction[]): FilingGroup[] {
+  const groups = new Map<string, InsiderTransaction[]>();
+  for (const tx of txns) {
+    const key = `${tx.source.accessionNumber}|${tx.code}|${tx.acquiredOrDisposed}|${tx.isDerivative ? "1" : "0"}`;
+    let list = groups.get(key);
+    if (!list) {
+      list = [];
+      groups.set(key, list);
+    }
+    list.push(tx);
+  }
+
+  const out: FilingGroup[] = [];
+  for (const list of groups.values()) {
+    const first = list[0]!;
+    const totalShares = list.reduce((s, t) => s + t.shares, 0);
+    const priced = list.filter((t) => t.pricePerShareCents !== null);
+    const sumValueCents = priced.reduce(
+      (s, t) => s + t.shares * (t.pricePerShareCents as number),
+      0,
+    );
+    const sumPricedShares = priced.reduce((s, t) => s + t.shares, 0);
+    const weightedAvgPriceCents =
+      sumPricedShares > 0 ? Math.round(sumValueCents / sumPricedShares) : null;
+    // Use the latest postTransactionShares in the group
+    const lastByDate = list.reduce((acc, t) =>
+      t.transactionDate > acc.transactionDate ? t : acc,
+    );
+    out.push({
+      accessionNumber: first.source.accessionNumber,
+      filingUrl: first.source.filingUrl,
+      transactionDate: first.transactionDate,
+      filedDate: first.filedDate,
+      code: first.code,
+      acquiredOrDisposed: first.acquiredOrDisposed,
+      securityTitle: first.securityTitle,
+      isDerivative: first.isDerivative,
+      shares: totalShares,
+      weightedAvgPriceCents,
+      totalCents: sumValueCents,
+      postTransactionShares: lastByDate.postTransactionShares,
+      ownershipNature: first.ownershipNature,
+    });
+  }
+  return out.sort((a, b) => b.transactionDate.localeCompare(a.transactionDate));
+}
+
+/**
+ * Most-recent post-transaction share count across all transactions, regardless
+ * of ownership nature. Approximates "current shares held" — actual current
+ * holding requires fresher data than the most recent Form 4.
+ */
+export function currentSharesHeld(txns: InsiderTransaction[]): number {
+  if (txns.length === 0) return 0;
+  const latest = txns.reduce((acc, t) =>
+    t.transactionDate > acc.transactionDate ? t : acc,
+  );
+  return latest.postTransactionShares;
+}
