@@ -2,12 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Avatar } from "@/components/Avatar";
 import { BadgeRow } from "@/components/Badge";
+import { CompTotal } from "@/components/CompTotal";
 import { PayMixBar, PayMixLegend } from "@/components/PayMixBar";
-import { ViewToggle } from "@/components/ViewToggle";
 import { execBadges, recordBadges } from "@/lib/badges";
 import { listExecsForCompany, loadCompany } from "@/lib/data";
-import { effectiveTotal, latestRecord, parseView, withView, type View } from "@/lib/comp";
-import { formatUsdAbbrev } from "@/lib/format";
+import { latestRecord } from "@/lib/comp";
 import type { Exec } from "@/lib/schemas";
 
 type RouteParams = { ticker: string };
@@ -25,15 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<RouteParams
   }
 }
 
-export default async function CompanyPage({
-  params,
-  searchParams,
-}: {
-  params: Promise<RouteParams>;
-  searchParams: Promise<{ view?: string | string[] }>;
-}) {
+export default async function CompanyPage({ params }: { params: Promise<RouteParams> }) {
   const { ticker } = await params;
-  const view = parseView(await searchParams);
   let company, execs;
   try {
     [company, execs] = await Promise.all([loadCompany(ticker), listExecsForCompany(ticker)]);
@@ -41,26 +33,18 @@ export default async function CompanyPage({
     notFound();
   }
 
-  const sortedExecs = [...execs].sort(
-    (a, b) =>
-      effectiveTotal(latestRecord(b.compRecords), view).cents -
-      effectiveTotal(latestRecord(a.compRecords), view).cents,
-  );
-  const orderedExecs = view === "cap" ? sortedExecs : execs;
-
   const sourceRecord = latestRecord(execs[0]!.compRecords);
   const source = sourceRecord.source;
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
-      <nav className="mb-12 flex items-center justify-between text-sm">
+      <nav className="mb-12 text-sm">
         <Link
-          href={withView("/", view)}
+          href="/"
           className="text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
         >
           ← Home
         </Link>
-        <ViewToggle view={view} basePath={`/companies/${ticker.toLowerCase()}`} />
       </nav>
 
       <header className="border-b border-zinc-200 pb-10 dark:border-zinc-800">
@@ -108,8 +92,8 @@ export default async function CompanyPage({
           <PayMixLegend />
         </div>
         <ul className="mt-6 divide-y divide-zinc-200 dark:divide-zinc-800">
-          {orderedExecs.map((exec) => (
-            <NeoRow key={exec.slug} exec={exec} view={view} />
+          {execs.map((exec) => (
+            <NeoRow key={exec.slug} exec={exec} />
           ))}
         </ul>
       </section>
@@ -136,13 +120,12 @@ export default async function CompanyPage({
   );
 }
 
-function NeoRow({ exec, view }: { exec: Exec; view: View }) {
+function NeoRow({ exec }: { exec: Exec }) {
   const latest = latestRecord(exec.compRecords);
-  const eff = effectiveTotal(latest, view);
   return (
     <li>
       <Link
-        href={withView(`/execs/${exec.ticker.toLowerCase()}/${exec.slug}`, view)}
+        href={`/execs/${exec.ticker.toLowerCase()}/${exec.slug}`}
         className="group -mx-3 block rounded-lg px-3 py-5 transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/50"
       >
         <div className="flex items-start justify-between gap-4">
@@ -161,21 +144,8 @@ function NeoRow({ exec, view }: { exec: Exec; view: View }) {
               <BadgeRow badges={recordBadges(latest)} size="sm" className="mt-1.5" />
             </div>
           </div>
-          <div className="shrink-0 text-right">
-            <p className="font-mono text-sm font-medium tabular-nums text-zinc-900 dark:text-zinc-50">
-              {formatUsdAbbrev(eff.cents)}
-              {eff.isFallback ? (
-                <span
-                  title="Compensation Actually Paid not disclosed individually for non-PEO NEOs; showing reported SCT total."
-                  className="ml-1 font-mono text-[10px] font-normal text-zinc-400 dark:text-zinc-500"
-                >
-                  (SCT)
-                </span>
-              ) : null}
-            </p>
-            <p className="font-mono text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
-              FY{latest.fiscalYear} {view === "cap" && !eff.isFallback ? "actually paid" : "total"}
-            </p>
+          <div className="shrink-0">
+            <CompTotal record={latest} fiscalYear={latest.fiscalYear} size="sm" />
           </div>
         </div>
         <div className="mt-4 ml-16">

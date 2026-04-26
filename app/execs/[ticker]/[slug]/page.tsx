@@ -3,9 +3,7 @@ import { notFound } from "next/navigation";
 import { Avatar } from "@/components/Avatar";
 import { BadgeRow } from "@/components/Badge";
 import { PerksBreakdown } from "@/components/PerksBreakdown";
-import { ViewToggle } from "@/components/ViewToggle";
 import { execBadges, recordBadges } from "@/lib/badges";
-import { effectiveTotal, parseView, withView, type View } from "@/lib/comp";
 import { loadCompany, loadExec } from "@/lib/data";
 import { formatCellOrDash, formatUsdAbbrev, formatUsdFull } from "@/lib/format";
 import type { CompRecord } from "@/lib/schemas";
@@ -25,15 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<RouteParams
   }
 }
 
-export default async function ExecPage({
-  params,
-  searchParams,
-}: {
-  params: Promise<RouteParams>;
-  searchParams: Promise<{ view?: string | string[] }>;
-}) {
+export default async function ExecPage({ params }: { params: Promise<RouteParams> }) {
   const { ticker, slug } = await params;
-  const view = parseView(await searchParams);
   let exec, company;
   try {
     [exec, company] = await Promise.all([loadExec(ticker, slug), loadCompany(ticker)]);
@@ -49,17 +40,13 @@ export default async function ExecPage({
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
-      <nav className="mb-12 flex items-center justify-between text-sm">
+      <nav className="mb-12 text-sm">
         <Link
-          href={withView("/", view)}
+          href="/"
           className="text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
         >
           ← All executives
         </Link>
-        <ViewToggle
-          view={view}
-          basePath={`/execs/${ticker.toLowerCase()}/${slug}`}
-        />
       </nav>
 
       <header className="flex flex-col gap-8 border-b border-zinc-200 pb-10 dark:border-zinc-800 sm:flex-row sm:items-end sm:justify-between">
@@ -98,39 +85,43 @@ export default async function ExecPage({
       <section className="mt-16">
         <SectionHeading
           eyebrow="Summary"
-          title={`${view === "cap" ? "Compensation actually paid" : "Total compensation"}, FY${records[records.length - 1].fiscalYear}–FY${latest.fiscalYear}`}
+          title={`Total compensation, FY${records[records.length - 1].fiscalYear}–FY${latest.fiscalYear}`}
         />
         <div className="mt-6 grid gap-px overflow-hidden rounded-xl border border-zinc-200 bg-zinc-200 dark:border-zinc-800 dark:bg-zinc-800 sm:grid-cols-3">
           {records.map((r) => {
-            const eff = effectiveTotal(r, view);
+            const cap = r.compActuallyPaidCents;
             return (
               <div key={r.fiscalYear} className="bg-white p-6 dark:bg-zinc-950">
                 <p className="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
                   FY{r.fiscalYear}
                 </p>
                 <p className="mt-2 font-mono text-3xl font-semibold tabular-nums tracking-tight text-zinc-900 dark:text-zinc-50">
-                  {formatUsdAbbrev(eff.cents)}
-                  {eff.isFallback ? (
-                    <span
-                      title="Compensation Actually Paid not disclosed individually for non-PEO NEOs."
-                      className="ml-1 align-middle font-mono text-[10px] font-normal text-zinc-400 dark:text-zinc-500"
-                    >
-                      (SCT)
-                    </span>
-                  ) : null}
+                  {formatUsdAbbrev(r.totalCents)}
                 </p>
                 <p className="mt-1 font-mono text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
-                  {formatUsdFull(eff.cents)}
+                  {cap !== undefined ? "reported" : formatUsdFull(r.totalCents)}
                 </p>
+                {cap !== undefined ? (
+                  <>
+                    <p className="mt-3 font-mono text-xl font-medium tabular-nums tracking-tight text-zinc-900 dark:text-zinc-50">
+                      {formatUsdAbbrev(cap)}
+                    </p>
+                    <p className="mt-1 font-mono text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
+                      actually paid · {capDeltaLabel(r.totalCents, cap)}
+                    </p>
+                  </>
+                ) : null}
                 <BadgeRow badges={recordBadges(r)} size="sm" className="mt-3" />
               </div>
             );
           })}
         </div>
-        {view === "cap" ? (
-          <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">
-            Compensation Actually Paid per the SEC&apos;s Pay vs. Performance rule. The Summary
-            Compensation Table breakdown below remains in reported (grant-date) values.
+        {records.some((r) => r.compActuallyPaidCents !== undefined) ? (
+          <p className="mt-3 max-w-2xl text-xs text-zinc-500 dark:text-zinc-400">
+            <em>Compensation Actually Paid</em> reflects the SEC&apos;s Pay vs. Performance
+            calculation: SCT total adjusted for change in fair value of unvested equity and value
+            at vesting. The Summary Compensation Table breakdown below stays in reported
+            (grant-date) values.
           </p>
         ) : null}
       </section>
@@ -270,6 +261,12 @@ const COMP_ROWS: { label: string; get: (r: CompRecord) => number }[] = [
   { label: "Pension & NQDC", get: (r) => r.pensionAndNqdcCents },
   { label: "All other compensation", get: (r) => r.allOtherCompCents },
 ];
+
+function capDeltaLabel(reported: number, cap: number): string {
+  const delta = cap - reported;
+  const sign = delta >= 0 ? "+" : "−";
+  return `${sign}${formatUsdAbbrev(Math.abs(delta))}`;
+}
 
 function fiscalEndLabel(monthDay: string): string {
   const [m, d] = monthDay.split("-").map(Number);
