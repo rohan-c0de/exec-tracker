@@ -6,14 +6,9 @@ A public-facing website that tracks US executive compensation and equity. Helps 
 - **Differentiator:** UI quality. Existing exec-comp tools (Equilar, AFL-CIO Executive Paywatch, SEC.gov directly) are functional but ugly. This site aims to make the data legible and beautiful. Peer comparison is a secondary angle, deferred until core data surface is proven.
 - **Audience:** Public / external readers. Not gated.
 
-## Resuming a session
+## Resuming work
 
-At the start of any new session, before doing substantive work:
-
-1. Run `git log --oneline -20` to see recent commits — that's the source of truth for what shipped recently and the rationale (commit messages and merged PRs are detailed by convention).
-2. Skim the rest of this file (you already loaded it). The "Common pitfalls" and "Branching and commits" sections matter most.
-3. If `ROADMAP.md` exists, read it for next-step intent.
-4. Don't guess what the operator wants to work on — ask. Conversation context from prior sessions does not carry over; the durable record is on disk.
+At the start of any new session, before doing substantive work: run `git log --oneline -20` to see recent commits (commit messages and merged PRs are detailed by convention and are the source of truth for what shipped), read `ROADMAP.md` for next-step intent, and ask the operator what they want to work on rather than guess. Conversation context from prior sessions does not carry over; the durable record is on disk.
 
 ## User context
 
