@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Avatar } from "@/components/Avatar";
+import { PerksBreakdown } from "@/components/PerksBreakdown";
 import { loadCompany, loadExec } from "@/lib/data";
 import { formatCellOrDash, formatUsdAbbrev, formatUsdFull } from "@/lib/format";
 import type { CompRecord } from "@/lib/schemas";
@@ -159,6 +160,16 @@ export default async function ExecPage({ params }: { params: Promise<RouteParams
           </table>
         </div>
       </section>
+
+      {latest.allOtherBreakdown && latest.allOtherBreakdown.length > 0 ? (
+        <section className="mt-16">
+          <SectionHeading
+            eyebrow="Perks & benefits"
+            title={`What's inside the All Other Compensation column · FY${latest.fiscalYear}`}
+          />
+          <PerksBreakdown record={latest} />
+        </section>
+      ) : null}
 
       {allFootnotes.length > 0 ? (
         <section className="mt-16">

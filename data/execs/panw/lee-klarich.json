@@ -16,6 +16,11 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 10672000,
       "totalCents": 2597123700,
+      "allOtherBreakdown": [
+        { "label": "Regulatory filing fee", "cents": 10500000 },
+        { "label": "401(k) plan matching contribution", "cents": 100000 },
+        { "label": "Life insurance", "cents": 72000 }
+      ],
       "footnotes": [
         "Stock Awards reflect grant-date fair value under ASC Topic 718. Per the proxy, the maximum-performance value of FY25 PSU grants would be $72,157,209.",
         "Non-Equity Incentive reflects the cash bonus paid under the executive cash incentive plan for FY25 performance.",

@@ -16,6 +16,13 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 267849800,
       "totalCents": 9973633600,
+      "allOtherBreakdown": [
+        { "label": "Personal security", "cents": 140240400 },
+        { "label": "Personal use of private aircraft", "cents": 87027500 },
+        { "label": "Tax gross-ups (security travel & auto)", "cents": 31580100 },
+        { "label": "Personal use of Company-leased automobile", "cents": 8929800 },
+        { "label": "Life insurance", "cents": 72000 }
+      ],
       "footnotes": [
         "Stock Awards reflect grant-date fair value of RSUs and PSUs under ASC Topic 718 — an accounting figure, not realized pay. Per the proxy, the maximum-performance value of FY25 PSU grants would be $268,674,816. The reported amount includes one-third of the PSUs legally granted in each of FY23, FY24, and FY25 (PSU performance metrics for those tranches were set in FY25).",
         "Non-Equity Incentive reflects the cash bonus paid under the executive cash incentive plan for FY25 performance.",
