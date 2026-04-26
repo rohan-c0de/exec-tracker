@@ -3,8 +3,10 @@ import { z } from "zod";
 const Cents = z.number().int().nonnegative();
 const IsoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "expected YYYY-MM-DD");
 const Url = z.string().url();
-const Slug = z.string().regex(/^[a-z0-9-]+$/, "lowercase letters, digits, hyphens only");
-const Ticker = z.string().regex(/^[A-Z]{1,5}$/, "uppercase ticker, 1-5 chars");
+export const SlugSchema = z.string().regex(/^[a-z0-9-]+$/, "lowercase letters, digits, hyphens only");
+export const TickerSchema = z.string().regex(/^[A-Z]{1,5}$/, "uppercase ticker, 1-5 chars");
+const Slug = SlugSchema;
+const Ticker = TickerSchema;
 
 export const SourceSchema = z.object({
   filingUrl: Url,
@@ -87,6 +89,39 @@ export const CompanySchema = z.object({
   neoSlugs: z.array(Slug).min(1),
 });
 
+export const TransactionCodeSchema = z.enum([
+  "A", "C", "D", "E", "F", "G", "H", "I", "J", "K",
+  "L", "M", "O", "P", "S", "U", "V", "W", "X", "Z",
+]);
+
+export const InsiderTransactionSchema = z.object({
+  transactionDate: IsoDate,
+  filedDate: IsoDate,
+  code: TransactionCodeSchema,
+  acquiredOrDisposed: z.enum(["A", "D"]),
+  securityTitle: z.string().min(1),
+  isDerivative: z.boolean(),
+  shares: z.number().nonnegative(),
+  pricePerShareCents: z.number().int().nonnegative().nullable(),
+  postTransactionShares: z.number().nonnegative(),
+  ownershipNature: z.enum(["D", "I"]),
+  ownershipExplanation: z.string().optional(),
+  source: z.object({
+    filingUrl: Url,
+    accessionNumber: z.string().regex(/^\d{10}-\d{2}-\d{6}$/),
+    formType: z.literal("4"),
+  }),
+});
+
+export const InsiderTransactionsFileSchema = z.object({
+  ticker: Ticker,
+  slug: Slug,
+  insiderCik: z.string().regex(/^\d{10}$/),
+  insiderNameAtSec: z.string().min(1),
+  lastUpdated: IsoDate,
+  transactions: z.array(InsiderTransactionSchema),
+});
+
 export type Source = z.infer<typeof SourceSchema>;
 export type PerkItem = z.infer<typeof PerkItemSchema>;
 export type BadgeKind = z.infer<typeof BadgeKindSchema>;
@@ -94,3 +129,6 @@ export type Badge = z.infer<typeof BadgeSchema>;
 export type CompRecord = z.infer<typeof CompRecordSchema>;
 export type Exec = z.infer<typeof ExecSchema>;
 export type Company = z.infer<typeof CompanySchema>;
+export type TransactionCode = z.infer<typeof TransactionCodeSchema>;
+export type InsiderTransaction = z.infer<typeof InsiderTransactionSchema>;
+export type InsiderTransactionsFile = z.infer<typeof InsiderTransactionsFileSchema>;
