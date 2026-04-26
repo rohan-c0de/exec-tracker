@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Avatar } from "@/components/Avatar";
+import { BadgeRow } from "@/components/Badge";
 import { PerksBreakdown } from "@/components/PerksBreakdown";
+import { execBadges, recordBadges } from "@/lib/badges";
 import { loadCompany, loadExec } from "@/lib/data";
 import { formatCellOrDash, formatUsdAbbrev, formatUsdFull } from "@/lib/format";
 import type { CompRecord } from "@/lib/schemas";
@@ -55,6 +57,7 @@ export default async function ExecPage({ params }: { params: Promise<RouteParams
               {exec.name}
             </h1>
             <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-400">{exec.role}</p>
+            <BadgeRow badges={execBadges(exec)} className="mt-3" />
           </div>
         </div>
         <div className="flex flex-col gap-1 text-sm sm:items-end">
@@ -96,6 +99,7 @@ export default async function ExecPage({ params }: { params: Promise<RouteParams
               <p className="mt-1 font-mono text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
                 {formatUsdFull(r.totalCents)}
               </p>
+              <BadgeRow badges={recordBadges(r)} size="sm" className="mt-3" />
             </div>
           ))}
         </div>

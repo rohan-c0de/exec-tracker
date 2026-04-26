@@ -8,6 +8,7 @@
     {
       "fiscalYear": 2025,
       "fiscalYearEnd": "2025-07-31",
+      "badges": [{ "kind": "psu-re-recognition" }],
       "salaryCents": 100000000,
       "bonusCents": 0,
       "stockAwardsCents": 9485783800,
@@ -39,6 +40,7 @@
     {
       "fiscalYear": 2024,
       "fiscalYearEnd": "2024-07-31",
+      "badges": [{ "kind": "psu-re-recognition" }],
       "salaryCents": 100000000,
       "bonusCents": 0,
       "stockAwardsCents": 5415035300,
@@ -61,6 +63,13 @@
     {
       "fiscalYear": 2023,
       "fiscalYearEnd": "2023-07-31",
+      "badges": [
+        {
+          "kind": "salary-foregone",
+          "detail": "Mr. Arora foregone salary Nov 2021–Oct 2022, reducing FY23 reported salary from $1M to $750K."
+        },
+        { "kind": "psu-re-recognition" }
+      ],
       "salaryCents": 75000000,
       "bonusCents": 0,
       "stockAwardsCents": 14537431800,

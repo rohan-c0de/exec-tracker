@@ -8,6 +8,12 @@
     {
       "fiscalYear": 2025,
       "fiscalYearEnd": "2025-07-31",
+      "badges": [
+        {
+          "kind": "partial-year",
+          "detail": "Appointed CFO May 26, 2025; FY25 covers ~2 months as CFO."
+        }
+      ],
       "salaryCents": 8723500,
       "bonusCents": 0,
       "stockAwardsCents": 2155135100,

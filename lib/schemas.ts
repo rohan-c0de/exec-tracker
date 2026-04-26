@@ -19,6 +19,23 @@ export const PerkItemSchema = z.object({
   cents: Cents,
 });
 
+export const BadgeKindSchema = z.enum([
+  "founder",
+  "former-officer",
+  "no-equity-this-year",
+  "salary-foregone",
+  "foreign-currency",
+  "partial-year",
+  "sign-on-bonus",
+  "multi-year-cliff-grant",
+  "psu-re-recognition",
+]);
+
+export const BadgeSchema = z.object({
+  kind: BadgeKindSchema,
+  detail: z.string().optional(),
+});
+
 export const CompRecordSchema = z
   .object({
     fiscalYear: z.number().int().min(1990).max(2100),
@@ -33,6 +50,7 @@ export const CompRecordSchema = z
     totalCents: Cents,
     footnotes: z.array(z.string()).default([]),
     allOtherBreakdown: z.array(PerkItemSchema).optional(),
+    badges: z.array(BadgeSchema).default([]),
     source: SourceSchema,
   })
   .refine(
@@ -53,6 +71,7 @@ export const ExecSchema = z.object({
   bio: z.string().optional(),
   photoPath: z.string().regex(/^\/[\w./-]+\.(png|jpg|jpeg|webp)$/i).optional(),
   photoCredit: z.string().optional(),
+  badges: z.array(BadgeSchema).default([]),
   compRecords: z.array(CompRecordSchema).min(1),
 });
 
@@ -69,6 +88,8 @@ export const CompanySchema = z.object({
 
 export type Source = z.infer<typeof SourceSchema>;
 export type PerkItem = z.infer<typeof PerkItemSchema>;
+export type BadgeKind = z.infer<typeof BadgeKindSchema>;
+export type Badge = z.infer<typeof BadgeSchema>;
 export type CompRecord = z.infer<typeof CompRecordSchema>;
 export type Exec = z.infer<typeof ExecSchema>;
 export type Company = z.infer<typeof CompanySchema>;
