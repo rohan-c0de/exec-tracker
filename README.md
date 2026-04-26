@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# exec-tracker
 
-## Getting Started
+A public-facing website that tracks US executive compensation and equity, sourced directly from each company's annual proxy statement (Form DEF 14A) on SEC EDGAR. Every figure is traceable to its filing.
 
-First, run the development server:
+**Stack:** Next.js 16 (App Router) + React 19 + TypeScript · Supabase (deferred to Phase 2) · Tailwind v4 · Vercel hosting.
+
+**Status:** Phase 1 — manually curated data for a small set of marquee companies. The data layer reads JSON files from `data/` at request time. Supabase wiring is deferred.
+
+## Quick start
 
 ```bash
+git clone https://github.com/rohan-c0de/exec-tracker.git
+cd exec-tracker
+npm install
+cp .env.example .env.local   # then fill in the values — see below
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The canonical list lives in [`.env.example`](.env.example). Copy it to `.env.local` (gitignored) and fill in:
 
-## Learn More
+| Variable | Required for | Where to get it |
+|---|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | Phase 2 (Supabase reads) | Supabase project → Settings → API |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Phase 2 (Supabase reads) | same place |
+| `SUPABASE_SERVICE_ROLE_KEY` | Phase 2 (server-only writes) | same place — **never commit, never expose to the client** |
+| `SEC_USER_AGENT` | Phase 2 scrapers | Set to `"exec-tracker your-email@example.com"` — SEC requires a contact in the User-Agent |
 
-To learn more about Next.js, take a look at the following resources:
+For Phase 1 (current state) none of these are strictly required to run the site, since data is read from `data/*.json`. They become required once the EDGAR scraper and Supabase import scripts come online.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Production values live in Vercel's project settings, not in any file.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project structure
 
-## Deploy on Vercel
+```
+app/                # Next.js App Router routes (public UI)
+components/         # shared React components
+lib/                # Zod schemas, fs-based data loaders, helpers
+data/companies/     # {ticker}.json — company profile + NEO list
+data/execs/         # {ticker}/{exec-slug}.json — per-exec comp history
+supabase/           # migrations (Phase 2)
+scripts/            # Phase 2 scrapers and importers
+public/             # static assets (incl. exec headshots)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For deeper conventions, invariants, and the project's domain primer (NEO, DEF 14A, SCT, etc.), see [`CLAUDE.md`](CLAUDE.md).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Dev commands
+
+- `npm run dev` — local Next server
+- `npm run build` — production build
+- `npm run lint` — ESLint
