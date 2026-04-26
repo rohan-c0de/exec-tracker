@@ -1,0 +1,77 @@
+{
+  "ticker": "PANW",
+  "slug": "dipak-golechha",
+  "name": "Dipak Golechha",
+  "role": "Chief Financial Officer",
+  "bio": "Dipak Golechha has served as Chief Financial Officer of Palo Alto Networks since 2020. His compensation follows the same multi-year PSU recognition pattern as the rest of the executive team — the Stock Awards column reports grant-date fair value of one-third of PSUs from each of FY23, FY24, and FY25 in the FY25 row, since their performance metrics were set in FY25.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-07-31",
+      "salaryCents": 60000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 2420596100,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 72000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 172000,
+      "totalCents": 2552768100,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under ASC Topic 718. Per the proxy, the maximum-performance value of FY25 PSU grants would be $67,920,673.",
+        "Non-Equity Incentive reflects the cash bonus paid under the executive cash incentive plan for FY25 performance.",
+        "All Other Compensation reflects $720 life insurance premiums and $1,000 in 401(k) plan matching contributions."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-07-31",
+      "salaryCents": 60000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 1330123300,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 72000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 292400,
+      "totalCents": 1462415700,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-07-31",
+      "salaryCents": 60000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 787964500,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 90000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 202300,
+      "totalCents": 938166800,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "PANW",
+  "legalName": "Palo Alto Networks, Inc.",
+  "displayName": "Palo Alto Networks",
+  "exchange": "NASDAQ",
+  "secCik": "0001327567",
+  "fiscalYearEndMonthDay": "07-31",
+  "websiteUrl": "https://www.paloaltonetworks.com",
+  "neoSlugs": [
+    "nikesh-arora",
+    "dipak-golechha",
+    "bj-jenkins",
+    "lee-klarich",
+    "nir-zuk"
+  ]
+}
