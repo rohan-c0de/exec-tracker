@@ -81,6 +81,22 @@ Required:
 - `tsx scripts/import/add-company.ts <ticker>` — push a curated company's JSON to Supabase (Phase 1)
 - `tsx scripts/scrapers/edgar-def14a.ts <ticker> <year>` — pull a proxy (Phase 2, stubbed until then)
 
+## Branching and commits
+
+This project follows GitHub Flow.
+
+- **`main` is always deployable.** Every commit on `main` should leave the site in a working state. Don't push WIP, broken builds, or half-done features to `main`.
+- **One branch per change.** Before starting non-trivial work, create a feature branch off `main` (`git checkout -b <name>`). Branch names are present-tense and describe the change: `add-crowdstrike`, `company-page`, `fix-chaudhry-footnote`. Don't bundle unrelated work on the same branch.
+- **Trivial single-file edits** (typo fixes, doc tweaks, README updates) can go straight to `main`. Anything that touches code, data, or schema should be on a branch.
+- **Merge after approval.** When a branch is ready, the operator approves, then merge with `git checkout main && git merge --no-ff <branch> && git branch -d <branch>`. `--no-ff` preserves the branch's existence in the history, which is useful for later reverts.
+- **No remote yet.** When a GitHub remote is added, branches will be pushed and merged via PR. Until then, all merges are local.
+
+### Claude's defaults
+
+- Before starting work, propose a branch name and pause for the operator to confirm. Don't auto-create.
+- Do not merge to `main` without explicit operator approval, even if all the per-step approvals during the work were given.
+- Never force-push, never rebase a branch that has been shared, never delete branches with unmerged work.
+
 ## Environment quirks
 
 **This is NOT the Next.js you were trained on.** Next 16 has breaking changes vs. training-cutoff Next.js (caching, async params, default behaviors). Before writing routing, caching, or server-component code, read the relevant page in `node_modules/next/dist/docs/`. Heed deprecation notices. Same warning as cc-coursemap — the same bugs bite twice if you forget.
