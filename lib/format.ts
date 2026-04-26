@@ -21,3 +21,13 @@ export function formatUsdAbbrev(cents: number): string {
 export function formatCellOrDash(cents: number): string {
   return cents === 0 ? "—" : formatUsdFull(cents);
 }
+
+/** Format a per-share price with cents preserved (e.g. $463.92). */
+export function formatUsdPrice(cents: number): string {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(cents / 100);
+}

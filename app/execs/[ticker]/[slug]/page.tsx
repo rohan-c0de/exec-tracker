@@ -2,9 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Avatar } from "@/components/Avatar";
 import { BadgeRow } from "@/components/Badge";
+import { InsiderTransactions } from "@/components/InsiderTransactions";
 import { PerksBreakdown } from "@/components/PerksBreakdown";
 import { execBadges, recordBadges } from "@/lib/badges";
-import { loadCompany, loadExec } from "@/lib/data";
+import { loadCompany, loadExec, loadInsiderTransactions } from "@/lib/data";
 import { formatCellOrDash, formatUsdAbbrev, formatUsdFull } from "@/lib/format";
 import type { CompRecord } from "@/lib/schemas";
 
@@ -31,6 +32,7 @@ export default async function ExecPage({ params }: { params: Promise<RouteParams
   } catch {
     notFound();
   }
+  const insiderData = await loadInsiderTransactions(ticker, slug);
 
   const records = [...exec.compRecords].sort((a, b) => b.fiscalYear - a.fiscalYear);
   const latest = records[0];
@@ -193,6 +195,23 @@ export default async function ExecPage({ params }: { params: Promise<RouteParams
             title={`What's inside the All Other Compensation column · FY${latest.fiscalYear}`}
           />
           <PerksBreakdown record={latest} />
+        </section>
+      ) : null}
+
+      {insiderData ? (
+        <section className="mt-16">
+          <SectionHeading
+            eyebrow="Insider transactions"
+            title="What was actually bought, sold, and held"
+          />
+          <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
+            Equity grants, vests, and open-market trades reported on Form 4 with the SEC, filed within
+            two business days of each transaction. The proxy says what was <em>granted</em>; Form 4 says
+            what actually moved.
+          </p>
+          <div className="mt-6">
+            <InsiderTransactions data={insiderData} />
+          </div>
         </section>
       ) : null}
 

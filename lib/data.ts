@@ -1,6 +1,13 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { CompanySchema, ExecSchema, type Company, type Exec } from "./schemas";
+import {
+  CompanySchema,
+  ExecSchema,
+  InsiderTransactionsFileSchema,
+  type Company,
+  type Exec,
+  type InsiderTransactionsFile,
+} from "./schemas";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 
@@ -30,4 +37,23 @@ export async function listCompanies(): Promise<Company[]> {
 export async function listExecsForCompany(ticker: string): Promise<Exec[]> {
   const company = await loadCompany(ticker);
   return Promise.all(company.neoSlugs.map((slug) => loadExec(ticker, slug)));
+}
+
+export async function loadInsiderTransactions(
+  ticker: string,
+  slug: string,
+): Promise<InsiderTransactionsFile | null> {
+  const file = path.join(
+    DATA_DIR,
+    "insider-transactions",
+    ticker.toLowerCase(),
+    `${slug}.json`,
+  );
+  try {
+    const raw = await fs.readFile(file, "utf8");
+    return InsiderTransactionsFileSchema.parse(JSON.parse(raw));
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return null;
+    throw err;
+  }
 }
