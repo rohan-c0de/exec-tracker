@@ -97,6 +97,19 @@ This project follows GitHub Flow.
 - Do not merge to `main` without explicit operator approval, even if all the per-step approvals during the work were given.
 - Never force-push, never rebase a branch that has been shared, never delete branches with unmerged work.
 
+### Standard branch lifecycle (the pacing the operator expects)
+
+For any non-trivial change, follow this sequence verbatim, pausing at each `→ pause` for operator go/no-go:
+
+1. **Propose branch name** (present-tense, scope-descriptive: `add-crowdstrike`, `company-page`). → pause
+2. `git checkout -b <name>` from up-to-date `main`.
+3. Do the work, committing as you go. For multi-step work, keep the operator's existing per-step pacing (present plan → pause before each meaningful step).
+4. When the work is ready, **propose the merge path** — local merge vs. push + PR. Recommend PR when the operator is learning the workflow or when the diff is non-trivial. → pause
+5. If PR path: `git push -u origin <branch>` → `gh pr create` with a real summary + test plan → pause for operator to choose CLI merge vs. UI merge.
+6. After merge: `git checkout main && git pull && git fetch --prune` to sync local main and clean stale tracking refs. Verify local branch is gone (auto-deleted by `gh pr merge --delete-branch`).
+
+For trivial single-file doc edits (typo, README tweak), commit straight to `main` — no branch, no PR. Code, data, and schema changes always go through the full lifecycle.
+
 ## Environment quirks
 
 **This is NOT the Next.js you were trained on.** Next 16 has breaking changes vs. training-cutoff Next.js (caching, async params, default behaviors). Before writing routing, caching, or server-component code, read the relevant page in `node_modules/next/dist/docs/`. Heed deprecation notices. Same warning as cc-coursemap — the same bugs bite twice if you forget.
