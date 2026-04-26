@@ -1,0 +1,56 @@
+{
+  "ticker": "CRWD",
+  "slug": "michael-sentonas",
+  "name": "Michael Sentonas",
+  "role": "President",
+  "bio": "Michael Sentonas was promoted to President of CrowdStrike in February 2023 after previously serving as Chief Technology Officer. He first became a Named Executive Officer in fiscal 2024; the proxy therefore discloses only two years of compensation (FY24–FY25). FY24 totals reflect a sizable promotion-related equity grant.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-01-31",
+      "salaryCents": 75000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 2275040200,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 79503900,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 1763800,
+      "totalCents": 2431307900,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay. The maximum-performance value of FY25 PSU grants would be $22,750,402.",
+        "Non-Equity Incentive reflects the cash bonus paid under the Corporate Incentive Plan (CIP) for fiscal 2025 performance.",
+        "All Other Compensation reflects standard supplementary benefits (life/disability insurance, executive health, 401(k) match)."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-01-31",
+      "salaryCents": 62500000,
+      "bonusCents": 0,
+      "stockAwardsCents": 3435236000,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 65353100,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 1770000,
+      "totalCents": 3564859100,
+      "footnotes": [
+        "FY24 Stock Awards include a promotion-related equity grant tied to Mr. Sentonas's elevation to President in February 2023, inflating the year's reported total relative to FY25.",
+        "Stock Awards reflect grant-date fair value under FASB ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    }
+  ]
+}

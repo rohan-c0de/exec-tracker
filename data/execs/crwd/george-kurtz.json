@@ -1,0 +1,77 @@
+{
+  "ticker": "CRWD",
+  "slug": "george-kurtz",
+  "name": "George Kurtz",
+  "role": "Chief Executive Officer, President and Director",
+  "bio": "George Kurtz co-founded CrowdStrike in 2011 and has served as CEO since inception. His compensation is dominated by equity, with cash salary held at $1M; FY24 included an outsized stock award figure tied to a multi-year PSU grant priced under a Monte-Carlo simulation. All Other Compensation includes Company-paid personal security and private aircraft usage tied to a Board-approved security program.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-01-31",
+      "salaryCents": 100000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 3185068100,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 132506400,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 101955500,
+      "totalCents": 3519530000,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay. Mr. Kurtz's multi-year PSU award is valued via Monte-Carlo simulation; the maximum-performance value of his FY25 PSU grants would be $31,850,681.",
+        "Non-Equity Incentive reflects the cash bonus paid under the Corporate Incentive Plan (CIP) for fiscal 2025 performance.",
+        "All Other Compensation includes ~$104,279 for personal security at residences and ~$898,426 for personal use of private aircraft, plus standard supplementary benefits (life/disability insurance, executive health, 401(k) match). These costs are tied to a Board-approved security program for Mr. Kurtz."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-01-31",
+      "salaryCents": 95000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 4409003700,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 124170900,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 70210900,
+      "totalCents": 4698385500,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-01-31",
+      "salaryCents": 90000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 3338633700,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 103730700,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 120903700,
+      "totalCents": 3653268100,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    }
+  ]
+}

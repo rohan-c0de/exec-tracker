@@ -1,0 +1,77 @@
+{
+  "ticker": "CRWD",
+  "slug": "shawn-henry",
+  "name": "Shawn Henry",
+  "role": "Former Chief Security Officer",
+  "bio": "Shawn Henry served as CrowdStrike's Chief Security Officer until his retirement from the role effective March 31, 2025. He remains with the Company as Executive Advisor to the CEO. The proxy discloses him as a former NEO; FY25 reflects salary and a partial cash incentive but no new equity grant.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-01-31",
+      "salaryCents": 60000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 0,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 24617800,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 2353400,
+      "totalCents": 86971200,
+      "footnotes": [
+        "FY25 Stock Awards are zero because Mr. Henry received no equity grant in fiscal 2025; he retired from his role as Chief Security Officer effective March 31, 2025 and transitioned to Executive Advisor to the CEO. The dramatic drop versus prior years reflects this transition, not a pay cut.",
+        "Non-Equity Incentive includes both the Corporate Incentive Plan (CIP) cash bonus and commission incentives earned under the Long-term Incentive Plan (LIP) for fiscal 2025.",
+        "All Other Compensation reflects standard supplementary benefits (life/disability insurance, executive health, 401(k) match)."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-01-31",
+      "salaryCents": 60000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 1259715400,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 24982600,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 2629500,
+      "totalCents": 1347327500,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under FASB ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-01-31",
+      "salaryCents": 60000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 1335432100,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 44569300,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 1406200,
+      "totalCents": 1441407600,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under FASB ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    }
+  ]
+}

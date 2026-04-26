@@ -1,0 +1,77 @@
+{
+  "ticker": "CRWD",
+  "slug": "burt-podbere",
+  "name": "Burt Podbere",
+  "role": "Chief Financial Officer",
+  "bio": "Burt Podbere has served as CrowdStrike's Chief Financial Officer since 2017. Like Mr. Kurtz, he received a multi-year PSU grant whose grant-date fair value is determined under a Monte-Carlo simulation tied to stock-price hurdles.",
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-01-31",
+      "salaryCents": 67500000,
+      "bonusCents": 0,
+      "stockAwardsCents": 1365012400,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 71553400,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 1847800,
+      "totalCents": 1505913600,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay. The maximum-performance value of FY25 PSU grants would be $13,650,124. Mr. Podbere's multi-year PSU award is valued via Monte-Carlo simulation.",
+        "Non-Equity Incentive reflects the cash bonus paid under the Corporate Incentive Plan (CIP) for fiscal 2025 performance.",
+        "All Other Compensation reflects standard supplementary benefits (life/disability insurance, executive health, 401(k) match)."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-01-31",
+      "salaryCents": 62500000,
+      "bonusCents": 0,
+      "stockAwardsCents": 1889573000,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 65353100,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 3212400,
+      "totalCents": 2020638500,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under FASB ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-01-31",
+      "salaryCents": 60000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 2003148200,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 56580400,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 1734300,
+      "totalCents": 2121462900,
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value under FASB ASC Topic 718 — an accounting figure, not realized pay."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    }
+  ]
+}

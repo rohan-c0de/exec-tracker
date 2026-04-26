@@ -1,0 +1,15 @@
+{
+  "ticker": "CRWD",
+  "legalName": "CrowdStrike Holdings, Inc.",
+  "displayName": "CrowdStrike",
+  "exchange": "NASDAQ",
+  "secCik": "0001535527",
+  "fiscalYearEndMonthDay": "01-31",
+  "websiteUrl": "https://www.crowdstrike.com",
+  "neoSlugs": [
+    "george-kurtz",
+    "michael-sentonas",
+    "burt-podbere",
+    "shawn-henry"
+  ]
+}
