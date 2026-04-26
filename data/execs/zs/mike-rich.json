@@ -31,6 +31,12 @@
     {
       "fiscalYear": 2024,
       "fiscalYearEnd": "2024-07-31",
+      "badges": [
+        {
+          "kind": "sign-on-bonus",
+          "detail": "$550K cash sign-on plus $550K consulting fee for prior services, paid Nov 2023."
+        }
+      ],
       "salaryCents": 33750000,
       "bonusCents": 55000000,
       "stockAwardsCents": 3167054200,

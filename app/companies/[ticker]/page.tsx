@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Avatar } from "@/components/Avatar";
+import { BadgeRow } from "@/components/Badge";
 import { PayMixBar, PayMixLegend } from "@/components/PayMixBar";
+import { execBadges, recordBadges } from "@/lib/badges";
 import { listExecsForCompany, loadCompany } from "@/lib/data";
 import { latestRecord } from "@/lib/comp";
 import { formatUsdAbbrev } from "@/lib/format";
@@ -130,12 +132,16 @@ function NeoRow({ exec }: { exec: Exec }) {
           <div className="flex min-w-0 items-center gap-4">
             <Avatar name={exec.name} photoPath={exec.photoPath} size="sm" />
             <div className="min-w-0">
-              <p className="truncate text-base font-medium text-zinc-900 dark:text-zinc-50">
-                {exec.name}
-              </p>
+              <div className="flex items-center gap-2">
+                <p className="truncate text-base font-medium text-zinc-900 dark:text-zinc-50">
+                  {exec.name}
+                </p>
+                <BadgeRow badges={execBadges(exec)} size="sm" />
+              </div>
               <p className="mt-0.5 truncate text-sm text-zinc-500 dark:text-zinc-400">
                 {exec.role}
               </p>
+              <BadgeRow badges={recordBadges(latest)} size="sm" className="mt-1.5" />
             </div>
           </div>
           <div className="shrink-0 text-right">

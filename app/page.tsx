@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Avatar } from "@/components/Avatar";
+import { Badge } from "@/components/Badge";
+import { execBadges, recordBadges, topBadge } from "@/lib/badges";
 import { latestRecord } from "@/lib/comp";
 import { listCompanies, listExecsForCompany } from "@/lib/data";
 import { formatUsdAbbrev } from "@/lib/format";
@@ -93,6 +95,8 @@ export default async function Home() {
 
 function LeaderboardRow({ rank, row }: { rank: number; row: ExecRow }) {
   const { company, exec, latestFiscalYear, latestTotalCents } = row;
+  const latest = latestRecord(exec.compRecords);
+  const top = topBadge([...execBadges(exec), ...recordBadges(latest)]);
   return (
     <Link
       href={`/execs/${exec.ticker.toLowerCase()}/${exec.slug}`}
@@ -103,9 +107,12 @@ function LeaderboardRow({ rank, row }: { rank: number; row: ExecRow }) {
       </span>
       <Avatar name={exec.name} photoPath={exec.photoPath} size="sm" />
       <div className="min-w-0 flex-1">
-        <p className="truncate text-base font-medium text-zinc-900 dark:text-zinc-50">
-          {exec.name}
-        </p>
+        <div className="flex items-center gap-2">
+          <p className="truncate text-base font-medium text-zinc-900 dark:text-zinc-50">
+            {exec.name}
+          </p>
+          {top ? <Badge badge={top} size="sm" /> : null}
+        </div>
         <p className="mt-0.5 truncate text-sm text-zinc-500 dark:text-zinc-400">
           {exec.role} · {company.displayName ?? company.legalName}
         </p>

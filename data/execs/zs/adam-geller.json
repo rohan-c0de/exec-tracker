@@ -8,6 +8,12 @@
     {
       "fiscalYear": 2025,
       "fiscalYearEnd": "2025-07-31",
+      "badges": [
+        {
+          "kind": "partial-year",
+          "detail": "Named executive officer Sept 30, 2024; FY25 covers ~10 months as an executive officer."
+        }
+      ],
       "salaryCents": 37670500,
       "bonusCents": 0,
       "stockAwardsCents": 2194352200,
