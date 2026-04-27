@@ -8,7 +8,7 @@ A public-facing website that tracks US executive compensation and equity. Helps 
 
 ## Resuming work
 
-At the start of any new session, before doing substantive work: run `git log --oneline -20` to see recent commits (commit messages and merged PRs are detailed by convention and are the source of truth for what shipped), read `ROADMAP.md` for next-step intent, and ask the operator what they want to work on rather than guess. Conversation context from prior sessions does not carry over; the durable record is on disk.
+At the start of any new session, before doing substantive work: run `git log --oneline -20` to see recent commits (commit messages and merged PRs are detailed by convention and are the source of truth for what shipped), run `git status` to confirm you're on `main` with a clean tree (if not, surface the in-flight branch to the operator before proposing anything new), read `ROADMAP.md` for next-step intent, and ask the operator what they want to work on rather than guess. Conversation context from prior sessions does not carry over; the durable record is on disk.
 
 ## User context
 
