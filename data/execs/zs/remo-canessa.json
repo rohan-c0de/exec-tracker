@@ -4,6 +4,18 @@
   "name": "Remo Canessa",
   "role": "Former Chief Financial Officer",
   "bio": "Remo Canessa served as Chief Financial Officer of Zscaler until Kevin Rubin succeeded him on May 26, 2025. He is included in the FY2025 proxy as a former officer per SEC rules — his FY2025 SCT total of $957K reflects salary and short-term incentive only, with no new equity grant in his final year as an NEO. Canessa's FY2023 and FY2024 disclosures show the more typical mix of salary, equity, and bonus.",
+  "beneficialOwnership": {
+    "sharesOwned": 4521,
+    "percentageOwned": null,
+    "asOfDate": "2025-11-01",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+      "accessionNumber": "0001713683-25-000198",
+      "formType": "DEF 14A",
+      "filedDate": "2025-11-21",
+      "periodOfReport": "2025-07-31"
+    }
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,

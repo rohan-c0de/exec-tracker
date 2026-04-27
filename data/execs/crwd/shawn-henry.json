@@ -6,6 +6,18 @@
   "photoPath": "/execs/crwd/shawn-henry.jpg",
   "photoCredit": "Courtesy CrowdStrike Holdings, Inc. (editorial use)",
   "bio": "Shawn Henry served as CrowdStrike's Chief Security Officer until his retirement from the role effective March 31, 2025. He remains with the Company as Executive Advisor to the CEO. The proxy discloses him as a former NEO; FY25 reflects salary and a partial cash incentive but no new equity grant.",
+  "beneficialOwnership": {
+    "sharesOwned": 16654,
+    "percentageOwned": null,
+    "asOfDate": "2025-04-15",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+      "accessionNumber": "0001104659-25-045047",
+      "formType": "DEF 14A",
+      "filedDate": "2025-05-06",
+      "periodOfReport": "2025-01-31"
+    }
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,

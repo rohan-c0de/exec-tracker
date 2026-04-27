@@ -6,6 +6,18 @@
   "photoPath": "/execs/panw/dipak-golechha.jpg",
   "photoCredit": "Courtesy Palo Alto Networks, Inc. (editorial use)",
   "bio": "Dipak Golechha has served as Chief Financial Officer of Palo Alto Networks since 2020. His compensation follows the same multi-year PSU recognition pattern as the rest of the executive team — the Stock Awards column reports grant-date fair value of one-third of PSUs from each of FY23, FY24, and FY25 in the FY25 row, since their performance metrics were set in FY25.",
+  "beneficialOwnership": {
+    "sharesOwned": 381955,
+    "percentageOwned": null,
+    "asOfDate": "2025-09-15",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+      "accessionNumber": "0001308179-25-000624",
+      "formType": "DEF 14A",
+      "filedDate": "2025-11-07",
+      "periodOfReport": "2025-07-31"
+    }
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,

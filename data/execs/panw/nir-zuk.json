@@ -7,6 +7,18 @@
   "photoCredit": "Courtesy Palo Alto Networks, Inc. (editorial use)",
   "bio": "Nir Zuk is the co-founder of Palo Alto Networks and pioneered the next-generation firewall that defined the company. He announced his retirement in connection with the FY25 proxy and transitioned the CTO role to Lee Klarich. His FY25 compensation was paid in Israeli New Shekels for the period August 1, 2024 through June 30, 2025 and converted to USD using an average rate of 0.27 USD per ILS over that window; he permanently relocated from Israel to the United States during fiscal 2025.",
   "badges": [{ "kind": "founder" }],
+  "beneficialOwnership": {
+    "sharesOwned": 3293136,
+    "percentageOwned": null,
+    "asOfDate": "2025-09-15",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+      "accessionNumber": "0001308179-25-000624",
+      "formType": "DEF 14A",
+      "filedDate": "2025-11-07",
+      "periodOfReport": "2025-07-31"
+    }
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,

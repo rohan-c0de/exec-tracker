@@ -7,6 +7,18 @@
   "photoCredit": "Wikimedia Commons / George Kurtz (CC BY-SA 4.0)",
   "bio": "George Kurtz co-founded CrowdStrike in 2011 and has served as CEO since inception. His compensation is dominated by equity, with cash salary held at $1M; FY24 included an outsized stock award figure tied to a multi-year PSU grant priced under a Monte-Carlo simulation. All Other Compensation includes Company-paid personal security and private aircraft usage tied to a Board-approved security program.",
   "badges": [{ "kind": "founder" }],
+  "beneficialOwnership": {
+    "sharesOwned": 6321555,
+    "percentageOwned": 2.53,
+    "asOfDate": "2025-04-15",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+      "accessionNumber": "0001104659-25-045047",
+      "formType": "DEF 14A",
+      "filedDate": "2025-05-06",
+      "periodOfReport": "2025-01-31"
+    }
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,

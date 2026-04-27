@@ -6,6 +6,18 @@
   "photoPath": "/execs/panw/nikesh-arora.jpg",
   "photoCredit": "Wikimedia Commons / Steve Jennings, TechCrunch (CC BY 2.0)",
   "bio": "Nikesh Arora has served as CEO and Chairman of Palo Alto Networks since June 2018. His compensation is overwhelmingly equity, dominated by multi-year PSUs whose grant-date fair value is recognized in the SCT only when each year's performance metrics are set — which inflates the reported figure in years following the legal grant. FY23 reflects a $145M stock-awards line driven by this PSU recognition pattern, and his All Other Compensation includes a Board-approved security program (personal security, private aircraft, Company-leased automobile) plus associated tax gross-ups.",
+  "beneficialOwnership": {
+    "sharesOwned": 3065694,
+    "percentageOwned": null,
+    "asOfDate": "2025-09-15",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+      "accessionNumber": "0001308179-25-000624",
+      "formType": "DEF 14A",
+      "filedDate": "2025-11-07",
+      "periodOfReport": "2025-07-31"
+    }
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,
