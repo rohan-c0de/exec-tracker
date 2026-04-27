@@ -19,14 +19,20 @@ export type Form4ScrapeResult = {
   insiderName: string;        // as SEC has it
   transactions: InsiderTransaction[];
   filingsScanned: number;
+  filingsSkippedDifferentIssuer: number;
   filingsSkipped: { accession: string; reason: string }[];
 };
 
 export async function scrapeForm4(
   insiderCik: string,
   edgar: EdgarClient,
-  options: { sinceDate?: string; maxFilings?: number } = {},
+  options: { sinceDate?: string; maxFilings?: number; issuerCik?: string } = {},
 ): Promise<Form4ScrapeResult> {
+  // Normalize issuer CIK for comparison: SEC submissions API hands us the
+  // 10-digit zero-padded form ("0001327567"), but the <issuerCik> tag in
+  // Form 4 XML can be either zero-padded or stripped — match on the
+  // numeric value, not the string.
+  const wantIssuer = options.issuerCik ? Number(options.issuerCik) : null;
   const subs = await edgar.fetchJson<EdgarSubmissions>(
     `https://data.sec.gov/submissions/CIK${insiderCik}.json`,
   );
@@ -47,6 +53,7 @@ export async function scrapeForm4(
 
   const transactions: InsiderTransaction[] = [];
   const filingsSkipped: Form4ScrapeResult["filingsSkipped"] = [];
+  let filingsSkippedDifferentIssuer = 0;
 
   for (let i = 0; i < accessions.length; i++) {
     const accession = accessions[i]!;
@@ -66,6 +73,14 @@ export async function scrapeForm4(
     const issuerCik = parseTag(xml, "issuerCik");
     if (!issuerCik) {
       filingsSkipped.push({ accession, reason: "no <issuerCik> in XML" });
+      continue;
+    }
+
+    // Skip filings from other issuers when caller has scoped to a specific
+    // company. This prevents conflating, e.g., Arora's Google-era Form 4s
+    // into his Palo Alto Networks page.
+    if (wantIssuer !== null && Number(issuerCik) !== wantIssuer) {
+      filingsSkippedDifferentIssuer++;
       continue;
     }
 
@@ -95,6 +110,7 @@ export async function scrapeForm4(
       b.transactionDate.localeCompare(a.transactionDate),
     ),
     filingsScanned: accessions.length,
+    filingsSkippedDifferentIssuer,
     filingsSkipped,
   };
 }

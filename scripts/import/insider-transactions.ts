@@ -66,8 +66,11 @@ async function main() {
   }
 
   console.log("scraping Form 4s...");
-  const result = await scrapeForm4(insider.cik, edgar);
-  console.log(`scanned ${result.filingsScanned} filings, parsed ${result.transactions.length} transactions`);
+  const result = await scrapeForm4(insider.cik, edgar, { issuerCik });
+  const kept = result.filingsScanned - result.filingsSkippedDifferentIssuer;
+  console.log(
+    `scanned ${result.filingsScanned} filings, kept ${kept} for ${ticker.toUpperCase()} (skipped ${result.filingsSkippedDifferentIssuer} from other issuers), parsed ${result.transactions.length} transactions`,
+  );
   if (result.filingsSkipped.length > 0) {
     console.log(`skipped ${result.filingsSkipped.length} entries:`);
     for (const s of result.filingsSkipped.slice(0, 5)) {
