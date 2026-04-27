@@ -10,9 +10,7 @@ The structure: **Up next** is the short ordered queue. **Substantive** is real f
 
 In rough recommended order. Each is one branch.
 
-1. **Form 4 backfill for the other 14 execs** — re-run `tsx scripts/import/insider-transactions.ts <ticker> <slug>` 14 times. The importer is idempotent and cached. Single PR for all 14 data files. After this, every exec page tells the wealth-realized story, not just Kurtz's.
-
-2. **Tax estimator** — apply federal + state (residence-aware) + NIIT + Medicare brackets to RSU vesting and Form 4 sales. Show "earned $X, kept ~$Y after tax." Cook's reported $74M? Closer to ~$35M kept. Depends on Form 4 ingestion (already shipped for Kurtz). Genuinely no consumer site does this. Most of the lift is the bracket calculator + residence inference; UI is small.
+1. **Tax estimator** — apply federal + state (residence-aware) + NIIT + Medicare brackets to RSU vesting and Form 4 sales. Show "earned $X, kept ~$Y after tax." Cook's reported $74M? Closer to ~$35M kept. Form 4 ingestion is now site-wide (all 15 execs), so this lights up everywhere on first ship. Genuinely no consumer site does this. Most of the lift is the bracket calculator + residence inference; UI is small.
 
 ## Substantive (waiting for a slot)
 
@@ -70,3 +68,4 @@ In ship order, with merge commits:
 - `f6beaa1` — Bars on all viewports + spell out "shares"
 - `5fd7a01` — Resuming-work section in CLAUDE.md
 - `ac70bdb` (PR #12) — Beneficial ownership % on exec records and UI (15 execs backfilled)
+- `eb7754e` (PR #13) — Form 4 backfill for the other 14 execs (~4,176 new transactions); widened CIK search to 300 + added `secCik` override for nicknames
