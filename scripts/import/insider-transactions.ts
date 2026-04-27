@@ -41,6 +41,7 @@ async function main() {
   );
   const execJson = JSON.parse(await fs.readFile(execFile, "utf8"));
   const execName: string = execJson.name;
+  const secCikOverride: string | undefined = execJson.secCik;
 
   console.log(`exec: ${execName} (${ticker.toUpperCase()} / ${slug})`);
 
@@ -48,14 +49,21 @@ async function main() {
   const issuerCik = await tickerToCik(ticker, edgar);
   console.log(`issuer CIK: ${issuerCik}`);
 
-  const insider = await findInsiderCik(execName, issuerCik, edgar);
-  if (!insider) {
-    console.error(
-      `could not find insider CIK for "${execName}" in 100 most recent ${ticker.toUpperCase()} Form 4s`,
-    );
-    process.exit(1);
+  let insider: { cik: string; matchedName: string };
+  if (secCikOverride) {
+    console.log(`insider CIK: ${secCikOverride} (from exec.secCik override)`);
+    insider = { cik: secCikOverride, matchedName: `${execName} (override)` };
+  } else {
+    const found = await findInsiderCik(execName, issuerCik, edgar);
+    if (!found) {
+      console.error(
+        `could not find insider CIK for "${execName}" in recent ${ticker.toUpperCase()} Form 4s — set "secCik" on the exec record to override`,
+      );
+      process.exit(1);
+    }
+    console.log(`insider CIK: ${found.cik} (SEC name: ${found.matchedName})`);
+    insider = found;
   }
-  console.log(`insider CIK: ${insider.cik} (SEC name: ${insider.matchedName})`);
 
   console.log("scraping Form 4s...");
   const result = await scrapeForm4(insider.cik, edgar);

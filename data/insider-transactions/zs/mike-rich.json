@@ -1,0 +1,230 @@
+{
+  "ticker": "ZS",
+  "slug": "mike-rich",
+  "insiderCik": "0002009289",
+  "insiderNameAtSec": "Mike Rich (override)",
+  "lastUpdated": "2026-04-27",
+  "transactions": [
+    {
+      "transactionDate": "2026-03-17",
+      "filedDate": "2026-03-18",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 3147,
+      "pricePerShareCents": 15659,
+      "postTransactionShares": 104350,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000068/xslF345X06/wk-form4_1773878954.xml",
+        "accessionNumber": "0001713683-26-000068",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-12-16",
+      "filedDate": "2025-12-17",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 4100,
+      "pricePerShareCents": 23082,
+      "postTransactionShares": 107497,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000223/xslF345X05/wk-form4_1766014755.xml",
+        "accessionNumber": "0001713683-25-000223",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-10-15",
+      "filedDate": "2025-10-16",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 10730,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 111552,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000183/xslF345X05/wk-form4_1760647174.xml",
+        "accessionNumber": "0001713683-25-000183",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-09-16",
+      "filedDate": "2025-09-17",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 11718,
+      "pricePerShareCents": 28070,
+      "postTransactionShares": 100822,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000170/xslF345X05/wk-form4_1758158643.xml",
+        "accessionNumber": "0001713683-25-000170",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-09-15",
+      "filedDate": "2025-09-17",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 14337,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 112540,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000170/xslF345X05/wk-form4_1758158643.xml",
+        "accessionNumber": "0001713683-25-000170",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-06-17",
+      "filedDate": "2025-06-18",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 4287,
+      "pricePerShareCents": 30370,
+      "postTransactionShares": 98203,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000120/xslF345X05/wk-form4_1750282673.xml",
+        "accessionNumber": "0001713683-25-000120",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-06-12",
+      "filedDate": "2025-06-16",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 9991,
+      "pricePerShareCents": 30288,
+      "postTransactionShares": 102400,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000105/xslF345X05/wk-form4_1750107427.xml",
+        "accessionNumber": "0001713683-25-000105",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-03-18",
+      "filedDate": "2025-03-20",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 3575,
+      "pricePerShareCents": 19915,
+      "postTransactionShares": 112391,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000050/xslF345X05/wk-form4_1742505159.xml",
+        "accessionNumber": "0001713683-25-000050",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2024-12-17",
+      "filedDate": "2024-12-19",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 3779,
+      "pricePerShareCents": 20032,
+      "postTransactionShares": 115966,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368324000173/xslF345X05/wk-form4_1734651064.xml",
+        "accessionNumber": "0001713683-24-000173",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2024-12-05",
+      "filedDate": "2024-12-09",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 16428,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 119687,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368324000158/xslF345X05/wk-form4_1733784498.xml",
+        "accessionNumber": "0001713683-24-000158",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2024-09-17",
+      "filedDate": "2024-09-18",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 4813,
+      "pricePerShareCents": 17128,
+      "postTransactionShares": 103259,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368324000125/xslF345X05/wk-form4_1726694202.xml",
+        "accessionNumber": "0001713683-24-000125",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2024-06-18",
+      "filedDate": "2024-06-20",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 4843,
+      "pricePerShareCents": 18093,
+      "postTransactionShares": 108008,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368324000091/xslF345X05/wk-form4_1718934109.xml",
+        "accessionNumber": "0001713683-24-000091",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2024-03-18",
+      "filedDate": "2024-03-20",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 4049,
+      "pricePerShareCents": 19315,
+      "postTransactionShares": 112851,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368324000052/xslF345X05/wk-form4_1710970571.xml",
+        "accessionNumber": "0001713683-24-000052",
+        "formType": "4"
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "ticker": "ZS",
+  "slug": "raj-judge",
+  "insiderCik": "0002068054",
+  "insiderNameAtSec": "Judge Raj",
+  "lastUpdated": "2026-04-27",
+  "transactions": [
+    {
+      "transactionDate": "2026-03-17",
+      "filedDate": "2026-03-18",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 2488,
+      "pricePerShareCents": 15659,
+      "postTransactionShares": 67906,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000066/xslF345X06/wk-form4_1773878622.xml",
+        "accessionNumber": "0001713683-26-000066",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-12-16",
+      "filedDate": "2025-12-17",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 3438,
+      "pricePerShareCents": 23082,
+      "postTransactionShares": 70394,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000219/xslF345X05/wk-form4_1766014724.xml",
+        "accessionNumber": "0001713683-25-000219",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-09-16",
+      "filedDate": "2025-09-17",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 4524,
+      "pricePerShareCents": 28070,
+      "postTransactionShares": 73832,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000168/xslF345X05/wk-form4_1758157666.xml",
+        "accessionNumber": "0001713683-25-000168",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-09-15",
+      "filedDate": "2025-09-17",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 2067,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 78356,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000168/xslF345X05/wk-form4_1758157666.xml",
+        "accessionNumber": "0001713683-25-000168",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-06-17",
+      "filedDate": "2025-06-18",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 2957,
+      "pricePerShareCents": 30370,
+      "postTransactionShares": 76289,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000121/xslF345X05/wk-form4_1750282712.xml",
+        "accessionNumber": "0001713683-25-000121",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-06-03",
+      "filedDate": "2025-06-05",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 67148,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 69298,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000085/xslF345X05/wk-form4_1749157549.xml",
+        "accessionNumber": "0001713683-25-000085",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-06-03",
+      "filedDate": "2025-06-05",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 9948,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 79246,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000085/xslF345X05/wk-form4_1749157549.xml",
+        "accessionNumber": "0001713683-25-000085",
+        "formType": "4"
+      }
+    }
+  ]
+}
