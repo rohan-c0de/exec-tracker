@@ -6,6 +6,18 @@
   "photoPath": "/execs/panw/lee-klarich.jpg",
   "photoCredit": "Courtesy Palo Alto Networks, Inc. (editorial use)",
   "bio": "Lee Klarich serves as Chief Product and Technology Officer of Palo Alto Networks and joined the Board following Nir Zuk's announced retirement. Per the Lead Independent Director's letter, Klarich has been the chief architect of the company's product strategy for nearly as long as Zuk and was elevated to CPTO and the Board to ensure continuity of the product vision.",
+  "beneficialOwnership": {
+    "sharesOwned": 1754032,
+    "percentageOwned": null,
+    "asOfDate": "2025-09-15",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+      "accessionNumber": "0001308179-25-000624",
+      "formType": "DEF 14A",
+      "filedDate": "2025-11-07",
+      "periodOfReport": "2025-07-31"
+    }
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,

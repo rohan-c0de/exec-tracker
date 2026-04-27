@@ -4,6 +4,18 @@
   "name": "Raj Judge",
   "role": "Executive Vice President of Corporate Strategy",
   "bio": "Raj Judge was appointed Executive Vice President of Corporate Strategy and a director, effective May 20, 2025. His FY2025 SCT figures cover only the partial-year period from his appointment through fiscal year-end on July 31, 2025; the bulk of the total is a June 3, 2025 equity grant of RSUs and PSUs that vest over four years.",
+  "beneficialOwnership": {
+    "sharesOwned": 16787,
+    "percentageOwned": null,
+    "asOfDate": "2025-11-01",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+      "accessionNumber": "0001713683-25-000198",
+      "formType": "DEF 14A",
+      "filedDate": "2025-11-21",
+      "periodOfReport": "2025-07-31"
+    }
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Avatar } from "@/components/Avatar";
 import { BadgeRow } from "@/components/Badge";
 import { InsiderTransactions } from "@/components/InsiderTransactions";
+import { OwnershipBadge } from "@/components/OwnershipBadge";
 import { PerksBreakdown } from "@/components/PerksBreakdown";
 import { execBadges, recordBadges } from "@/lib/badges";
 import { loadCompany, loadExec, loadInsiderTransactions } from "@/lib/data";
@@ -59,7 +60,12 @@ export default async function ExecPage({ params }: { params: Promise<RouteParams
               {exec.name}
             </h1>
             <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-400">{exec.role}</p>
-            <BadgeRow badges={execBadges(exec)} className="mt-3" />
+            <div className="mt-3 flex flex-wrap items-center gap-1.5">
+              <BadgeRow badges={execBadges(exec)} />
+              {exec.beneficialOwnership ? (
+                <OwnershipBadge ownership={exec.beneficialOwnership} />
+              ) : null}
+            </div>
           </div>
         </div>
         <div className="flex flex-col gap-1 text-sm sm:items-end">

@@ -7,6 +7,18 @@
   "photoCredit": "Wikimedia Commons / BluBayou (CC0)",
   "bio": "Jay Chaudhry founded Zscaler in 2007 and has served as CEO and Chairman since inception. His Summary Compensation Table totals are dominated by a single multi-year equity grant made in fiscal 2023 designed to cover roughly four fiscal years of pay; in FY24 and FY25 he received only base salary and de minimis benefits because no new equity was granted.",
   "badges": [{ "kind": "founder" }],
+  "beneficialOwnership": {
+    "sharesOwned": 26857608,
+    "percentageOwned": 16.8,
+    "asOfDate": "2025-11-01",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+      "accessionNumber": "0001713683-25-000198",
+      "formType": "DEF 14A",
+      "filedDate": "2025-11-21",
+      "periodOfReport": "2025-07-31"
+    }
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,

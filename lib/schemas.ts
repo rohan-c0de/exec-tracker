@@ -21,6 +21,14 @@ export const PerkItemSchema = z.object({
   cents: Cents,
 });
 
+export const BeneficialOwnershipSchema = z.object({
+  sharesOwned: z.number().nonnegative(),
+  // null means "less than 1%" (proxy convention "*" — the underlying number isn't disclosed)
+  percentageOwned: z.number().nonnegative().nullable(),
+  asOfDate: IsoDate,
+  source: SourceSchema,
+});
+
 export const BadgeKindSchema = z.enum([
   "founder",
   "former-officer",
@@ -75,6 +83,7 @@ export const ExecSchema = z.object({
   photoPath: z.string().regex(/^\/[\w./-]+\.(png|jpg|jpeg|webp)$/i).optional(),
   photoCredit: z.string().optional(),
   badges: z.array(BadgeSchema).default([]),
+  beneficialOwnership: BeneficialOwnershipSchema.optional(),
   compRecords: z.array(CompRecordSchema).min(1),
 });
 
@@ -124,6 +133,7 @@ export const InsiderTransactionsFileSchema = z.object({
 
 export type Source = z.infer<typeof SourceSchema>;
 export type PerkItem = z.infer<typeof PerkItemSchema>;
+export type BeneficialOwnership = z.infer<typeof BeneficialOwnershipSchema>;
 export type BadgeKind = z.infer<typeof BadgeKindSchema>;
 export type Badge = z.infer<typeof BadgeSchema>;
 export type CompRecord = z.infer<typeof CompRecordSchema>;

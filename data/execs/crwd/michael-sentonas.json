@@ -5,6 +5,18 @@
   "role": "President",
   "photoPath": "/execs/crwd/michael-sentonas.jpg",
   "photoCredit": "Courtesy CrowdStrike Holdings, Inc. (editorial use)",
+  "beneficialOwnership": {
+    "sharesOwned": 208025,
+    "percentageOwned": null,
+    "asOfDate": "2025-04-15",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+      "accessionNumber": "0001104659-25-045047",
+      "formType": "DEF 14A",
+      "filedDate": "2025-05-06",
+      "periodOfReport": "2025-01-31"
+    }
+  },
   "bio": "Michael Sentonas was promoted to President of CrowdStrike in February 2023 after previously serving as Chief Technology Officer. He first became a Named Executive Officer in fiscal 2024; the proxy therefore discloses only two years of compensation (FY24–FY25). FY24 totals reflect a sizable promotion-related equity grant.",
   "compRecords": [
     {

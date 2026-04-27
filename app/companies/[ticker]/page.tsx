@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Avatar } from "@/components/Avatar";
 import { BadgeRow } from "@/components/Badge";
 import { CompTotal } from "@/components/CompTotal";
+import { OwnershipBadge } from "@/components/OwnershipBadge";
 import { PayMixBar, PayMixLegend } from "@/components/PayMixBar";
 import { execBadges, recordBadges } from "@/lib/badges";
 import { listExecsForCompany, loadCompany } from "@/lib/data";
@@ -132,11 +133,14 @@ function NeoRow({ exec }: { exec: Exec }) {
           <div className="flex min-w-0 items-center gap-4">
             <Avatar name={exec.name} photoPath={exec.photoPath} size="sm" />
             <div className="min-w-0">
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <p className="truncate text-base font-medium text-zinc-900 dark:text-zinc-50">
                   {exec.name}
                 </p>
                 <BadgeRow badges={execBadges(exec)} size="sm" />
+                {exec.beneficialOwnership ? (
+                  <OwnershipBadge ownership={exec.beneficialOwnership} />
+                ) : null}
               </div>
               <p className="mt-0.5 truncate text-sm text-zinc-500 dark:text-zinc-400">
                 {exec.role}
