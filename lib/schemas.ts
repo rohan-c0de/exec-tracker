@@ -84,6 +84,10 @@ export const ExecSchema = z.object({
   photoCredit: z.string().optional(),
   badges: z.array(BadgeSchema).default([]),
   beneficialOwnership: BeneficialOwnershipSchema.optional(),
+  // Override for the Form 4 importer when the exec's display name doesn't
+  // match SEC's "Lastname Firstname M" tokenization (e.g. nicknames like
+  // "BJ" for "William D Jr", or "Jay" for "Jagtar"). 10 digits, no formatting.
+  secCik: z.string().regex(/^\d{10}$/).optional(),
   compRecords: z.array(CompRecordSchema).min(1),
 });
 

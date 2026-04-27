@@ -38,13 +38,17 @@ export async function tickerToCik(
  * Form 4s are filed within 2 business days of any insider transaction, so an
  * active CEO has dozens per year. We scan up to {limit} most recent Form 4s.
  *
+ * Default 300 covers former officers (e.g. someone who stopped filing 1-2 years
+ * ago, but whose proxy NEO entry is still relevant) without blowing past the
+ * SEC submissions API's recent-window cap (~1000).
+ *
  * Returns null if no match found in the most recent {limit} filings.
  */
 export async function findInsiderCik(
   insiderName: string,
   issuerCik: string,
   edgar: EdgarClient,
-  limit: number = 100,
+  limit: number = 300,
 ): Promise<{ cik: string; matchedName: string } | null> {
   const subs = await edgar.getSubmissions(issuerCik);
   const recent = subs.filings.recent;
