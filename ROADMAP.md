@@ -10,11 +10,9 @@ The structure: **Up next** is the short ordered queue. **Substantive** is real f
 
 In rough recommended order. Each is one branch.
 
-1. **Beneficial ownership %** — show what fraction of the company each NEO owns. Source: each proxy's "Security Ownership of Certain Beneficial Owners and Management" table (already in proxies we've fetched). Add `beneficialOwnership` field to `ExecSchema` (shares + percentage + as-of date + source), backfill from CRWD/PANW/ZS proxies, render on the exec page. Single-PR feature; ~2 hours. *Operator-requested in the Form 4 session.*
+1. **Form 4 backfill for the other 14 execs** — re-run `tsx scripts/import/insider-transactions.ts <ticker> <slug>` 14 times. The importer is idempotent and cached. Single PR for all 14 data files. After this, every exec page tells the wealth-realized story, not just Kurtz's.
 
 2. **Tax estimator** — apply federal + state (residence-aware) + NIIT + Medicare brackets to RSU vesting and Form 4 sales. Show "earned $X, kept ~$Y after tax." Cook's reported $74M? Closer to ~$35M kept. Depends on Form 4 ingestion (already shipped for Kurtz). Genuinely no consumer site does this. Most of the lift is the bracket calculator + residence inference; UI is small.
-
-3. **Form 4 backfill for the other 14 execs** — re-run `tsx scripts/import/insider-transactions.ts <ticker> <slug>` 14 times. The importer is idempotent and cached. Single PR for all 14 data files. After this, every exec page tells the wealth-realized story, not just Kurtz's.
 
 ## Substantive (waiting for a slot)
 
@@ -71,3 +69,4 @@ In ship order, with merge commits:
 - `ee0bf72` (PR #11) — Bar-in-row visual + peak-year callout on annual table
 - `f6beaa1` — Bars on all viewports + spell out "shares"
 - `5fd7a01` — Resuming-work section in CLAUDE.md
+- `ac70bdb` (PR #12) — Beneficial ownership % on exec records and UI (15 execs backfilled)
