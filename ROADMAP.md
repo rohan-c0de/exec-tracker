@@ -69,3 +69,4 @@ In ship order, with merge commits:
 - `5fd7a01` — Resuming-work section in CLAUDE.md
 - `ac70bdb` (PR #12) — Beneficial ownership % on exec records and UI (15 execs backfilled)
 - `eb7754e` (PR #13) — Form 4 backfill for the other 14 execs (~4,176 new transactions); widened CIK search to 300 + added `secCik` override for nicknames
+- `f538e0d` (PR #14) — Form 4 scraper: filter by issuer CIK (fixed Arora's "305 shares" cross-company conflation; dropped 20,548 stale txn lines across 8 execs)
