@@ -12,20 +12,25 @@
 import { createHash } from "node:crypto";
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const RATE_LIMIT_MS = 110; // ~9 req/sec, comfortably under SEC's 10/sec cap
 const MAX_RETRIES = 5;
 const BACKOFF_BASE_MS = 500;
 
+// Anchor file paths to this module's location, NOT process.cwd(). A
+// scheduled Form-4 re-fetch (GitHub Actions / cron) may run from any
+// directory; cwd-relative paths would fragment the cache and silently
+// fail to read .env.local. Two levels up from scripts/lib/ → repo root.
+const REPO_ROOT = path.resolve(
+  path.dirname(fileURLToPath(import.meta.url)),
+  "..",
+  "..",
+);
+
 // In-repo so it survives reboots and serves as an audit trail.
 // Gitignored via .gitignore (`scripts/scrapers/_cache/`).
-const DEFAULT_CACHE_DIR = path.join(
-  process.cwd(),
-  "scripts",
-  "scrapers",
-  "_cache",
-  "edgar",
-);
+const DEFAULT_CACHE_DIR = path.join(REPO_ROOT, "scripts", "scrapers", "_cache", "edgar");
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -219,10 +224,12 @@ export type EdgarSubmissions = {
 export async function makeEdgarClient(): Promise<EdgarClient> {
   let ua = process.env.SEC_USER_AGENT;
   if (!ua) {
-    // Fallback: read .env.local manually so scripts work without dotenv
+    // Fallback: read .env.local manually so scripts work without dotenv.
+    // Anchored to REPO_ROOT (not cwd) so cron / CI runs find it regardless
+    // of working directory.
     try {
       const env = await fs.readFile(
-        path.join(process.cwd(), ".env.local"),
+        path.join(REPO_ROOT, ".env.local"),
         "utf8",
       );
       const match = env.match(/^SEC_USER_AGENT=(.+)$/m);
