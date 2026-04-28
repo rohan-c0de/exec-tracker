@@ -1,0 +1,34 @@
+{
+  "ticker": "S",
+  "slug": "barbara-larson",
+  "name": "Barbara Larson",
+  "role": "Chief Financial Officer",
+  "bio": "Barbara Larson was appointed Chief Financial Officer of SentinelOne in September 2024, succeeding David Bernhardt. Her FY2025 totals reflect a partial year (~5 months in the role) plus a sign-on equity grant. Future fiscal years will reflect a full annualized package.",
+  "badges": [],
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-01-31",
+      "salaryCents": 20421300,
+      "bonusCents": 0,
+      "stockAwardsCents": 1127197500,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 15854600,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 2604100,
+      "totalCents": 1166077500,
+      "badges": [{ "kind": "partial-year", "detail": "Appointed CFO September 2024" }],
+      "footnotes": [
+        "Ms. Larson was appointed Chief Financial Officer in September 2024; salary, non-equity incentive, and other compensation reflect a partial fiscal year.",
+        "Stock Awards are dominated by Ms. Larson's sign-on RSU and PSU grants. Assuming maximum performance, the FY2025 PSU grant would have a grant-date fair value of $1,950,911."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    }
+  ]
+}

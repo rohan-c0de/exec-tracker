@@ -1,0 +1,17 @@
+{
+  "ticker": "S",
+  "legalName": "SentinelOne, Inc.",
+  "displayName": "SentinelOne",
+  "exchange": "NYSE",
+  "secCik": "0001583708",
+  "fiscalYearEndMonthDay": "01-31",
+  "websiteUrl": "https://www.sentinelone.com",
+  "neoSlugs": [
+    "tomer-weingarten",
+    "barbara-larson",
+    "richard-smith",
+    "keenan-conder",
+    "vats-srivatsan",
+    "david-bernhardt"
+  ]
+}

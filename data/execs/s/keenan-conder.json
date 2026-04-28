@@ -1,0 +1,74 @@
+{
+  "ticker": "S",
+  "slug": "keenan-conder",
+  "name": "Keenan Conder",
+  "role": "Chief Legal Officer and Corporate Secretary",
+  "bio": "Keenan Conder serves as SentinelOne's Chief Legal Officer and Corporate Secretary, overseeing legal, regulatory, compliance, and corporate governance.",
+  "badges": [],
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-01-31",
+      "salaryCents": 45000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 381205500,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 29700000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 607700,
+      "totalCents": 456513200,
+      "footnotes": [
+        "Assuming maximum performance, the FY2025 PSU grant would have a grant-date fair value of $500,007."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-01-31",
+      "salaryCents": 42500000,
+      "bonusCents": 0,
+      "stockAwardsCents": 470467200,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 28050000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 250000,
+      "totalCents": 541267200,
+      "footnotes": [],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-01-31",
+      "salaryCents": 42437500,
+      "bonusCents": 28050000,
+      "stockAwardsCents": 200460900,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 0,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 356300,
+      "totalCents": 271304700,
+      "footnotes": [
+        "Bonus reflects a discretionary bonus earned in fiscal 2023 pursuant to Mr. Conder's offer letter; FY2024 onward shifted to a formal cash incentive plan reported under Non-Equity Incentive."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    }
+  ]
+}
