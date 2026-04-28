@@ -198,10 +198,19 @@ function SummaryCard({ label, value, sub }: { label: string; value: string; sub:
 
 function HoldingsCard({ holdings }: { holdings: ReturnType<typeof currentHoldings> }) {
   const { direct, indirect, total } = holdings;
-  const both = direct !== null && indirect !== null;
-  const onlyDirect = direct !== null && indirect === null;
-  const onlyIndirect = direct === null && indirect !== null;
-  const latestAsOf = [direct?.asOf, indirect?.asOf]
+  // Treat a zero-balance track as no-current-holding for display purposes.
+  // The track's filing history is still visible in the per-filing table below.
+  // Avoids misleading sub-lines like "2,012,771 direct + 0 indirect" implying
+  // an active indirect position that was actually unwound years ago.
+  const directActive = direct !== null && direct.shares > 0;
+  const indirectActive = indirect !== null && indirect.shares > 0;
+  const both = directActive && indirectActive;
+  const onlyDirect = directActive && !indirectActive;
+  const onlyIndirect = !directActive && indirectActive;
+  const latestAsOf = [
+    directActive ? direct!.asOf : null,
+    indirectActive ? indirect!.asOf : null,
+  ]
     .filter((d): d is string => Boolean(d))
     .sort()
     .pop();

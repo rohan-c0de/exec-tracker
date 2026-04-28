@@ -50,21 +50,32 @@ export async function tickerToCik(
  * Multi-match guard: if more than one distinct CIK matches the name within
  * the scan window (real failure mode at S&P 500 scale — namesake collisions
  * like a different "John Smith" filing for the same issuer), this function
- * returns the FIRST match found and logs a loud warning listing all
- * candidate CIKs. Caller should set `secCik` on the exec record to lock in
- * the correct CIK if the warning fires.
+ * returns the FIRST match found, sets `ambiguous: true`, and includes every
+ * candidate in `candidates`. Callers running unattended (CI / cron) MUST
+ * check `ambiguous` and either abort or require an explicit `secCik`
+ * override on the exec record. A `console.warn` is also emitted so manual
+ * runs see the issue in the terminal.
  *
  * Returns null if no match found within the scan window.
  */
+export type InsiderMatch = {
+  cik: string;
+  matchedName: string;
+  ambiguous: boolean;
+  candidates: { cik: string; name: string }[];
+};
+
 export async function findInsiderCik(
   insiderName: string,
   issuerCik: string,
   edgar: EdgarClient,
   limit: number = 300,
-): Promise<{ cik: string; matchedName: string } | null> {
+): Promise<InsiderMatch | null> {
   const subs = await edgar.getSubmissions(issuerCik);
-  const matches = new Map<string, string>(); // CIK → SEC name
-  let firstMatch: { cik: string; matchedName: string } | null = null;
+  // CIK → SEC name. Map preserves insertion order, so the first-inserted
+  // CIK is the first-found match. We don't bookkeep `firstMatch` separately
+  // (TS can't narrow a closure-mutated outer variable cleanly).
+  const matches = new Map<string, string>();
   let scanned = 0;
 
   // Walk one filings bucket (recent or an older year-bucket).
@@ -84,13 +95,8 @@ export async function findInsiderCik(
       }
       const owners = parseReportingOwners(xml);
       for (const owner of owners) {
-        if (namesMatch(owner.name, insiderName)) {
-          if (!matches.has(owner.cik)) {
-            matches.set(owner.cik, owner.name);
-            if (firstMatch === null) {
-              firstMatch = { cik: owner.cik, matchedName: owner.name };
-            }
-          }
+        if (namesMatch(owner.name, insiderName) && !matches.has(owner.cik)) {
+          matches.set(owner.cik, owner.name);
         }
       }
     }
@@ -99,7 +105,7 @@ export async function findInsiderCik(
   await walkBucket(subs.filings.recent);
 
   // If recent exhausted without a match, try older year-buckets newest-first.
-  if (firstMatch === null && scanned < limit) {
+  if (matches.size === 0 && scanned < limit) {
     const olderFiles = subs.filings.files ?? [];
     // Newest first: filings.files is typically ordered oldest→newest, so reverse.
     const byNewest = [...olderFiles].sort((a, b) => b.filingTo.localeCompare(a.filingTo));
@@ -113,21 +119,27 @@ export async function findInsiderCik(
         continue;
       }
       await walkBucket(bucket);
-      if (firstMatch !== null) break;
+      if (matches.size > 0) break;
     }
   }
 
-  if (matches.size > 1) {
-    const list = [...matches.entries()]
-      .map(([cik, name]) => `${name} (CIK ${cik})`)
-      .join(", ");
+  if (matches.size === 0) return null;
+
+  const candidates = [...matches.entries()].map(([cik, name]) => ({ cik, name }));
+  const [firstCik, firstName] = candidates[0]!.cik
+    ? [candidates[0]!.cik, candidates[0]!.name]
+    : ["", ""]; // unreachable — size > 0 guard above
+  const ambiguous = candidates.length > 1;
+
+  if (ambiguous) {
+    const list = candidates.map((c) => `${c.name} (CIK ${c.cik})`).join(", ");
     console.warn(
-      `\n⚠ findInsiderCik: ${matches.size} distinct CIKs matched "${insiderName}" within ${scanned} Form 4s of issuer ${issuerCik}: ${list}. ` +
-        `Returning the first match (${firstMatch!.cik}). If this is the wrong person, set "secCik" on the exec record to override.\n`,
+      `\n⚠ findInsiderCik: ${candidates.length} distinct CIKs matched "${insiderName}" within ${scanned} Form 4s of issuer ${issuerCik}: ${list}. ` +
+        `Returning the first match (${firstCik}). If this is the wrong person, set "secCik" on the exec record to override.\n`,
     );
   }
 
-  return firstMatch;
+  return { cik: firstCik, matchedName: firstName, ambiguous, candidates };
 }
 
 type ReportingOwner = { cik: string; name: string };
@@ -166,7 +178,7 @@ function normalize(name: string): string {
  * while we use "Firstname Surname". A match requires every token in our name
  * to appear in the SEC name (set comparison, order-independent).
  */
-function namesMatch(secName: string, ourName: string): boolean {
+export function namesMatch(secName: string, ourName: string): boolean {
   const secTokens = new Set(normalize(secName).split(" ").filter(Boolean));
   const ourTokens = normalize(ourName).split(" ").filter(Boolean);
   if (ourTokens.length === 0) return false;

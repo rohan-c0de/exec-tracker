@@ -20,10 +20,15 @@ async function main() {
 
   console.log("\n→ findInsiderCik('George Kurtz', CRWD)");
   const kurtz = await findInsiderCik("George Kurtz", issuerCik, edgar);
-  if (!kurtz) throw new Error("Kurtz CIK not found in 100 most recent CRWD Form 4s");
+  if (!kurtz) throw new Error("Kurtz CIK not found in recent CRWD Form 4s");
   console.log(`  Kurtz insider CIK: ${kurtz.cik} (matched: ${kurtz.matchedName})`);
   if (kurtz.cik !== "0001778564") {
     throw new Error(`Expected 0001778564, got ${kurtz.cik}`);
+  }
+  if (kurtz.ambiguous) {
+    throw new Error(
+      `Kurtz match should be unambiguous; got ${kurtz.candidates.length} candidates`,
+    );
   }
 
   console.log("\n✓ smoke test passed");
