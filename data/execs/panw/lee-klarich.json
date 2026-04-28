@@ -16,7 +16,25 @@
       "formType": "DEF 14A",
       "filedDate": "2025-11-07",
       "periodOfReport": "2025-07-31"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "Direct",
+        "shares": 177954
+      },
+      {
+        "label": "Lee and Susan Klarich 2005 Trust",
+        "shares": 740000
+      },
+      {
+        "label": "PSUs vesting within 60 days",
+        "shares": 468038
+      },
+      {
+        "label": "PSOs exercisable within 60 days",
+        "shares": 368040
+      }
+    ]
   },
   "compRecords": [
     {
@@ -31,9 +49,18 @@
       "allOtherCompCents": 10672000,
       "totalCents": 2597123700,
       "allOtherBreakdown": [
-        { "label": "Regulatory filing fee", "cents": 10500000 },
-        { "label": "401(k) plan matching contribution", "cents": 100000 },
-        { "label": "Life insurance", "cents": 72000 }
+        {
+          "label": "Regulatory filing fee",
+          "cents": 10500000
+        },
+        {
+          "label": "401(k) plan matching contribution",
+          "cents": 100000
+        },
+        {
+          "label": "Life insurance",
+          "cents": 72000
+        }
       ],
       "footnotes": [
         "Stock Awards reflect grant-date fair value under ASC Topic 718. Per the proxy, the maximum-performance value of FY25 PSU grants would be $72,157,209.",
@@ -60,7 +87,7 @@
       "allOtherCompCents": 216200,
       "totalCents": 2033831800,
       "footnotes": [
-        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay."
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 \u2014 an accounting figure, not realized pay."
       ],
       "source": {
         "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
@@ -82,7 +109,7 @@
       "allOtherCompCents": 3202300,
       "totalCents": 1709237000,
       "footnotes": [
-        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay."
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 \u2014 an accounting figure, not realized pay."
       ],
       "source": {
         "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",

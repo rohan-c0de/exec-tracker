@@ -21,7 +21,29 @@
       "formType": "DEF 14A",
       "filedDate": "2025-11-21",
       "periodOfReport": "2025-07-31"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "Direct",
+        "shares": 325342
+      },
+      {
+        "label": "Jagtar S Chaudhry TTEE The RSJ Trust",
+        "shares": 2177994
+      },
+      {
+        "label": "Jyoti Chaudhry TTEE The RSP Trust",
+        "shares": 24341267
+      },
+      {
+        "label": "P. Jyoti Chaudhry Family Trust",
+        "shares": 6666
+      },
+      {
+        "label": "RSU awards vesting within 60 days",
+        "shares": 6339
+      }
+    ]
   },
   "secCik": "0001374436",
   "compRecords": [

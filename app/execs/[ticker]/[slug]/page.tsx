@@ -4,6 +4,7 @@ import { Avatar } from "@/components/Avatar";
 import { BadgeRow } from "@/components/Badge";
 import { InsiderTransactions } from "@/components/InsiderTransactions";
 import { OwnershipBadge } from "@/components/OwnershipBadge";
+import { OwnershipBreakdown } from "@/components/OwnershipBreakdown";
 import { PerksBreakdown } from "@/components/PerksBreakdown";
 import { execBadges, recordBadges } from "@/lib/badges";
 import { loadCompany, loadExec, loadInsiderTransactions } from "@/lib/data";
@@ -88,6 +89,13 @@ export default async function ExecPage({ params }: { params: Promise<RouteParams
         <p className="mt-8 max-w-2xl text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
           {exec.bio}
         </p>
+      ) : null}
+
+      {exec.beneficialOwnership?.breakdown ? (
+        <OwnershipBreakdown
+          ownership={exec.beneficialOwnership}
+          asOfDate={exec.beneficialOwnership.asOfDate}
+        />
       ) : null}
 
       <section className="mt-16">

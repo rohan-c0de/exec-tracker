@@ -5,7 +5,7 @@
   "role": "Chief Executive Officer",
   "photoPath": "/execs/panw/nikesh-arora.jpg",
   "photoCredit": "Wikimedia Commons / Steve Jennings, TechCrunch (CC BY 2.0)",
-  "bio": "Nikesh Arora has served as CEO and Chairman of Palo Alto Networks since June 2018. His compensation is overwhelmingly equity, dominated by multi-year PSUs whose grant-date fair value is recognized in the SCT only when each year's performance metrics are set — which inflates the reported figure in years following the legal grant. FY23 reflects a $145M stock-awards line driven by this PSU recognition pattern, and his All Other Compensation includes a Board-approved security program (personal security, private aircraft, Company-leased automobile) plus associated tax gross-ups.",
+  "bio": "Nikesh Arora has served as CEO and Chairman of Palo Alto Networks since June 2018. His compensation is overwhelmingly equity, dominated by multi-year PSUs whose grant-date fair value is recognized in the SCT only when each year's performance metrics are set \u2014 which inflates the reported figure in years following the legal grant. FY23 reflects a $145M stock-awards line driven by this PSU recognition pattern, and his All Other Compensation includes a Board-approved security program (personal security, private aircraft, Company-leased automobile) plus associated tax gross-ups.",
   "beneficialOwnership": {
     "sharesOwned": 3065694,
     "percentageOwned": null,
@@ -16,13 +16,39 @@
       "formType": "DEF 14A",
       "filedDate": "2025-11-07",
       "periodOfReport": "2025-07-31"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "Direct",
+        "shares": 275013
+      },
+      {
+        "label": "Bacchey Investments L.P. (held via LLC)",
+        "shares": 32010
+      },
+      {
+        "label": "Nikesh Arora 2025 Annuity Trust",
+        "shares": 726542
+      },
+      {
+        "label": "PSUs vesting within 60 days",
+        "shares": 1185721
+      },
+      {
+        "label": "PSOs exercisable within 60 days",
+        "shares": 846408
+      }
+    ]
   },
   "compRecords": [
     {
       "fiscalYear": 2025,
       "fiscalYearEnd": "2025-07-31",
-      "badges": [{ "kind": "psu-re-recognition" }],
+      "badges": [
+        {
+          "kind": "psu-re-recognition"
+        }
+      ],
       "salaryCents": 100000000,
       "bonusCents": 0,
       "stockAwardsCents": 9485783800,
@@ -33,16 +59,31 @@
       "totalCents": 9973633600,
       "compActuallyPaidCents": 26747429000,
       "allOtherBreakdown": [
-        { "label": "Personal security", "cents": 140240400 },
-        { "label": "Personal use of private aircraft", "cents": 87027500 },
-        { "label": "Tax gross-ups (security travel & auto)", "cents": 31580100 },
-        { "label": "Personal use of Company-leased automobile", "cents": 8929800 },
-        { "label": "Life insurance", "cents": 72000 }
+        {
+          "label": "Personal security",
+          "cents": 140240400
+        },
+        {
+          "label": "Personal use of private aircraft",
+          "cents": 87027500
+        },
+        {
+          "label": "Tax gross-ups (security travel & auto)",
+          "cents": 31580100
+        },
+        {
+          "label": "Personal use of Company-leased automobile",
+          "cents": 8929800
+        },
+        {
+          "label": "Life insurance",
+          "cents": 72000
+        }
       ],
       "footnotes": [
-        "Stock Awards reflect grant-date fair value of RSUs and PSUs under ASC Topic 718 — an accounting figure, not realized pay. Per the proxy, the maximum-performance value of FY25 PSU grants would be $268,674,816. The reported amount includes one-third of the PSUs legally granted in each of FY23, FY24, and FY25 (PSU performance metrics for those tranches were set in FY25).",
+        "Stock Awards reflect grant-date fair value of RSUs and PSUs under ASC Topic 718 \u2014 an accounting figure, not realized pay. Per the proxy, the maximum-performance value of FY25 PSU grants would be $268,674,816. The reported amount includes one-third of the PSUs legally granted in each of FY23, FY24, and FY25 (PSU performance metrics for those tranches were set in FY25).",
         "Non-Equity Incentive reflects the cash bonus paid under the executive cash incentive plan for FY25 performance.",
-        "All Other Compensation of $2,678,498 includes ~$1,402,404 personal security, ~$870,276 personal use of private aircraft, ~$89,298 personal use of a Company-leased automobile, and $315,801 in associated tax gross-ups, plus $720 life insurance — all tied to a Board-approved security program for Mr. Arora."
+        "All Other Compensation of $2,678,498 includes ~$1,402,404 personal security, ~$870,276 personal use of private aircraft, ~$89,298 personal use of a Company-leased automobile, and $315,801 in associated tax gross-ups, plus $720 life insurance \u2014 all tied to a Board-approved security program for Mr. Arora."
       ],
       "source": {
         "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
@@ -55,7 +96,11 @@
     {
       "fiscalYear": 2024,
       "fiscalYearEnd": "2024-07-31",
-      "badges": [{ "kind": "psu-re-recognition" }],
+      "badges": [
+        {
+          "kind": "psu-re-recognition"
+        }
+      ],
       "salaryCents": 100000000,
       "bonusCents": 0,
       "stockAwardsCents": 5415035300,
@@ -66,7 +111,7 @@
       "totalCents": 5803687500,
       "compActuallyPaidCents": 10527581100,
       "footnotes": [
-        "Stock Awards reflect grant-date fair value under ASC Topic 718. Per the proxy footnote, the FY24 figure includes ~16% of the PSUs legally granted in FY22, one-third of FY23 PSUs, and one-third of FY24 PSUs — because performance metrics for those tranches were set in FY24."
+        "Stock Awards reflect grant-date fair value under ASC Topic 718. Per the proxy footnote, the FY24 figure includes ~16% of the PSUs legally granted in FY22, one-third of FY23 PSUs, and one-third of FY24 PSUs \u2014 because performance metrics for those tranches were set in FY24."
       ],
       "source": {
         "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
@@ -82,9 +127,11 @@
       "badges": [
         {
           "kind": "salary-foregone",
-          "detail": "Mr. Arora foregone salary Nov 2021–Oct 2022, reducing FY23 reported salary from $1M to $750K."
+          "detail": "Mr. Arora foregone salary Nov 2021\u2013Oct 2022, reducing FY23 reported salary from $1M to $750K."
         },
-        { "kind": "psu-re-recognition" }
+        {
+          "kind": "psu-re-recognition"
+        }
       ],
       "salaryCents": 75000000,
       "bonusCents": 0,
@@ -97,7 +144,7 @@
       "compActuallyPaidCents": 26636875500,
       "footnotes": [
         "Salary of $750,000 (vs. $1,000,000 in FY24/FY25) reflects Mr. Arora's election to forego salary from November 1, 2021 to October 31, 2022, which spans most of fiscal 2022 and the first three months of fiscal 2023.",
-        "Stock Awards of $145.4M reflect grant-date fair value under ASC Topic 718 and include ~42% of PSUs legally granted in FY22, one-third of PSUs legally granted in August 2022, and all PSUs legally granted to Mr. Arora in June 2023 — because the performance metrics for those tranches were set in FY23. This is an accounting figure, not realized pay."
+        "Stock Awards of $145.4M reflect grant-date fair value under ASC Topic 718 and include ~42% of PSUs legally granted in FY22, one-third of PSUs legally granted in August 2022, and all PSUs legally granted to Mr. Arora in June 2023 \u2014 because the performance metrics for those tranches were set in FY23. This is an accounting figure, not realized pay."
       ],
       "source": {
         "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",

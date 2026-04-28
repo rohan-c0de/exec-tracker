@@ -21,13 +21,35 @@ export const PerkItemSchema = z.object({
   cents: Cents,
 });
 
-export const BeneficialOwnershipSchema = z.object({
-  sharesOwned: z.number().nonnegative(),
-  // null means "less than 1%" (proxy convention "*" — the underlying number isn't disclosed)
-  percentageOwned: z.number().nonnegative().nullable(),
-  asOfDate: IsoDate,
-  source: SourceSchema,
+export const OwnershipLineItemSchema = z.object({
+  // Mirrors the proxy footnote's wording (e.g. "Direct", "Annuity Trust",
+  // "RSUs vesting within 60 days", "Options exercisable within 60 days").
+  label: z.string().min(1),
+  shares: z.number().int().nonnegative(),
 });
+
+export const BeneficialOwnershipSchema = z
+  .object({
+    sharesOwned: z.number().nonnegative(),
+    // null means "less than 1%" (proxy convention "*" — the underlying number isn't disclosed)
+    percentageOwned: z.number().nonnegative().nullable(),
+    asOfDate: IsoDate,
+    source: SourceSchema,
+    // Optional. When present, sum of breakdown.shares MUST equal sharesOwned.
+    // Used when the proxy's beneficial-ownership footnote splits the holding
+    // across multiple tracks (direct / trust / LLC / vesting RSUs /
+    // exercisable options) — otherwise the aggregate is misleading.
+    breakdown: z.array(OwnershipLineItemSchema).optional(),
+  })
+  .refine(
+    (b) =>
+      b.breakdown === undefined ||
+      b.breakdown.reduce((s, i) => s + i.shares, 0) === b.sharesOwned,
+    {
+      message: "breakdown items must sum exactly to sharesOwned",
+      path: ["breakdown"],
+    },
+  );
 
 export const BadgeKindSchema = z.enum([
   "founder",
@@ -138,6 +160,7 @@ export const InsiderTransactionsFileSchema = z.object({
 export type Source = z.infer<typeof SourceSchema>;
 export type PerkItem = z.infer<typeof PerkItemSchema>;
 export type BeneficialOwnership = z.infer<typeof BeneficialOwnershipSchema>;
+export type OwnershipLineItem = z.infer<typeof OwnershipLineItemSchema>;
 export type BadgeKind = z.infer<typeof BadgeKindSchema>;
 export type Badge = z.infer<typeof BadgeSchema>;
 export type CompRecord = z.infer<typeof CompRecordSchema>;
