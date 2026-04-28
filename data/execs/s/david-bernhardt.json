@@ -95,5 +95,33 @@
         "periodOfReport": "2025-01-31"
       }
     }
+  ],
+  "severanceScenarios": [
+    {
+      "trigger": "without-cause",
+      "asOfDate": "2025-01-31",
+      "components": [
+        {
+          "label": "Cash severance payment",
+          "cents": 53043000
+        },
+        {
+          "label": "Continued medical benefits",
+          "cents": 1869900
+        },
+        {
+          "label": "Accelerated equity awards",
+          "cents": 374564600
+        }
+      ],
+      "totalCents": 429477500,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    }
   ]
 }

@@ -92,5 +92,55 @@
         "periodOfReport": "2025-01-31"
       }
     }
+  ],
+  "severanceScenarios": [
+    {
+      "trigger": "without-cause",
+      "asOfDate": "2025-01-31",
+      "components": [
+        {
+          "label": "Cash severance payment",
+          "cents": 21250000
+        },
+        {
+          "label": "Continued medical benefits",
+          "cents": 1659900
+        }
+      ],
+      "totalCents": 22909900,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "trigger": "cic-with-termination",
+      "asOfDate": "2025-01-31",
+      "components": [
+        {
+          "label": "Cash severance payment",
+          "cents": 68000000
+        },
+        {
+          "label": "Continued medical benefits",
+          "cents": 3319700
+        },
+        {
+          "label": "Accelerated equity awards",
+          "cents": 639141700
+        }
+      ],
+      "totalCents": 710461400,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    }
   ]
 }

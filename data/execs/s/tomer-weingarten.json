@@ -22,23 +22,23 @@
     },
     "breakdown": [
       {
-        "label": "Class A common \u2014 direct",
+        "label": "Class A common — direct",
         "shares": 83991
       },
       {
-        "label": "Class A common \u2014 RSUs vesting within 60 days",
+        "label": "Class A common — RSUs vesting within 60 days",
         "shares": 95752
       },
       {
-        "label": "Class B common \u2014 direct",
+        "label": "Class B common — direct",
         "shares": 4251402
       },
       {
-        "label": "Class B common \u2014 held by trust",
+        "label": "Class B common — held by trust",
         "shares": 423629
       },
       {
-        "label": "Class B common \u2014 options exercisable within 60 days",
+        "label": "Class B common — options exercisable within 60 days",
         "shares": 2624342
       }
     ]
@@ -66,7 +66,7 @@
         }
       ],
       "footnotes": [
-        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 \u2014 an accounting figure, not realized pay. Assuming maximum performance, the FY2025 PSU grant would have a grant-date fair value of $2,171,337.",
+        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay. Assuming maximum performance, the FY2025 PSU grant would have a grant-date fair value of $2,171,337.",
         "Non-Equity Incentive reflects cash incentive paid under the FY2025 annual cash incentive plan based on achievement of predetermined performance goals.",
         "All Other Compensation consists of $742,420 for personal security services at residences and during personal travel (a Board-approved program in response to heightened risks tied to Middle East conflicts), plus $4,200 in cell phone and internet perquisite over the standard employee benefit."
       ],
@@ -114,6 +114,60 @@
       "footnotes": [
         "Bonus reflects a discretionary bonus earned in fiscal 2023 pursuant to Mr. Weingarten's offer letter; FY2024 onward shifted to a formal cash incentive plan reported under Non-Equity Incentive."
       ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    }
+  ],
+  "severanceScenarios": [
+    {
+      "trigger": "without-cause",
+      "asOfDate": "2025-01-31",
+      "components": [
+        {
+          "label": "Cash severance payment",
+          "cents": 70000000
+        },
+        {
+          "label": "Continued medical benefits",
+          "cents": 3133300
+        },
+        {
+          "label": "Accelerated equity awards",
+          "cents": 1304645100
+        }
+      ],
+      "totalCents": 1377778400,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "trigger": "cic-with-termination",
+      "asOfDate": "2025-01-31",
+      "components": [
+        {
+          "label": "Cash severance payment",
+          "cents": 192500000
+        },
+        {
+          "label": "Continued medical benefits",
+          "cents": 4699900
+        },
+        {
+          "label": "Accelerated equity awards",
+          "cents": 4018409600
+        }
+      ],
+      "totalCents": 4215609500,
       "source": {
         "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
         "accessionNumber": "0001583708-25-000095",
