@@ -137,11 +137,24 @@ export const SeveranceScenarioSchema = z
     components: z.array(SeveranceComponentSchema).min(1),
     totalCents: z.number().int().nonnegative(),
     source: SourceSchema,
+    // Optional. Records proxy-side typos / footnote arithmetic errors where
+    // the disclosed components don't sum to the stated total (e.g. Zscaler
+    // FY2025 Rubin CIC: components sum to $10.35M but proxy states $7.25M).
+    // When present, the components-sum-equals-total refine is relaxed, and
+    // we keep the proxy's stated total per the never-fabricate invariant.
+    // Same shape as BeneficialOwnershipSchema.discrepancyNote.
+    discrepancyNote: z.string().min(1).optional(),
   })
-  .refine((s) => s.components.reduce((a, c) => a + c.cents, 0) === s.totalCents, {
-    message: "components must sum exactly to totalCents",
-    path: ["components"],
-  });
+  .refine(
+    (s) =>
+      s.discrepancyNote !== undefined ||
+      s.components.reduce((a, c) => a + c.cents, 0) === s.totalCents,
+    {
+      message:
+        "components must sum exactly to totalCents (or set discrepancyNote to record a proxy-side mismatch)",
+      path: ["components"],
+    },
+  );
 
 export const ExecSchema = z.object({
   ticker: Ticker,

@@ -123,5 +123,73 @@
         "periodOfReport": "2025-07-31"
       }
     }
+  ],
+  "severanceScenarios": [
+    {
+      "trigger": "without-cause",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Salary severance",
+          "cents": 1183000
+        },
+        {
+          "label": "Accelerated RSUs",
+          "cents": 181016500
+        }
+      ],
+      "totalCents": 182199500,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "trigger": "cic-with-termination",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Salary severance",
+          "cents": 2300000
+        },
+        {
+          "label": "Accelerated RSUs (and PSUs at target)",
+          "cents": 12490822700
+        },
+        {
+          "label": "Health benefit severance",
+          "cents": 3600000
+        }
+      ],
+      "totalCents": 12496722700,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "trigger": "cic-without-termination",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Performance-based RSU acceleration (at target)",
+          "cents": 11585654700
+        }
+      ],
+      "totalCents": 11585654700,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    }
   ]
 }

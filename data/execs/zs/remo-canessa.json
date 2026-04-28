@@ -85,5 +85,77 @@
         "periodOfReport": "2025-07-31"
       }
     }
+  ],
+  "severanceScenarios": [
+    {
+      "trigger": "without-cause",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Salary severance",
+          "cents": 23500000
+        },
+        {
+          "label": "Accelerated RSUs",
+          "cents": 129101700
+        }
+      ],
+      "totalCents": 152601700,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "trigger": "cic-with-termination",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Salary severance",
+          "cents": 47000000
+        },
+        {
+          "label": "Bonus severance",
+          "cents": 70288400
+        },
+        {
+          "label": "Accelerated RSUs (and PSUs at target)",
+          "cents": 1979958800
+        },
+        {
+          "label": "Health benefit severance",
+          "cents": 3600000
+        }
+      ],
+      "totalCents": 2100847200,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "trigger": "cic-without-termination",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Performance-based RSU acceleration (at target)",
+          "cents": 904939600
+        }
+      ],
+      "totalCents": 904939600,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    }
   ]
 }
