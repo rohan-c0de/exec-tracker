@@ -223,15 +223,46 @@ export function aggregateByFilingAndCode(txns: InsiderTransaction[]): FilingGrou
   return out.sort((a, b) => b.transactionDate.localeCompare(a.transactionDate));
 }
 
+export type Holding = {
+  shares: number;
+  asOf: string; // ISO date of the latest Form 4 on this ownership track
+};
+
+export type CurrentHoldings = {
+  direct: Holding | null;
+  indirect: Holding | null;
+  total: number;
+};
+
 /**
- * Most-recent post-transaction share count across all transactions, regardless
- * of ownership nature. Approximates "current shares held" — actual current
- * holding requires fresher data than the most recent Form 4.
+ * Form 4 reports each transaction against a single ownership track —
+ * "D" (direct, in the insider's own name) or "I" (indirect, e.g. held by
+ * a family trust or LLC). `postTransactionShares` is specific to that
+ * track. Taking only the most-recent transaction (regardless of nature)
+ * silently drops every other track's holdings — for execs with both, this
+ * under-states by orders of magnitude (e.g. Lee Klarich at PANW renders
+ * 640,070 from his latest indirect filing while his direct stake of
+ * ~420K shares is invisible).
+ *
+ * This function returns the latest balance on each track separately, plus
+ * their sum. Note: even the sum can under-state proxy beneficial ownership
+ * because vesting PSUs and options exercisable within 60 days don't appear
+ * on Form 4.
  */
-export function currentSharesHeld(txns: InsiderTransaction[]): number {
-  if (txns.length === 0) return 0;
-  const latest = txns.reduce((acc, t) =>
-    t.transactionDate > acc.transactionDate ? t : acc,
-  );
-  return latest.postTransactionShares;
+export function currentHoldings(txns: InsiderTransaction[]): CurrentHoldings {
+  const latestOnTrack = (nature: "D" | "I"): Holding | null => {
+    const filtered = txns.filter((t) => t.ownershipNature === nature);
+    if (filtered.length === 0) return null;
+    const latest = filtered.reduce((acc, t) =>
+      t.transactionDate > acc.transactionDate ? t : acc,
+    );
+    return { shares: latest.postTransactionShares, asOf: latest.transactionDate };
+  };
+  const direct = latestOnTrack("D");
+  const indirect = latestOnTrack("I");
+  return {
+    direct,
+    indirect,
+    total: (direct?.shares ?? 0) + (indirect?.shares ?? 0),
+  };
 }
