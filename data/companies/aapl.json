@@ -13,5 +13,102 @@
     "kate-adams",
     "sabih-khan",
     "luca-maestri"
+  ],
+  "pvpRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-09-27",
+      "peoSlug": "tim-cook",
+      "peoSctTotalCents": 7429481100,
+      "peoCapCents": 10842373300,
+      "averageNonPeoSctTotalCents": 2381235800,
+      "averageNonPeoCapCents": 3412574300,
+      "tsrIndexed": 233.88,
+      "peerTsrIndexed": 279.51,
+      "netIncomeMillions": 112010,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-09-28",
+      "peoSlug": "tim-cook",
+      "peoSctTotalCents": 7460980200,
+      "peoCapCents": 16898056800,
+      "averageNonPeoSctTotalCents": 2717889600,
+      "averageNonPeoCapCents": 5863352500,
+      "tsrIndexed": 207.59,
+      "peerTsrIndexed": 206.32,
+      "netIncomeMillions": 93736,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-09-30",
+      "peoSlug": "tim-cook",
+      "peoSctTotalCents": 6320984500,
+      "peoCapCents": 10664358800,
+      "averageNonPeoSctTotalCents": 2694395600,
+      "averageNonPeoCapCents": 4198066400,
+      "tsrIndexed": 155.24,
+      "peerTsrIndexed": 132.03,
+      "netIncomeMillions": 96955,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    },
+    {
+      "fiscalYear": 2022,
+      "fiscalYearEnd": "2022-09-24",
+      "peoSlug": "tim-cook",
+      "peoSctTotalCents": 9942009700,
+      "peoCapCents": 12883302100,
+      "averageNonPeoSctTotalCents": 2715029300,
+      "averageNonPeoCapCents": 4156494600,
+      "tsrIndexed": 135.59,
+      "peerTsrIndexed": 92.83,
+      "netIncomeMillions": 99803,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    },
+    {
+      "fiscalYear": 2021,
+      "fiscalYearEnd": "2021-09-25",
+      "peoSlug": "tim-cook",
+      "peoSctTotalCents": 9873439400,
+      "peoCapCents": 31184580100,
+      "averageNonPeoSctTotalCents": 2698763100,
+      "averageNonPeoCapCents": 7530792200,
+      "tsrIndexed": 131.69,
+      "peerTsrIndexed": 136.94,
+      "netIncomeMillions": 94680,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    }
   ]
 }

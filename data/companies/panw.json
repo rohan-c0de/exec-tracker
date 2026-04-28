@@ -12,5 +12,102 @@
     "bj-jenkins",
     "lee-klarich",
     "nir-zuk"
+  ],
+  "pvpRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-07-31",
+      "peoSlug": "nikesh-arora",
+      "peoSctTotalCents": 9973633600,
+      "peoCapCents": 26747429000,
+      "averageNonPeoSctTotalCents": 2354148000,
+      "averageNonPeoCapCents": 6168528600,
+      "tsrIndexed": 407,
+      "peerTsrIndexed": 280.58,
+      "netIncomeMillions": 1133.9,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-07-31",
+      "peoSlug": "nikesh-arora",
+      "peoSctTotalCents": 5803687500,
+      "peoCapCents": 10527581100,
+      "averageNonPeoSctTotalCents": 1632379200,
+      "averageNonPeoCapCents": 1448590700,
+      "tsrIndexed": 380.66,
+      "peerTsrIndexed": 226.91,
+      "netIncomeMillions": 2577.6,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-07-31",
+      "peoSlug": "nikesh-arora",
+      "peoSctTotalCents": 15142520300,
+      "peoCapCents": 26636875500,
+      "averageNonPeoSctTotalCents": 1214591400,
+      "averageNonPeoCapCents": 3176869600,
+      "tsrIndexed": 293.01,
+      "peerTsrIndexed": 167.84,
+      "netIncomeMillions": 439.7,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2022,
+      "fiscalYearEnd": "2022-07-31",
+      "peoSlug": "nikesh-arora",
+      "peoSctTotalCents": 1041047700,
+      "peoCapCents": 20851483100,
+      "averageNonPeoSctTotalCents": 805818600,
+      "averageNonPeoCapCents": 5680528500,
+      "tsrIndexed": 195.02,
+      "peerTsrIndexed": 132.31,
+      "netIncomeMillions": -267,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2021,
+      "fiscalYearEnd": "2021-07-31",
+      "peoSlug": "nikesh-arora",
+      "peoSctTotalCents": 2328385800,
+      "peoCapCents": 21973197000,
+      "averageNonPeoSctTotalCents": 1027916300,
+      "averageNonPeoCapCents": 5481115900,
+      "tsrIndexed": 155.93,
+      "peerTsrIndexed": 140.03,
+      "netIncomeMillions": -498.9,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    }
   ]
 }

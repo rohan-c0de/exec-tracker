@@ -73,6 +73,21 @@ export default async function Home() {
       </section>
 
       <section className="mt-24">
+        <SectionHeading eyebrow="Pay vs. Performance" title="Did the pay actually track the stock?" />
+        <p className="mt-4 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
+          A scatter plot of <em>Compensation Actually Paid</em> against single-year shareholder
+          return for every covered CEO since FY2021 — the SEC&apos;s honest answer to whether each
+          CEO got paid in line with what shareholders earned.
+        </p>
+        <Link
+          href="/pvp"
+          className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 hover:decoration-zinc-900 dark:text-zinc-100 dark:decoration-zinc-700 dark:hover:decoration-zinc-100"
+        >
+          See the chart →
+        </Link>
+      </section>
+
+      <section className="mt-24">
         <SectionHeading
           eyebrow="Companies"
           title={`${companies.length} ${companies.length === 1 ? "company" : "companies"} tracked`}

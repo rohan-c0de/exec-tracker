@@ -11,5 +11,102 @@
     "michael-sentonas",
     "burt-podbere",
     "shawn-henry"
+  ],
+  "pvpRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-01-31",
+      "peoSlug": "george-kurtz",
+      "peoSctTotalCents": 3519530000,
+      "peoCapCents": 14850480600,
+      "averageNonPeoSctTotalCents": 1341397600,
+      "averageNonPeoCapCents": 3757224000,
+      "tsrIndexed": 651.61,
+      "peerTsrIndexed": 279.92,
+      "netIncomeMillions": -16.596,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-01-31",
+      "peoSlug": "george-kurtz",
+      "peoSctTotalCents": 4698385500,
+      "peoCapCents": 34368977500,
+      "averageNonPeoSctTotalCents": 2310941700,
+      "averageNonPeoCapCents": 7524525400,
+      "tsrIndexed": 478.8,
+      "peerTsrIndexed": 219.37,
+      "netIncomeMillions": 90.585,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-01-31",
+      "peoSlug": "george-kurtz",
+      "peoSctTotalCents": 3653268100,
+      "peoCapCents": -11165303600,
+      "averageNonPeoSctTotalCents": 1781435300,
+      "averageNonPeoCapCents": -249664300,
+      "tsrIndexed": 173.35,
+      "peerTsrIndexed": 146.16,
+      "netIncomeMillions": -182.285,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2022,
+      "fiscalYearEnd": "2022-01-31",
+      "peoSlug": "george-kurtz",
+      "peoSctTotalCents": 14769574600,
+      "peoCapCents": 3492019300,
+      "averageNonPeoSctTotalCents": 1495888000,
+      "averageNonPeoCapCents": 101257300,
+      "tsrIndexed": 295.69,
+      "peerTsrIndexed": 173.37,
+      "netIncomeMillions": -232.378,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2021,
+      "fiscalYearEnd": "2021-01-31",
+      "peoSlug": "george-kurtz",
+      "peoSctTotalCents": 2051801100,
+      "peoCapCents": 49414620800,
+      "averageNonPeoSctTotalCents": 1293857400,
+      "averageNonPeoCapCents": 5733691300,
+      "tsrIndexed": 353.25,
+      "peerTsrIndexed": 137.13,
+      "netIncomeMillions": -92.629,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    }
   ]
 }

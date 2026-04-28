@@ -13,5 +13,83 @@
     "keenan-conder",
     "vats-srivatsan",
     "david-bernhardt"
+  ],
+  "pvpRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-01-31",
+      "peoSlug": "tomer-weingarten",
+      "peoSctTotalCents": 1896546600,
+      "peoCapCents": -725484200,
+      "averageNonPeoSctTotalCents": 804608200,
+      "averageNonPeoCapCents": 164656600,
+      "tsrIndexed": 56.35,
+      "peerTsrIndexed": 172.45,
+      "netIncomeMillions": -288.4,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-01-31",
+      "peoSlug": "tomer-weingarten",
+      "peoSctTotalCents": 1654408800,
+      "peoCapCents": 8323790600,
+      "averageNonPeoSctTotalCents": 760074400,
+      "averageNonPeoCapCents": 2159421900,
+      "tsrIndexed": 63.06,
+      "peerTsrIndexed": 139.33,
+      "netIncomeMillions": -338.7,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-01-31",
+      "peoSlug": "tomer-weingarten",
+      "peoSctTotalCents": 1352236200,
+      "peoCapCents": -18313342600,
+      "averageNonPeoSctTotalCents": 874675000,
+      "averageNonPeoCapCents": -1138173900,
+      "tsrIndexed": 35.51,
+      "peerTsrIndexed": 92.83,
+      "netIncomeMillions": -378.7,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2022,
+      "fiscalYearEnd": "2022-01-31",
+      "peoSlug": "tomer-weingarten",
+      "peoSctTotalCents": 9539553400,
+      "peoCapCents": 35212625400,
+      "averageNonPeoSctTotalCents": 932432100,
+      "averageNonPeoCapCents": 1706476700,
+      "tsrIndexed": 105.29,
+      "peerTsrIndexed": 110.11,
+      "netIncomeMillions": -271.1,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    }
   ]
 }
