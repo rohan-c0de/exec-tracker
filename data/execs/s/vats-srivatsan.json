@@ -4,7 +4,12 @@
   "name": "Narayanan \"Vats\" Srivatsan",
   "role": "Former Chief Operating Officer",
   "bio": "Vats Srivatsan joined SentinelOne on April 4, 2022 as Chief Operating Officer. On March 19, 2024 he transitioned to Chief Business Officer (no longer an executive officer). He remained CBO until January 6, 2025, after which he served as a consultant. The outsized FY2023 stock awards reflect his initial joining grant, with RSUs vesting over a two-year period.",
-  "badges": [{ "kind": "former-officer" }],
+  "badges": [
+    {
+      "kind": "former-officer"
+    }
+  ],
+  "secCik": "0001922406",
   "compRecords": [
     {
       "fiscalYear": 2025,
@@ -17,7 +22,12 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 24619900,
       "totalCents": 473054500,
-      "badges": [{ "kind": "partial-year", "detail": "Transitioned from COO March 2024; left employment January 2025" }],
+      "badges": [
+        {
+          "kind": "partial-year",
+          "detail": "Transitioned from COO March 2024; left employment January 2025"
+        }
+      ],
       "footnotes": [
         "All Other Compensation for FY2025 includes $22,222 for housing expenses.",
         "Mr. Srivatsan transitioned from his Chief Operating Officer role on March 19, 2024 and was no longer an executive officer of the Company. He remained Chief Business Officer until January 6, 2025, after which he served as a consultant."
@@ -61,10 +71,15 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 362500,
       "totalCents": 1495934100,
-      "badges": [{ "kind": "partial-year", "detail": "Joined April 2022" }],
+      "badges": [
+        {
+          "kind": "partial-year",
+          "detail": "Joined April 2022"
+        }
+      ],
       "footnotes": [
         "Mr. Srivatsan joined the Company on April 4, 2022; salary and bonus reflect a partial fiscal year.",
-        "Stock Awards reflect the grant-date fair value of his joining RSU grant, vesting over a two-year period at 1/8 quarterly — outsized vs. peers because it covers two years' worth of equity in a single year's SCT line.",
+        "Stock Awards reflect the grant-date fair value of his joining RSU grant, vesting over a two-year period at 1/8 quarterly \u2014 outsized vs. peers because it covers two years' worth of equity in a single year's SCT line.",
         "Bonus reflects a discretionary bonus pursuant to Mr. Srivatsan's offer letter; FY2024 onward shifted to a formal cash incentive plan.",
         "Sum of disclosed components ($14,960,466) exceeds the proxy-stated total by $1,125. Recorded the proxy's stated total verbatim. The proxy does not explain the $1,125 difference; a corresponding $1,125 under-statement appears in Mr. Smith's FY2023 row, suggesting paired transcription errors in the proxy itself."
       ],

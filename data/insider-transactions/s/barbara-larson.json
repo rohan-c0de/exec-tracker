@@ -1,0 +1,128 @@
+{
+  "ticker": "S",
+  "slug": "barbara-larson",
+  "insiderCik": "0001904150",
+  "insiderNameAtSec": "Larson Barbara A",
+  "lastUpdated": "2026-04-28",
+  "transactions": [
+    {
+      "transactionDate": "2026-01-06",
+      "filedDate": "2026-01-08",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Class A Common Stock",
+      "isDerivative": false,
+      "shares": 11173,
+      "pricePerShareCents": 1482,
+      "postTransactionShares": 539372,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000190415026000002/xslF345X05/wk-form4_1767908070.xml",
+        "accessionNumber": "0001904150-26-000002",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-10-06",
+      "filedDate": "2025-10-07",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Class A Common Stock",
+      "isDerivative": false,
+      "shares": 54583,
+      "pricePerShareCents": 1813,
+      "postTransactionShares": 549498,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000190415025000004/xslF345X05/wk-form4_1759871904.xml",
+        "accessionNumber": "0001904150-25-000004",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-04-15",
+      "filedDate": "2025-04-17",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Class A Common Stock",
+      "isDerivative": false,
+      "shares": 129764,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 602987,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000075/xslF345X05/wk-form4_1744927687.xml",
+        "accessionNumber": "0001583708-25-000075",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-03-27",
+      "filedDate": "2025-03-28",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Class A Common Stock",
+      "isDerivative": false,
+      "shares": 10172,
+      "pricePerShareCents": 1977,
+      "postTransactionShares": 473223,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000062/xslF345X05/wk-form4_1743204051.xml",
+        "accessionNumber": "0001583708-25-000062",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-03-21",
+      "filedDate": "2025-03-25",
+      "code": "M",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Class A Common Stock",
+      "isDerivative": false,
+      "shares": 34907,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 483395,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000038/xslF345X05/wk-form4_1742947384.xml",
+        "accessionNumber": "0001583708-25-000038",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-03-21",
+      "filedDate": "2025-03-25",
+      "code": "M",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Performance Based Restricted Stock Units",
+      "isDerivative": true,
+      "shares": 34907,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 112121,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000038/xslF345X05/wk-form4_1742947384.xml",
+        "accessionNumber": "0001583708-25-000038",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2024-09-16",
+      "filedDate": "2024-09-17",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Class A Common Stock",
+      "isDerivative": false,
+      "shares": 448488,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 448488,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370824000096/xslF345X05/wk-form4_1726603705.xml",
+        "accessionNumber": "0001583708-24-000096",
+        "formType": "4"
+      }
+    }
+  ]
+}
