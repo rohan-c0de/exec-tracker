@@ -15,9 +15,15 @@ All scrapers in this directory hit SEC EDGAR or similar public sources. Getting 
 
 ## Raw filings cache
 
-- Download raw HTML/XML to `scripts/scrapers/_cache/{ticker}/{accession-number}.html` before parsing.
-- Cache serves as audit trail: "did the proxy actually say $X, or did we parse it wrong?" needs the original bytes.
-- `_cache/` MUST be in `.gitignore`. Raw filings are large and redownloadable.
+- Cache root: `scripts/scrapers/_cache/`. MUST be in `.gitignore` (it is).
+- Cache serves as audit trail: "did the proxy actually say $X, or did we parse it wrong?" needs the original bytes. So files must be readable by a grep-walk through `_cache/`.
+- Two sub-trees, by source of the file:
+  - **`scripts/scrapers/_cache/edgar/`** — written by `EdgarClient.fetchText`. URL-derived path scheme:
+    - `archives/{cikInt}/{accessionFlat}/{filename}` for `https://www.sec.gov/Archives/...` URLs (e.g. `archives/1583708/000158370825000095/s-20250514.htm`).
+    - `submissions/CIK{cik}.json` for the submissions API.
+    - Older year-buckets fetched via `filings.files[].name` go under `submissions/` too (e.g. `submissions/CIK0001535527-submissions-001.json`).
+    - `misc/{sha256-prefix}.{ext}` fallback for any URL not matching the above shapes.
+  - **`scripts/scrapers/_cache/{ticker}/`** — hand-curated proxy snapshots saved by the `add-company` workflow (e.g. `s/0001583708-25-000095.htm`). Useful when you want to find the proxy you transcribed without remembering its CIK.
 - Never delete a cached filing without also invalidating the derived JSON in `data/`.
 
 ## Parser output

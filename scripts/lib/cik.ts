@@ -10,7 +10,7 @@
  *     <rptOwnerCik>/<rptOwnerName> out of the Form 4 XML.
  */
 
-import { EdgarClient } from "./edgar";
+import { EdgarClient, type EdgarSubmissionsRecent } from "./edgar";
 
 type TickerEntry = { cik_str: number; ticker: string; title: string };
 type TickersIndex = Record<string, TickerEntry>;
@@ -32,17 +32,29 @@ export async function tickerToCik(
 }
 
 /**
- * Find an insider's CIK by walking the issuer's recent Form 4 filings, fetching
- * each Form 4 XML, and matching <rptOwnerName> to the target name.
+ * Find an insider's CIK by walking the issuer's Form 4 filings, fetching each
+ * Form 4 XML, and matching <rptOwnerName> to the target name.
  *
- * Form 4s are filed within 2 business days of any insider transaction, so an
- * active CEO has dozens per year. We scan up to {limit} most recent Form 4s.
+ * Walks `filings.recent` first (~1000 most recent submissions, all forms),
+ * then if no match is found and `limit` isn't reached, walks older
+ * year-buckets via `filings.files[]`. The `limit` is the cap on the number
+ * of Form 4 XMLs fetched across both phases — at S&P 500 scale, mega-cap
+ * issuers can fill `recent` with non-Form-4 filings before any match for a
+ * particular NEO surfaces, so the older-bucket fallback is required.
  *
- * Default 300 covers former officers (e.g. someone who stopped filing 1-2 years
- * ago, but whose proxy NEO entry is still relevant) without blowing past the
- * SEC submissions API's recent-window cap (~1000).
+ * Default `limit=300` is generous for active execs and reaches former
+ * officers who stopped filing 1-2 years ago. Mega-cap issuers may need a
+ * higher limit; raise it if the importer reports "could not find insider
+ * CIK" despite knowing the exec is real.
  *
- * Returns null if no match found in the most recent {limit} filings.
+ * Multi-match guard: if more than one distinct CIK matches the name within
+ * the scan window (real failure mode at S&P 500 scale — namesake collisions
+ * like a different "John Smith" filing for the same issuer), this function
+ * returns the FIRST match found and logs a loud warning listing all
+ * candidate CIKs. Caller should set `secCik` on the exec record to lock in
+ * the correct CIK if the warning fires.
+ *
+ * Returns null if no match found within the scan window.
  */
 export async function findInsiderCik(
   insiderName: string,
@@ -51,35 +63,71 @@ export async function findInsiderCik(
   limit: number = 300,
 ): Promise<{ cik: string; matchedName: string } | null> {
   const subs = await edgar.getSubmissions(issuerCik);
-  const recent = subs.filings.recent;
-
+  const matches = new Map<string, string>(); // CIK → SEC name
+  let firstMatch: { cik: string; matchedName: string } | null = null;
   let scanned = 0;
-  for (let i = 0; i < recent.form.length && scanned < limit; i++) {
-    if (recent.form[i] !== "4") continue;
-    scanned++;
-    const accession = recent.accessionNumber[i]!;
-    const primaryDoc = recent.primaryDocument[i]!;
-    // The submissions API gives us the styled XSL path; the raw XML is at the
-    // same name without the xslF*/ prefix.
-    const xmlDoc = primaryDoc.replace(/^xslF\d+X\d+\//, "");
-    const xmlUrl = edgar.filingUrl(issuerCik, accession, xmlDoc);
 
-    let xml: string;
-    try {
-      xml = await edgar.fetchText(xmlUrl);
-    } catch {
-      continue;
-    }
-
-    // Form 4 XML always has exactly one or more <reportingOwner> blocks.
-    const owners = parseReportingOwners(xml);
-    for (const owner of owners) {
-      if (namesMatch(owner.name, insiderName)) {
-        return { cik: owner.cik, matchedName: owner.name };
+  // Walk one filings bucket (recent or an older year-bucket).
+  const walkBucket = async (bucket: EdgarSubmissionsRecent): Promise<void> => {
+    for (let i = 0; i < bucket.form.length && scanned < limit; i++) {
+      if (bucket.form[i] !== "4") continue;
+      scanned++;
+      const accession = bucket.accessionNumber[i]!;
+      const primaryDoc = bucket.primaryDocument[i]!;
+      const xmlDoc = primaryDoc.replace(/^xslF\d+X\d+\//, "");
+      const xmlUrl = edgar.filingUrl(issuerCik, accession, xmlDoc);
+      let xml: string;
+      try {
+        xml = await edgar.fetchText(xmlUrl);
+      } catch {
+        continue;
+      }
+      const owners = parseReportingOwners(xml);
+      for (const owner of owners) {
+        if (namesMatch(owner.name, insiderName)) {
+          if (!matches.has(owner.cik)) {
+            matches.set(owner.cik, owner.name);
+            if (firstMatch === null) {
+              firstMatch = { cik: owner.cik, matchedName: owner.name };
+            }
+          }
+        }
       }
     }
+  };
+
+  await walkBucket(subs.filings.recent);
+
+  // If recent exhausted without a match, try older year-buckets newest-first.
+  if (firstMatch === null && scanned < limit) {
+    const olderFiles = subs.filings.files ?? [];
+    // Newest first: filings.files is typically ordered oldest→newest, so reverse.
+    const byNewest = [...olderFiles].sort((a, b) => b.filingTo.localeCompare(a.filingTo));
+    for (const file of byNewest) {
+      if (scanned >= limit) break;
+      const url = `https://data.sec.gov/submissions/${file.name}`;
+      let bucket: EdgarSubmissionsRecent;
+      try {
+        bucket = await edgar.fetchJson<EdgarSubmissionsRecent>(url);
+      } catch {
+        continue;
+      }
+      await walkBucket(bucket);
+      if (firstMatch !== null) break;
+    }
   }
-  return null;
+
+  if (matches.size > 1) {
+    const list = [...matches.entries()]
+      .map(([cik, name]) => `${name} (CIK ${cik})`)
+      .join(", ");
+    console.warn(
+      `\n⚠ findInsiderCik: ${matches.size} distinct CIKs matched "${insiderName}" within ${scanned} Form 4s of issuer ${issuerCik}: ${list}. ` +
+        `Returning the first match (${firstMatch!.cik}). If this is the wrong person, set "secCik" on the exec record to override.\n`,
+    );
+  }
+
+  return firstMatch;
 }
 
 type ReportingOwner = { cik: string; name: string };
