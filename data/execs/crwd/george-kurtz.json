@@ -6,7 +6,11 @@
   "photoPath": "/execs/crwd/george-kurtz.png",
   "photoCredit": "Wikimedia Commons / George Kurtz (CC BY-SA 4.0)",
   "bio": "George Kurtz co-founded CrowdStrike in 2011 and has served as CEO since inception. His compensation is dominated by equity, with cash salary held at $1M; FY24 included an outsized stock award figure tied to a multi-year PSU grant priced under a Monte-Carlo simulation. All Other Compensation includes Company-paid personal security and private aircraft usage tied to a Board-approved security program.",
-  "badges": [{ "kind": "founder" }],
+  "badges": [
+    {
+      "kind": "founder"
+    }
+  ],
   "beneficialOwnership": {
     "sharesOwned": 6321555,
     "percentageOwned": 2.53,
@@ -17,7 +21,29 @@
       "formType": "DEF 14A",
       "filedDate": "2025-05-06",
       "periodOfReport": "2025-01-31"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "Direct",
+        "shares": 1489183
+      },
+      {
+        "label": "Trusts with independent trustee",
+        "shares": 4245383
+      },
+      {
+        "label": "Kurtz Family Dynasty Trust (advisor)",
+        "shares": 100000
+      },
+      {
+        "label": "PSUs vesting within 60 days",
+        "shares": 135000
+      },
+      {
+        "label": "Options exercisable within 60 days",
+        "shares": 351989
+      }
+    ]
   },
   "compRecords": [
     {
@@ -33,12 +59,21 @@
       "totalCents": 3519530000,
       "compActuallyPaidCents": 14850480600,
       "allOtherBreakdown": [
-        { "label": "Personal use of private aircraft", "cents": 89842600 },
-        { "label": "Personal security at residences", "cents": 10427900 },
-        { "label": "Standard benefits & insurance", "cents": 1685000 }
+        {
+          "label": "Personal use of private aircraft",
+          "cents": 89842600
+        },
+        {
+          "label": "Personal security at residences",
+          "cents": 10427900
+        },
+        {
+          "label": "Standard benefits & insurance",
+          "cents": 1685000
+        }
       ],
       "footnotes": [
-        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay. Mr. Kurtz's multi-year PSU award is valued via Monte-Carlo simulation; the maximum-performance value of his FY25 PSU grants would be $31,850,681.",
+        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 \u2014 an accounting figure, not realized pay. Mr. Kurtz's multi-year PSU award is valued via Monte-Carlo simulation; the maximum-performance value of his FY25 PSU grants would be $31,850,681.",
         "Non-Equity Incentive reflects the cash bonus paid under the Corporate Incentive Plan (CIP) for fiscal 2025 performance.",
         "All Other Compensation includes ~$104,279 for personal security at residences and ~$898,426 for personal use of private aircraft, plus standard supplementary benefits (life/disability insurance, executive health, 401(k) match). These costs are tied to a Board-approved security program for Mr. Kurtz."
       ],
@@ -63,7 +98,7 @@
       "totalCents": 4698385500,
       "compActuallyPaidCents": 34368977500,
       "footnotes": [
-        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay."
+        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 \u2014 an accounting figure, not realized pay."
       ],
       "source": {
         "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
@@ -86,7 +121,7 @@
       "totalCents": 3653268100,
       "compActuallyPaidCents": -11165303600,
       "footnotes": [
-        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay."
+        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 \u2014 an accounting figure, not realized pay."
       ],
       "source": {
         "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
