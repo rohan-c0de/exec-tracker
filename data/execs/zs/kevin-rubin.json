@@ -50,5 +50,78 @@
         "periodOfReport": "2025-07-31"
       }
     }
+  ],
+  "severanceScenarios": [
+    {
+      "trigger": "without-cause",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Salary severance",
+          "cents": 23500000
+        },
+        {
+          "label": "Accelerated RSUs",
+          "cents": 183415200
+        }
+      ],
+      "totalCents": 206915200,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "trigger": "cic-with-termination",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Salary severance",
+          "cents": 47000000
+        },
+        {
+          "label": "Bonus severance",
+          "cents": 55926700
+        },
+        {
+          "label": "Accelerated RSUs (and PSUs at target)",
+          "cents": 928012900
+        },
+        {
+          "label": "Health benefit severance",
+          "cents": 3600000
+        }
+      ],
+      "totalCents": 725192400,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      },
+      "discrepancyNote": "Proxy-disclosed components (salary $470,000 + bonus $559,267 + RSUs $9,280,129 + health $36,000 = $10,345,396) exceed the proxy-stated total of $7,251,924 by $3,093,472. Stated total preserved per the never-fabricate invariant; the discrepancy appears to be a proxy-side arithmetic error."
+    },
+    {
+      "trigger": "cic-without-termination",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Performance-based RSU acceleration (at target)",
+          "cents": 618665700
+        }
+      ],
+      "totalCents": 618665700,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    }
   ]
 }

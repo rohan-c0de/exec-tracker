@@ -95,6 +95,11 @@ function ScenarioRow({
                 </li>
               ))}
             </ul>
+            {scenario.discrepancyNote ? (
+              <p className="ml-4 mt-2 text-xs italic text-amber-700 dark:text-amber-500">
+                {scenario.discrepancyNote}
+              </p>
+            ) : null}
           </td>
         </tr>
       ) : null}

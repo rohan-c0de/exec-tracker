@@ -47,5 +47,85 @@
         "periodOfReport": "2025-07-31"
       }
     }
+  ],
+  "severanceScenarios": [
+    {
+      "trigger": "without-cause",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Salary severance",
+          "cents": 22500000
+        },
+        {
+          "label": "Accelerated RSUs",
+          "cents": 95234300
+        },
+        {
+          "label": "Accelerated options (in-the-money value)",
+          "cents": 133244700
+        }
+      ],
+      "totalCents": 250979000,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "trigger": "cic-with-termination",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Salary severance",
+          "cents": 45000000
+        },
+        {
+          "label": "Bonus severance",
+          "cents": 67050500
+        },
+        {
+          "label": "Accelerated RSUs (and PSUs at target)",
+          "cents": 2857113500
+        },
+        {
+          "label": "Accelerated options (in-the-money value)",
+          "cents": 399750000
+        },
+        {
+          "label": "Health benefit severance",
+          "cents": 3600000
+        }
+      ],
+      "totalCents": 3372514000,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "trigger": "cic-without-termination",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Performance-based RSU acceleration (at target)",
+          "cents": 1523805300
+        }
+      ],
+      "totalCents": 1523805300,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    }
   ]
 }
