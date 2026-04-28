@@ -61,8 +61,20 @@ async function main() {
       );
       process.exit(1);
     }
+    if (found.ambiguous) {
+      // Multiple distinct CIKs matched the same name (already logged by
+      // findInsiderCik). Refuse to write data based on a guess; the operator
+      // must pick one and pin it via secCik before re-running.
+      const list = found.candidates.map((c) => `  - ${c.cik}  ${c.name}`).join("\n");
+      console.error(
+        `\nrefusing to import: ambiguous CIK match for "${execName}" at ${ticker.toUpperCase()}.\n` +
+          `Candidates:\n${list}\n` +
+          `Set "secCik" on data/execs/${ticker.toLowerCase()}/${slug}.json to one of the CIKs above and re-run.\n`,
+      );
+      process.exit(2);
+    }
     console.log(`insider CIK: ${found.cik} (SEC name: ${found.matchedName})`);
-    insider = found;
+    insider = { cik: found.cik, matchedName: found.matchedName };
   }
 
   console.log("scraping Form 4s...");
