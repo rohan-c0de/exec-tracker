@@ -56,7 +56,7 @@
       "allOtherCompCents": 1528500,
       "totalCents": 1803051500,
       "footnotes": [
-        "Stock Awards reflect grant-date fair value under ASC Topic 718 \u2014 an accounting figure, not realized pay."
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay."
       ],
       "source": {
         "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
@@ -78,8 +78,62 @@
       "allOtherCompCents": 3183600,
       "totalCents": 1402340400,
       "footnotes": [
-        "Stock Awards reflect grant-date fair value under ASC Topic 718 \u2014 an accounting figure, not realized pay."
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay."
       ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    }
+  ],
+  "severanceScenarios": [
+    {
+      "trigger": "death",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Cash incentive plan payout (assumed at target)",
+          "cents": 37500000
+        },
+        {
+          "label": "Accelerated equity awards (RSUs and PSUs at target)",
+          "cents": 5007144800
+        }
+      ],
+      "totalCents": 5044644800,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
+        "accessionNumber": "0001308179-25-000624",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-07",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "trigger": "cic-with-termination",
+      "asOfDate": "2025-07-31",
+      "components": [
+        {
+          "label": "Salary continuation",
+          "cents": 75000000
+        },
+        {
+          "label": "Target annual cash bonus",
+          "cents": 75000000
+        },
+        {
+          "label": "Accelerated equity awards (time-based RSUs)",
+          "cents": 66454100
+        },
+        {
+          "label": "Continued health care coverage premiums",
+          "cents": 3645200
+        }
+      ],
+      "totalCents": 220099300,
       "source": {
         "filingUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000130817925000624/panw-20251107.htm",
         "accessionNumber": "0001308179-25-000624",

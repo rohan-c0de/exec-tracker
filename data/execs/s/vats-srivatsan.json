@@ -101,10 +101,52 @@
       ],
       "footnotes": [
         "Mr. Srivatsan joined the Company on April 4, 2022; salary and bonus reflect a partial fiscal year.",
-        "Stock Awards reflect the grant-date fair value of his joining RSU grant, vesting over a two-year period at 1/8 quarterly \u2014 outsized vs. peers because it covers two years' worth of equity in a single year's SCT line.",
+        "Stock Awards reflect the grant-date fair value of his joining RSU grant, vesting over a two-year period at 1/8 quarterly — outsized vs. peers because it covers two years' worth of equity in a single year's SCT line.",
         "Bonus reflects a discretionary bonus pursuant to Mr. Srivatsan's offer letter; FY2024 onward shifted to a formal cash incentive plan.",
         "Sum of disclosed components ($14,960,466) exceeds the proxy-stated total ($14,959,341) by $1,125. Recorded the proxy's stated total verbatim. The proxy does not explain the $1,125 difference; a corresponding $1,125 mismatch in the opposite direction (proxy-stated total above the sum of components) appears in Mr. Smith's FY2023 row, suggesting paired transcription errors in the proxy itself."
       ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    }
+  ],
+  "severanceScenarios": [
+    {
+      "trigger": "without-cause",
+      "asOfDate": "2025-01-31",
+      "components": [
+        {
+          "label": "Cash severance payment",
+          "cents": 22500000
+        },
+        {
+          "label": "Continued medical benefits",
+          "cents": 1869900
+        }
+      ],
+      "totalCents": 24369900,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "trigger": "cic-with-termination",
+      "asOfDate": "2025-01-31",
+      "components": [
+        {
+          "label": "Accelerated equity awards",
+          "cents": 497968400
+        }
+      ],
+      "totalCents": 497968400,
       "source": {
         "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
         "accessionNumber": "0001583708-25-000095",
