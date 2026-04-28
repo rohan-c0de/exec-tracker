@@ -87,5 +87,43 @@
         "periodOfReport": "2025-01-31"
       }
     }
+  ],
+  "severanceScenarios": [
+    {
+      "trigger": "without-cause",
+      "asOfDate": "2025-01-31",
+      "components": [
+        {
+          "label": "Cash severance",
+          "cents": 16875000
+        }
+      ],
+      "totalCents": 16875000,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "trigger": "cic-with-termination",
+      "asOfDate": "2025-01-31",
+      "components": [
+        {
+          "label": "Cash severance",
+          "cents": 16875000
+        }
+      ],
+      "totalCents": 16875000,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000110465925045047/tm252455-2_def14a.htm",
+        "accessionNumber": "0001104659-25-045047",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-06",
+        "periodOfReport": "2025-01-31"
+      }
+    }
   ]
 }
