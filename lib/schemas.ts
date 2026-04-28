@@ -106,6 +106,43 @@ export const CompRecordSchema = z
     },
   );
 
+// SEC Reg S-K Item 402(j) — "Potential Payments Upon Termination or Change in
+// Control." Standardized trigger taxonomy across all DEF 14A filers; each
+// trigger maps to an itemized payout (cash severance, accelerated equity,
+// continued benefits, etc.) valued at fiscal year-end.
+export const SeveranceTriggerSchema = z.enum([
+  "voluntary",                  // resignation without good reason
+  "for-cause",                  // termination for cause
+  "without-cause",              // single-trigger, termination without cause
+  "good-reason",                // single-trigger, resignation for good reason
+  "cic-without-termination",    // change in control, employment continues (rare; equity acceleration only)
+  "cic-with-termination",       // double-trigger: CIC + termination without cause / for good reason
+  "death",
+  "disability",
+  "retirement",
+]);
+
+export const SeveranceComponentSchema = z.object({
+  // Free-text label, mirroring the proxy's own line item ("Cash Severance",
+  // "Accelerated RSUs", "Continued Health Benefits"). Don't normalize across
+  // filers — preserve the proxy's wording so a future scraper can map 1:1.
+  label: z.string().min(1),
+  cents: z.number().int().nonnegative(),
+});
+
+export const SeveranceScenarioSchema = z
+  .object({
+    trigger: SeveranceTriggerSchema,
+    asOfDate: IsoDate,                  // hypothetical termination date (typically fiscal year-end)
+    components: z.array(SeveranceComponentSchema).min(1),
+    totalCents: z.number().int().nonnegative(),
+    source: SourceSchema,
+  })
+  .refine((s) => s.components.reduce((a, c) => a + c.cents, 0) === s.totalCents, {
+    message: "components must sum exactly to totalCents",
+    path: ["components"],
+  });
+
 export const ExecSchema = z.object({
   ticker: Ticker,
   slug: Slug,
@@ -121,6 +158,7 @@ export const ExecSchema = z.object({
   // "BJ" for "William D Jr", or "Jay" for "Jagtar"). 10 digits, no formatting.
   secCik: z.string().regex(/^\d{10}$/).optional(),
   compRecords: z.array(CompRecordSchema).min(1),
+  severanceScenarios: z.array(SeveranceScenarioSchema).optional(),
 });
 
 export const CompanySchema = z.object({
@@ -174,6 +212,9 @@ export type OwnershipLineItem = z.infer<typeof OwnershipLineItemSchema>;
 export type BadgeKind = z.infer<typeof BadgeKindSchema>;
 export type Badge = z.infer<typeof BadgeSchema>;
 export type CompRecord = z.infer<typeof CompRecordSchema>;
+export type SeveranceTrigger = z.infer<typeof SeveranceTriggerSchema>;
+export type SeveranceComponent = z.infer<typeof SeveranceComponentSchema>;
+export type SeveranceScenario = z.infer<typeof SeveranceScenarioSchema>;
 export type Exec = z.infer<typeof ExecSchema>;
 export type Company = z.infer<typeof CompanySchema>;
 export type TransactionCode = z.infer<typeof TransactionCodeSchema>;

@@ -6,6 +6,7 @@ import { InsiderTransactions } from "@/components/InsiderTransactions";
 import { OwnershipBadge } from "@/components/OwnershipBadge";
 import { OwnershipBreakdown } from "@/components/OwnershipBreakdown";
 import { PerksBreakdown } from "@/components/PerksBreakdown";
+import { SeveranceScenarios } from "@/components/SeveranceScenarios";
 import { execBadges, recordBadges } from "@/lib/badges";
 import { loadCompany, loadExec, loadInsiderTransactions } from "@/lib/data";
 import { formatCellOrDash, formatUsdAbbrev, formatUsdFull } from "@/lib/format";
@@ -209,6 +210,21 @@ export default async function ExecPage({ params }: { params: Promise<RouteParams
             title={`What's inside the All Other Compensation column · FY${latest.fiscalYear}`}
           />
           <PerksBreakdown record={latest} />
+        </section>
+      ) : null}
+
+      {exec.severanceScenarios && exec.severanceScenarios.length > 0 ? (
+        <section className="mt-16">
+          <SectionHeading
+            eyebrow="Walk-away value"
+            title="What this exec gets if employment ends"
+          />
+          <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
+            SEC-mandated &quot;Potential Payments Upon Termination or Change in Control&quot;
+            disclosure (Reg S-K Item 402(j)). Each row models a hypothetical termination on the
+            company&apos;s fiscal year-end and shows what would be owed under that scenario.
+          </p>
+          <SeveranceScenarios scenarios={exec.severanceScenarios} />
         </section>
       ) : null}
 

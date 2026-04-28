@@ -92,5 +92,43 @@
         "periodOfReport": "2025-09-27"
       }
     }
+  ],
+  "severanceScenarios": [
+    {
+      "trigger": "death",
+      "asOfDate": "2025-09-27",
+      "components": [
+        {
+          "label": "Estimated total value of equity acceleration (RSUs at $255.46 FY-end close plus accumulated dividend equivalents)",
+          "cents": 10556966400
+        }
+      ],
+      "totalCents": 10556966400,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    },
+    {
+      "trigger": "disability",
+      "asOfDate": "2025-09-27",
+      "components": [
+        {
+          "label": "Estimated total value of equity acceleration (RSUs at $255.46 FY-end close plus accumulated dividend equivalents)",
+          "cents": 7317745000
+        }
+      ],
+      "totalCents": 7317745000,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    }
   ]
 }
