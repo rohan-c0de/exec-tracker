@@ -2,7 +2,7 @@ import {
   TRANSACTION_CODES,
   aggregateByFilingAndCode,
   aggregateByYear,
-  currentSharesHeld,
+  currentHoldings,
   type FilingGroup,
 } from "@/lib/insider";
 import { formatUsdAbbrev, formatUsdPrice } from "@/lib/format";
@@ -14,7 +14,7 @@ const RECENT_YEARS_LIMIT = 6;
 export function InsiderTransactions({ data }: { data: InsiderTransactionsFile }) {
   const annual = aggregateByYear(data.transactions).slice(0, RECENT_YEARS_LIMIT);
   const recent = aggregateByFilingAndCode(data.transactions).slice(0, RECENT_LIMIT);
-  const heldShares = currentSharesHeld(data.transactions);
+  const holdings = currentHoldings(data.transactions);
 
   const totalDisposedCents = data.transactions.reduce((s, t) => {
     if (t.acquiredOrDisposed !== "D") return s;
@@ -44,11 +44,7 @@ export function InsiderTransactions({ data }: { data: InsiderTransactionsFile })
           value={formatUsdAbbrev(totalDisposedCents)}
           sub={`${formatShares(totalDisposedShares)} shares since ${lifetimeStart?.slice(0, 4) ?? "—"}${peakYear && peakYear.centsDisposed > 0 ? ` · peak year ${peakYear.year} (${formatUsdAbbrev(peakYear.centsDisposed)})` : ""}`}
         />
-        <SummaryCard
-          label="Currently held"
-          value={`${formatShares(heldShares)} shares`}
-          sub="As of most recent Form 4"
-        />
+        <HoldingsCard holdings={holdings} />
         <SummaryCard
           label="Filings tracked"
           value={`${new Set(data.transactions.map((t) => t.source.accessionNumber)).size}`}
@@ -194,6 +190,40 @@ function SummaryCard({ label, value, sub }: { label: string; value: string; sub:
       </p>
       <p className="mt-2 font-mono text-2xl font-semibold tabular-nums tracking-tight text-zinc-900 dark:text-zinc-50">
         {value}
+      </p>
+      <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">{sub}</p>
+    </div>
+  );
+}
+
+function HoldingsCard({ holdings }: { holdings: ReturnType<typeof currentHoldings> }) {
+  const { direct, indirect, total } = holdings;
+  const both = direct !== null && indirect !== null;
+  const onlyDirect = direct !== null && indirect === null;
+  const onlyIndirect = direct === null && indirect !== null;
+  const latestAsOf = [direct?.asOf, indirect?.asOf]
+    .filter((d): d is string => Boolean(d))
+    .sort()
+    .pop();
+
+  const sub = both
+    ? `${formatShares(direct!.shares)} direct + ${formatShares(indirect!.shares)} indirect`
+    : onlyDirect
+      ? `Direct holdings only · as of ${latestAsOf}`
+      : onlyIndirect
+        ? `Indirect holdings only · as of ${latestAsOf}`
+        : "No Form 4 holdings on record";
+
+  return (
+    <div
+      className="bg-white p-6 dark:bg-zinc-950"
+      title="Sum of the most recent Form 4 balance on each ownership track (direct + indirect). Excludes vesting PSUs and options exercisable within 60 days that don't appear on Form 4 — those are disclosed in the proxy's beneficial-ownership table."
+    >
+      <p className="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+        Currently held
+      </p>
+      <p className="mt-2 font-mono text-2xl font-semibold tabular-nums tracking-tight text-zinc-900 dark:text-zinc-50">
+        {total > 0 ? `${formatShares(total)} shares` : "—"}
       </p>
       <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">{sub}</p>
     </div>
