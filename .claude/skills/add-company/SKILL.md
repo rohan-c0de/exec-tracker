@@ -301,19 +301,28 @@ Run `npm run dev` (kill any stale process on `:3000` first) and curl each:
 
 Each route should return HTTP 200 and contain the expected names/totals. If anything 404s or throws, debug before reporting done.
 
-### 15. Form-4 backfill (recommended follow-up, separate PR)
+### 15. Form-4 backfill (mandatory, separate PR, fired right after company PR merges)
 
-After the company PR merges, run the Form-4 importer for each NEO:
+This is required, not optional — without it, the company's exec pages render with empty insider-transaction sections. It lives on a separate branch / PR because the auto-generated transaction JSON is large (hundreds of KB to MB per exec) and would drown the human-curated SCT diff in the bootstrap PR.
+
+Sequence — fire as soon as the company PR is merged and local main is synced (Step 14 cleanup):
 
 ```bash
+git checkout -b form-4-backfill-{ticker}
 for slug in {neoSlugs}; do
   ./node_modules/.bin/tsx scripts/import/insider-transactions.ts {ticker} $slug --write
 done
+git add data/insider-transactions/{ticker-lower}/
+git commit -m "Form-4 backfill: {ticker}"
+git push -u origin form-4-backfill-{ticker}
+gh pr create --title "Form-4 backfill: {ticker}" --body "..."
 ```
 
-The importer is idempotent. Issuer-CIK filter (PR #14) prevents cross-company conflation. Each NEO's `secCik` override (from Step 7) is honored. Watch for the multi-match warning (PR #19) — if it fires, set `secCik` on the affected exec.
+Then pause for operator approval and merge as usual.
 
-This is a separate PR (`form-4-backfill-{ticker}`) since insider-transaction JSONs are large (~hundreds of KB to MB per exec) and review value is highest when isolated from the company-bootstrap PR.
+The importer is idempotent. Issuer-CIK filter (PR #14) prevents cross-company conflation. Each NEO's `secCik` override (from Step 7) is honored. Watch for the multi-match warning (PR #19) — if it fires, set `secCik` on the affected exec, commit it to a new bootstrap-fix PR before continuing the backfill.
+
+Do not bundle the backfill into the bootstrap PR even if the operator doesn't ask for it separately — the diff-noise reason still applies.
 
 ### 16. Report to the operator
 
@@ -336,5 +345,6 @@ Per-company manual time on the four shipped companies has been ~60–90 minutes.
 - Invent comp numbers, dates, or accession numbers to fill gaps. Missing data stays missing.
 - Skip the totals check (Step 12). Silently-wrong totals are the #1 manual-curation risk.
 - Skip Steps 8–10 (beneficial ownership, CAP, allOtherBreakdown). They are not optional polish — every existing company has them, and skipping forces a follow-up backfill PR per company.
+- Skip Step 15 (Form-4 backfill). It's mandatory, not "recommended" — exec pages render anemic without it. The split into a second PR is for diff hygiene, not optionality.
 - Push to Supabase. Phase 1 is JSON-on-disk.
 - Commit until the operator has eyeballed the rendered pages.
