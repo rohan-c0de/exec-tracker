@@ -1,11 +1,64 @@
 import type { PvpRecord } from "@/lib/schemas";
 import { formatUsdAbbrev } from "@/lib/format";
 
-const MARGIN = { top: 16, right: 24, bottom: 48, left: 64 };
+const MARGIN = { top: 24, right: 32, bottom: 48, left: 64 };
 const WIDTH = 720;
 const HEIGHT = 360;
 const INNER_W = WIDTH - MARGIN.left - MARGIN.right;
 const INNER_H = HEIGHT - MARGIN.top - MARGIN.bottom;
+
+/** Compact axis tick formatter — drops trailing .00 (e.g. "$320M" not "$320.00M"). */
+function formatAxisTick(cents: number): string {
+  const negative = cents < 0;
+  const abs = Math.abs(cents);
+  const dollars = abs / 100;
+  let body: string;
+  if (dollars >= 1_000_000_000) body = `$${(dollars / 1_000_000_000).toFixed(1).replace(/\.0$/, "")}B`;
+  else if (dollars >= 1_000_000) body = `$${Math.round(dollars / 1_000_000)}M`;
+  else if (dollars >= 1_000) body = `$${Math.round(dollars / 1_000)}K`;
+  else if (dollars === 0) body = `$0`;
+  else body = `$${Math.round(dollars)}`;
+  return negative ? `−${body}` : body;
+}
+
+/**
+ * Place a year label near each dot with simple collision avoidance.
+ * Tries right-of-dot first; if that overlaps a previously placed label,
+ * tries above, then below, then left. With 5 dots this stays cheap.
+ */
+function placeLabels(
+  points: { x: number; y: number }[],
+): Array<{ dx: number; dy: number; anchor: "start" | "end" }> {
+  const candidates: Array<{ dx: number; dy: number; anchor: "start" | "end" }> = [
+    { dx: 10, dy: 0, anchor: "start" },
+    { dx: 10, dy: -16, anchor: "start" },
+    { dx: 10, dy: 16, anchor: "start" },
+    { dx: -10, dy: 0, anchor: "end" },
+    { dx: -10, dy: -16, anchor: "end" },
+    { dx: -10, dy: 16, anchor: "end" },
+  ];
+  const placed: Array<{ x: number; y: number }> = [];
+  const out: Array<{ dx: number; dy: number; anchor: "start" | "end" }> = [];
+  const labelW = 48;
+  const labelH = 14;
+  for (const p of points) {
+    let chosen = candidates[0]!;
+    for (const c of candidates) {
+      const lx = p.x + c.dx;
+      const ly = p.y + c.dy;
+      const collides = placed.some(
+        (l) => Math.abs(l.x - lx) < labelW && Math.abs(l.y - ly) < labelH,
+      );
+      if (!collides) {
+        chosen = c;
+        break;
+      }
+    }
+    placed.push({ x: p.x + chosen.dx, y: p.y + chosen.dy });
+    out.push(chosen);
+  }
+  return out;
+}
 
 type Point = {
   fiscalYear: number;
@@ -98,7 +151,7 @@ export function PvpTrajectory({
                 textAnchor="end"
                 className="fill-current font-mono text-[10px] tabular-nums"
               >
-                {formatUsdAbbrev(v)}
+                {formatAxisTick(v)}
               </text>
             </g>
           ))}
@@ -142,32 +195,45 @@ export function PvpTrajectory({
               strokeWidth={1.5}
             />
           ) : null}
-          {points.map((p) => (
-            <g key={p.fiscalYear}>
-              <circle
-                cx={xScale(p.tsrSingleYear)}
-                cy={yScale(p.capCents)}
-                r={7}
-                fill={color}
-                fillOpacity={0.8}
-                stroke="white"
-                strokeWidth={1.5}
-              >
-                <title>
-                  FY{p.fiscalYear} · CAP {formatUsdAbbrev(p.capCents)} · TSR{" "}
-                  {(p.tsrSingleYear * 100).toFixed(1)}%
-                </title>
-              </circle>
-              <text
-                x={xScale(p.tsrSingleYear) + 10}
-                y={yScale(p.capCents)}
-                dy="0.32em"
-                className="fill-zinc-500 font-mono text-[10px] tabular-nums dark:fill-zinc-400"
-              >
-                FY{p.fiscalYear.toString().slice(-2)}
-              </text>
-            </g>
-          ))}
+          {(() => {
+            const positions = points.map((p) => ({
+              x: xScale(p.tsrSingleYear),
+              y: yScale(p.capCents),
+            }));
+            const labelOffsets = placeLabels(positions);
+            return points.map((p, i) => {
+              const cx = positions[i]!.x;
+              const cy = positions[i]!.y;
+              const off = labelOffsets[i]!;
+              return (
+                <g key={p.fiscalYear}>
+                  <circle
+                    cx={cx}
+                    cy={cy}
+                    r={7}
+                    fill={color}
+                    fillOpacity={0.8}
+                    stroke="white"
+                    strokeWidth={1.5}
+                  >
+                    <title>
+                      FY{p.fiscalYear} · CAP {formatUsdAbbrev(p.capCents)} · TSR{" "}
+                      {(p.tsrSingleYear * 100).toFixed(1)}%
+                    </title>
+                  </circle>
+                  <text
+                    x={cx + off.dx}
+                    y={cy + off.dy}
+                    dy="0.32em"
+                    textAnchor={off.anchor}
+                    className="fill-zinc-500 font-mono text-[10px] tabular-nums dark:fill-zinc-400"
+                  >
+                    FY{p.fiscalYear.toString().slice(-2)}
+                  </text>
+                </g>
+              );
+            });
+          })()}
           <text
             x={INNER_W / 2}
             y={INNER_H + 38}
