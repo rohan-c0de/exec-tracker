@@ -6,6 +6,7 @@ import { InsiderTransactions } from "@/components/InsiderTransactions";
 import { OwnershipBadge } from "@/components/OwnershipBadge";
 import { OwnershipBreakdown } from "@/components/OwnershipBreakdown";
 import { PerksBreakdown } from "@/components/PerksBreakdown";
+import { PvpTrajectory } from "@/components/PvpTrajectory";
 import { SeveranceScenarios } from "@/components/SeveranceScenarios";
 import { execBadges, recordBadges } from "@/lib/badges";
 import { loadCompany, loadExec, loadInsiderTransactions } from "@/lib/data";
@@ -212,6 +213,29 @@ export default async function ExecPage({ params }: { params: Promise<RouteParams
           <PerksBreakdown record={latest} />
         </section>
       ) : null}
+
+      {(() => {
+        const peoRecords = (company.pvpRecords ?? []).filter((r) => r.peoSlug === exec.slug);
+        if (peoRecords.length === 0) return null;
+        return (
+          <section className="mt-16">
+            <SectionHeading
+              eyebrow="Pay vs. Performance"
+              title="Did the pay actually track the stock?"
+            />
+            <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
+              SEC-mandated &quot;Pay vs. Performance&quot; disclosure (Reg S-K Item 402(v)). One
+              dot per fiscal year of {exec.name}&apos;s tenure as Principal Executive Officer.{" "}
+              <em>Compensation Actually Paid</em> re-marks unvested equity to year-end fair value —
+              far closer to what the CEO really pocketed than the headline grant-date number.
+              Single-year TSR is derived from the proxy&apos;s indexed series.
+            </p>
+            <div className="mt-6">
+              <PvpTrajectory records={peoRecords} />
+            </div>
+          </section>
+        );
+      })()}
 
       {exec.severanceScenarios && exec.severanceScenarios.length > 0 ? (
         <section className="mt-16">
