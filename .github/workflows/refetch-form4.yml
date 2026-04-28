@@ -1,0 +1,168 @@
+name: Refetch Form 4 transactions
+
+# Runs the Form-4 importer for every NEO across every tracked company.
+# Idempotent — only opens a PR if any insider-transactions/*.json actually
+# changed. See issues #27 and #25, plus PRs #14, #19, #21, #22 for the
+# enabling pieces (issuer-CIK filter, retry/backoff, ambiguity guard,
+# REPO_ROOT path anchoring).
+#
+# Schedule: 09:00 UTC daily = 04:00 ET / 01:00 PT. Late enough to catch
+# Form 4s filed during prior US trading hours (filings come in until US
+# market close + late submissions).
+
+on:
+  schedule:
+    - cron: "0 9 * * *"
+  workflow_dispatch: # manual trigger via GitHub UI
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  # Don't queue overlapping runs; if a run is already in flight when the
+  # next cron fires, skip rather than stack.
+  group: refetch-form4
+  cancel-in-progress: false
+
+jobs:
+  refetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run importer for every NEO
+        env:
+          # Required by EdgarClient. Set via repo secret. Format:
+          # "exec-tracker your-email@example.com"
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: |
+          set -uo pipefail
+          if [ -z "${SEC_USER_AGENT:-}" ]; then
+            echo "::error::SEC_USER_AGENT secret is not set. Configure it under repo Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+          failures=()
+
+          for company_file in data/companies/*.json; do
+            ticker=$(basename "$company_file" .json)
+            for slug in $(jq -r '.neoSlugs[]' "$company_file"); do
+              echo "::group::$ticker / $slug"
+              if ! npx tsx scripts/import/insider-transactions.ts "$ticker" "$slug" --write; then
+                code=$?
+                echo "::error::$ticker/$slug failed with exit code $code"
+                failures+=("$ticker/$slug (exit $code)")
+              fi
+              echo "::endgroup::"
+            done
+          done
+
+          # Persist failure list for the PR step.
+          if [ ${#failures[@]} -gt 0 ]; then
+            printf '%s\n' "${failures[@]}" > /tmp/refresh-failures.txt
+          else
+            : > /tmp/refresh-failures.txt
+          fi
+
+          # Don't fail the job here — we want to still open a PR for
+          # whatever DID succeed. The "Fail workflow on errors" step at
+          # the end will mark the run red if any exec failed.
+
+      - name: Detect data changes
+        id: changes
+        run: |
+          # The importer only writes to data/insider-transactions/. Any other
+          # path showing up in the diff would indicate a bug in the importer.
+          # Use --untracked to catch newly-added exec files (e.g. a NEO who
+          # was added to data/companies/{ticker}.json via add-company since
+          # the last cron run).
+          if [ -z "$(git status --porcelain data/insider-transactions/)" ]; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No transaction changes."
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            git status --porcelain data/insider-transactions/ | tee /tmp/refresh-diffstat.txt
+          fi
+
+      - name: Open PR with refreshed data
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          today=$(date -u +%Y-%m-%d)
+          branch="form-4-refresh/${today}"
+
+          # Bot identity
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # If the daily branch already exists from an earlier same-day run, append.
+          if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
+            git fetch origin "$branch:$branch"
+            git checkout "$branch"
+          else
+            git checkout -b "$branch"
+          fi
+
+          git add data/insider-transactions/
+          git commit -m "Form 4 refresh ${today}"
+          git push -u origin "$branch"
+
+          # Build PR body
+          {
+            echo "Automated Form 4 re-fetch for ${today}."
+            echo
+            echo "## Diff stats"
+            echo
+            echo '```'
+            cat /tmp/refresh-diffstat.txt
+            echo '```'
+            if [ -s /tmp/refresh-failures.txt ]; then
+              echo
+              echo "## Failures during this run"
+              echo
+              echo '```'
+              cat /tmp/refresh-failures.txt
+              echo '```'
+              echo
+              echo "Re-run manually after investigating, or set \`secCik\` on any ambiguous-CIK exec record."
+            fi
+            echo
+            echo "🤖 Filed by the refetch-form4 workflow"
+          } > /tmp/refresh-pr-body.md
+
+          # Reuse open PR for this branch if any, else create new
+          existing_pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number' 2>/dev/null || echo "")
+          if [ -n "$existing_pr" ]; then
+            gh pr edit "$existing_pr" --body-file /tmp/refresh-pr-body.md
+            echo "Updated existing PR #$existing_pr"
+          else
+            gh pr create \
+              --title "Form 4 refresh ${today}" \
+              --body-file /tmp/refresh-pr-body.md \
+              --base main \
+              --head "$branch"
+          fi
+
+      - name: Fail workflow on per-exec errors
+        run: |
+          if [ -s /tmp/refresh-failures.txt ]; then
+            echo "::error::Some execs failed to refresh. See above and the PR body for the list."
+            cat /tmp/refresh-failures.txt
+            exit 1
+          fi
+          echo "All execs refreshed successfully."
