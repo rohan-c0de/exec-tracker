@@ -13,5 +13,102 @@
     "raj-judge",
     "mike-rich",
     "remo-canessa"
+  ],
+  "pvpRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-07-31",
+      "peoSlug": "jay-chaudhry",
+      "peoSctTotalCents": 2975300,
+      "peoCapCents": 4744452600,
+      "averageNonPeoSctTotalCents": 1848064600,
+      "averageNonPeoCapCents": 2495439400,
+      "tsrIndexed": 220,
+      "peerTsrIndexed": 281,
+      "netIncomeMillions": -41.478,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-07-31",
+      "peoSlug": "jay-chaudhry",
+      "peoSctTotalCents": 2516200,
+      "peoCapCents": 952972800,
+      "averageNonPeoSctTotalCents": 1441827800,
+      "averageNonPeoCapCents": 1607703300,
+      "tsrIndexed": 138,
+      "peerTsrIndexed": 227,
+      "netIncomeMillions": -57.706,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-07-31",
+      "peoSlug": "jay-chaudhry",
+      "peoSctTotalCents": 5777548300,
+      "peoCapCents": 8583852300,
+      "averageNonPeoSctTotalCents": 1506008500,
+      "averageNonPeoCapCents": 1798445000,
+      "tsrIndexed": 124,
+      "peerTsrIndexed": 168,
+      "netIncomeMillions": -202.335,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2022,
+      "fiscalYearEnd": "2022-07-31",
+      "peoSlug": "jay-chaudhry",
+      "peoSctTotalCents": 4153016000,
+      "peoCapCents": 4090934000,
+      "averageNonPeoSctTotalCents": 2640803500,
+      "averageNonPeoCapCents": 661439000,
+      "tsrIndexed": 119,
+      "peerTsrIndexed": 132,
+      "netIncomeMillions": -390.278,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    },
+    {
+      "fiscalYear": 2021,
+      "fiscalYearEnd": "2021-07-31",
+      "peoSlug": "jay-chaudhry",
+      "peoSctTotalCents": 1999916000,
+      "peoCapCents": 3686464500,
+      "averageNonPeoSctTotalCents": 544615000,
+      "averageNonPeoCapCents": 2983891500,
+      "tsrIndexed": 182,
+      "peerTsrIndexed": 140,
+      "netIncomeMillions": -262.029,
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368325000198/zs-20251121.htm",
+        "accessionNumber": "0001713683-25-000198",
+        "formType": "DEF 14A",
+        "filedDate": "2025-11-21",
+        "periodOfReport": "2025-07-31"
+      }
+    }
   ]
 }

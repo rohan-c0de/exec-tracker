@@ -174,6 +174,38 @@ export const ExecSchema = z.object({
   severanceScenarios: z.array(SeveranceScenarioSchema).optional(),
 });
 
+// SEC Reg S-K Item 402(v) — "Pay Versus Performance" disclosure. Standardized
+// table required of every reporting company since FY2022. Columns map 1:1
+// from proxy column letters (a)-(i):
+//   (a) Year, (b) PEO SCT total, (c) PEO Compensation Actually Paid,
+//   (d) Avg non-PEO NEO SCT total, (e) Avg non-PEO NEO CAP,
+//   (f) Cumulative TSR (value of $100 invested at start), (g) Peer TSR,
+//   (h) Net income, (i) Company-selected metric (varies; not modeled here).
+// CAP is signed (can be negative in stock-decline years). TSR is unitless
+// (proxy convention: $100 invested at start of the 5-year disclosure window).
+export const PvpRecordSchema = z.object({
+  fiscalYear: z.number().int().min(1990).max(2100),
+  fiscalYearEnd: IsoDate,
+  // Slug of the PEO for this fiscal year. Allows the chart to color-code or
+  // annotate CEO transitions (e.g. PANW: Arora throughout; CRWD: Kurtz
+  // throughout; some companies span multiple PEOs in a 5-year window).
+  peoSlug: Slug,
+  peoSctTotalCents: z.number().int().nonnegative(),
+  peoCapCents: z.number().int(),
+  averageNonPeoSctTotalCents: z.number().int().nonnegative(),
+  averageNonPeoCapCents: z.number().int(),
+  // Cumulative indexed TSR per Item 402(v): the value of $100 invested at the
+  // start of the 5-year disclosure window, measured at this fiscal year-end.
+  // E.g. Apple FY2025: 233.88 means $100 at FY2020-end is now $233.88.
+  // Single-year TSR is derived at render time as (this / prior) - 1.
+  tsrIndexed: z.number().nonnegative(),
+  peerTsrIndexed: z.number().nonnegative(),
+  // Net income reported in millions of USD (proxy convention; preserved as-is
+  // since Item 402(v) presents in millions). Signed — can be negative.
+  netIncomeMillions: z.number(),
+  source: SourceSchema,
+});
+
 export const CompanySchema = z.object({
   ticker: Ticker,
   legalName: z.string().min(1),
@@ -183,6 +215,7 @@ export const CompanySchema = z.object({
   fiscalYearEndMonthDay: z.string().regex(/^\d{2}-\d{2}$/, "MM-DD of fiscal year end"),
   websiteUrl: Url.optional(),
   neoSlugs: z.array(Slug).min(1),
+  pvpRecords: z.array(PvpRecordSchema).optional(),
 });
 
 export const TransactionCodeSchema = z.enum([
@@ -229,6 +262,7 @@ export type SeveranceTrigger = z.infer<typeof SeveranceTriggerSchema>;
 export type SeveranceComponent = z.infer<typeof SeveranceComponentSchema>;
 export type SeveranceScenario = z.infer<typeof SeveranceScenarioSchema>;
 export type Exec = z.infer<typeof ExecSchema>;
+export type PvpRecord = z.infer<typeof PvpRecordSchema>;
 export type Company = z.infer<typeof CompanySchema>;
 export type TransactionCode = z.infer<typeof TransactionCodeSchema>;
 export type InsiderTransaction = z.infer<typeof InsiderTransactionSchema>;
