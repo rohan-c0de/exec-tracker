@@ -1,0 +1,383 @@
+{
+  "ticker": "AAPL",
+  "slug": "kevan-parekh",
+  "insiderCik": "0002050912",
+  "insiderNameAtSec": "Parekh Kevan",
+  "lastUpdated": "2026-04-28",
+  "transactions": [
+    {
+      "transactionDate": "2026-04-23",
+      "filedDate": "2026-04-27",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 1534,
+      "pricePerShareCents": 27500,
+      "postTransactionShares": 13366,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126017175/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-017175",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-04-15",
+      "filedDate": "2026-04-17",
+      "code": "M",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 10928,
+      "pricePerShareCents": null,
+      "postTransactionShares": 19693,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126015420/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-015420",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-04-15",
+      "filedDate": "2026-04-17",
+      "code": "F",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 4793,
+      "pricePerShareCents": 26643,
+      "postTransactionShares": 14900,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126015420/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-015420",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-04-15",
+      "filedDate": "2026-04-17",
+      "code": "M",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 5817,
+      "pricePerShareCents": null,
+      "postTransactionShares": 5816,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126015420/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-015420",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-04-15",
+      "filedDate": "2026-04-17",
+      "code": "M",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 5111,
+      "pricePerShareCents": null,
+      "postTransactionShares": 15331,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126015420/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-015420",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-10-16",
+      "filedDate": "2025-10-17",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 500,
+      "pricePerShareCents": 24589,
+      "postTransactionShares": 12464,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000205091225000008/xslF345X05/wk-form4_1760740266.xml",
+        "accessionNumber": "0002050912-25-000008",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-10-16",
+      "filedDate": "2025-10-17",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 1665,
+      "pricePerShareCents": 24704,
+      "postTransactionShares": 10799,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000205091225000008/xslF345X05/wk-form4_1760740266.xml",
+        "accessionNumber": "0002050912-25-000008",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-10-16",
+      "filedDate": "2025-10-17",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 1534,
+      "pricePerShareCents": 24782,
+      "postTransactionShares": 9265,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000205091225000008/xslF345X05/wk-form4_1760740266.xml",
+        "accessionNumber": "0002050912-25-000008",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-10-16",
+      "filedDate": "2025-10-17",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 500,
+      "pricePerShareCents": 24873,
+      "postTransactionShares": 8765,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000205091225000008/xslF345X05/wk-form4_1760740266.xml",
+        "accessionNumber": "0002050912-25-000008",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-10-15",
+      "filedDate": "2025-10-17",
+      "code": "M",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 16457,
+      "pricePerShareCents": null,
+      "postTransactionShares": 21026,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000205091225000008/xslF345X05/wk-form4_1760740266.xml",
+        "accessionNumber": "0002050912-25-000008",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-10-15",
+      "filedDate": "2025-10-17",
+      "code": "F",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 8062,
+      "pricePerShareCents": 24934,
+      "postTransactionShares": 12964,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000205091225000008/xslF345X05/wk-form4_1760740266.xml",
+        "accessionNumber": "0002050912-25-000008",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-10-15",
+      "filedDate": "2025-10-17",
+      "code": "M",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 5530,
+      "pricePerShareCents": null,
+      "postTransactionShares": 0,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000205091225000008/xslF345X05/wk-form4_1760740266.xml",
+        "accessionNumber": "0002050912-25-000008",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-10-15",
+      "filedDate": "2025-10-17",
+      "code": "M",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 5816,
+      "pricePerShareCents": null,
+      "postTransactionShares": 11633,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000205091225000008/xslF345X05/wk-form4_1760740266.xml",
+        "accessionNumber": "0002050912-25-000008",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-10-15",
+      "filedDate": "2025-10-17",
+      "code": "M",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 5111,
+      "pricePerShareCents": null,
+      "postTransactionShares": 20442,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000205091225000008/xslF345X05/wk-form4_1760740266.xml",
+        "accessionNumber": "0002050912-25-000008",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-09-28",
+      "filedDate": "2025-09-30",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 48932,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 48932,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000205091225000006/xslF345X05/wk-form4_1759271713.xml",
+        "accessionNumber": "0002050912-25-000006",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-09-28",
+      "filedDate": "2025-09-30",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 48932,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 48932,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000205091225000006/xslF345X05/wk-form4_1759271713.xml",
+        "accessionNumber": "0002050912-25-000006",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-04-23",
+      "filedDate": "2025-04-25",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 4570,
+      "pricePerShareCents": 20600,
+      "postTransactionShares": 4569,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000051/xslF345X05/wk-form4_1745620207.xml",
+        "accessionNumber": "0000320193-25-000051",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-04-15",
+      "filedDate": "2025-04-17",
+      "code": "M",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 16458,
+      "pricePerShareCents": null,
+      "postTransactionShares": 16458,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000049/xslF345X05/wk-form4_1744929115.xml",
+        "accessionNumber": "0000320193-25-000049",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-04-15",
+      "filedDate": "2025-04-17",
+      "code": "F",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 7319,
+      "pricePerShareCents": 20214,
+      "postTransactionShares": 9139,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000049/xslF345X05/wk-form4_1744929115.xml",
+        "accessionNumber": "0000320193-25-000049",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-04-15",
+      "filedDate": "2025-04-17",
+      "code": "M",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 5530,
+      "pricePerShareCents": null,
+      "postTransactionShares": 5530,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000049/xslF345X05/wk-form4_1744929115.xml",
+        "accessionNumber": "0000320193-25-000049",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-04-15",
+      "filedDate": "2025-04-17",
+      "code": "M",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 5817,
+      "pricePerShareCents": null,
+      "postTransactionShares": 17449,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000049/xslF345X05/wk-form4_1744929115.xml",
+        "accessionNumber": "0000320193-25-000049",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2025-04-15",
+      "filedDate": "2025-04-17",
+      "code": "M",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 5111,
+      "pricePerShareCents": null,
+      "postTransactionShares": 25553,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000049/xslF345X05/wk-form4_1744929115.xml",
+        "accessionNumber": "0000320193-25-000049",
+        "formType": "4"
+      }
+    }
+  ]
+}
