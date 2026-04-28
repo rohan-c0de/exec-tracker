@@ -10,6 +10,7 @@
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { findInsiderCik, tickerToCik } from "../lib/cik";
 import { makeEdgarClient } from "../lib/edgar";
 import { scrapeForm4 } from "../scrapers/form-4";
@@ -17,6 +18,14 @@ import {
   InsiderTransactionsFileSchema,
   type InsiderTransactionsFile,
 } from "../../lib/schemas";
+
+// Anchor data paths to the repo root, not process.cwd(). Cron / CI may
+// invoke this script from any directory.
+const REPO_ROOT = path.resolve(
+  path.dirname(fileURLToPath(import.meta.url)),
+  "..",
+  "..",
+);
 
 async function main() {
   const args = process.argv.slice(2);
@@ -33,7 +42,7 @@ async function main() {
 
   // Load the exec record so we know their proper name
   const execFile = path.join(
-    process.cwd(),
+    REPO_ROOT,
     "data",
     "execs",
     ticker.toLowerCase(),
@@ -118,7 +127,7 @@ async function main() {
   }
 
   const outPath = path.join(
-    process.cwd(),
+    REPO_ROOT,
     "data",
     "insider-transactions",
     ticker.toLowerCase(),
