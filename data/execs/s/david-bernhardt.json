@@ -4,7 +4,23 @@
   "name": "David Bernhardt",
   "role": "Former Chief Financial Officer",
   "bio": "David Bernhardt served as SentinelOne's CFO until September 11, 2024, when he transitioned to an advisor role; he departed the Company on December 31, 2024. His FY2025 totals are inflated by the incremental ASC 718 expense from accelerated vesting of equity awards under his Separation and Release Agreement, plus the cash severance and pro-rated bonus disclosed under All Other Compensation.",
-  "badges": [{ "kind": "former-officer" }],
+  "badges": [
+    {
+      "kind": "former-officer"
+    }
+  ],
+  "beneficialOwnership": {
+    "sharesOwned": 248656,
+    "percentageOwned": null,
+    "asOfDate": "2025-04-30",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+      "accessionNumber": "0001583708-25-000095",
+      "formType": "DEF 14A",
+      "filedDate": "2025-05-14",
+      "periodOfReport": "2025-01-31"
+    }
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,
@@ -17,7 +33,12 @@
       "pensionAndNqdcCents": 0,
       "allOtherCompCents": 55163000,
       "totalCents": 958489600,
-      "badges": [{ "kind": "partial-year", "detail": "Transitioned from CFO September 2024; departed December 2024" }],
+      "badges": [
+        {
+          "kind": "partial-year",
+          "detail": "Transitioned from CFO September 2024; departed December 2024"
+        }
+      ],
       "footnotes": [
         "Mr. Bernhardt transitioned from his Chief Financial Officer role on September 11, 2024 and was no longer an executive officer of the Company; he departed on December 31, 2024.",
         "Stock Awards include incremental ASC 718 expense from the accelerated vesting of certain equity grants in connection with his transition (modification date September 10, 2024). The accounting cost does not correspond to economic value received.",

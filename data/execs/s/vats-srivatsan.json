@@ -10,6 +10,28 @@
     }
   ],
   "secCik": "0001922406",
+  "beneficialOwnership": {
+    "sharesOwned": 393732,
+    "percentageOwned": null,
+    "asOfDate": "2025-04-30",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+      "accessionNumber": "0001583708-25-000095",
+      "formType": "DEF 14A",
+      "filedDate": "2025-05-14",
+      "periodOfReport": "2025-01-31"
+    },
+    "breakdown": [
+      {
+        "label": "Direct",
+        "shares": 366767
+      },
+      {
+        "label": "RSUs vesting within 60 days",
+        "shares": 26965
+      }
+    ]
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,
