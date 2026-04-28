@@ -55,6 +55,13 @@ export function OwnershipBreakdown({
           </li>
         ))}
       </ul>
+      {ownership.discrepancyNote ? (
+        <DiscrepancyNote
+          stated={ownership.sharesOwned}
+          sum={items.reduce((s, i) => s + i.shares, 0)}
+          note={ownership.discrepancyNote}
+        />
+      ) : null}
       <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-400">
         Per SEC rules, beneficial ownership includes shares held directly,
         through trusts and LLCs, vested-but-deferred RSUs/PSUs, and equity
@@ -64,6 +71,34 @@ export function OwnershipBreakdown({
         forward-vesting equity in the rows above.
       </p>
     </section>
+  );
+}
+
+function DiscrepancyNote({
+  stated,
+  sum,
+  note,
+}: {
+  stated: number;
+  sum: number;
+  note: string;
+}) {
+  const delta = stated - sum;
+  return (
+    <div className="mt-3 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-900 dark:border-amber-900/40 dark:bg-amber-950/30 dark:text-amber-200">
+      <div className="flex flex-wrap items-baseline justify-between gap-2 font-mono tabular-nums">
+        <span>Sum of disclosed line items:</span>
+        <span>{sum.toLocaleString("en-US")}</span>
+      </div>
+      <div className="mt-0.5 flex flex-wrap items-baseline justify-between gap-2 font-mono tabular-nums">
+        <span>Proxy-stated total:</span>
+        <span>
+          {stated.toLocaleString("en-US")} ({delta > 0 ? "+" : ""}
+          {delta.toLocaleString("en-US")})
+        </span>
+      </div>
+      <p className="mt-2 italic">{note}</p>
+    </div>
   );
 }
 

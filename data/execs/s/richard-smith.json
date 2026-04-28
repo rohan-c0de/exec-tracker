@@ -6,6 +6,24 @@
   "bio": "Richard Smith leads SentinelOne's product, engineering, and operations functions. His compensation is overwhelmingly equity (RSUs and performance-based PSUs); cash salary stepped up from $450K to $550K for FY2025.",
   "badges": [],
   "secCik": "0001866450",
+  "beneficialOwnership": {
+    "sharesOwned": 54186,
+    "percentageOwned": null,
+    "asOfDate": "2025-04-30",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+      "accessionNumber": "0001583708-25-000095",
+      "formType": "DEF 14A",
+      "filedDate": "2025-05-14",
+      "periodOfReport": "2025-01-31"
+    },
+    "breakdown": [
+      {
+        "label": "RSUs vesting within 60 days (no direct holdings)",
+        "shares": 54186
+      }
+    ]
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,

@@ -35,18 +35,28 @@ export const BeneficialOwnershipSchema = z
     percentageOwned: z.number().nonnegative().nullable(),
     asOfDate: IsoDate,
     source: SourceSchema,
-    // Optional. When present, sum of breakdown.shares MUST equal sharesOwned.
+    // Optional. When present, sum of breakdown.shares MUST equal sharesOwned
+    // unless `discrepancyNote` is also present (see below).
     // Used when the proxy's beneficial-ownership footnote splits the holding
     // across multiple tracks (direct / trust / LLC / vesting RSUs /
     // exercisable options) — otherwise the aggregate is misleading.
     breakdown: z.array(OwnershipLineItemSchema).optional(),
+    // Optional. Records proxy-side typos / footnote omissions where the
+    // disclosed line items don't sum to the stated total (e.g. Nir Zuk PANW
+    // FY2025: footnote skips line "(iii)" so components are 132 shares short).
+    // When present, the breakdown-sum-equals-total refine is relaxed.
+    // Same shape of issue as paired SCT-row mismatches (e.g. SentinelOne
+    // FY2023 Smith/Srivatsan ±$1,125, captured in compRecords[].footnotes[]).
+    discrepancyNote: z.string().min(1).optional(),
   })
   .refine(
     (b) =>
       b.breakdown === undefined ||
+      b.discrepancyNote !== undefined ||
       b.breakdown.reduce((s, i) => s + i.shares, 0) === b.sharesOwned,
     {
-      message: "breakdown items must sum exactly to sharesOwned",
+      message:
+        "breakdown items must sum exactly to sharesOwned (or set discrepancyNote to record a proxy-side mismatch)",
       path: ["breakdown"],
     },
   );

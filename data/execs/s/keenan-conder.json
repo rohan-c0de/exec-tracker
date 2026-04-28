@@ -5,6 +5,28 @@
   "role": "Chief Legal Officer and Corporate Secretary",
   "bio": "Keenan Conder serves as SentinelOne's Chief Legal Officer and Corporate Secretary, overseeing legal, regulatory, compliance, and corporate governance.",
   "badges": [],
+  "beneficialOwnership": {
+    "sharesOwned": 232244,
+    "percentageOwned": null,
+    "asOfDate": "2025-04-30",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+      "accessionNumber": "0001583708-25-000095",
+      "formType": "DEF 14A",
+      "filedDate": "2025-05-14",
+      "periodOfReport": "2025-01-31"
+    },
+    "breakdown": [
+      {
+        "label": "Direct",
+        "shares": 200861
+      },
+      {
+        "label": "RSUs vesting within 60 days",
+        "shares": 31383
+      }
+    ]
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,

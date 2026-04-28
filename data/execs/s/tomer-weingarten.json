@@ -4,7 +4,45 @@
   "name": "Tomer Weingarten",
   "role": "Co-Founder, President, Chief Executive Officer, and Chairman",
   "bio": "Tomer Weingarten co-founded SentinelOne in 2013 and has served as CEO since inception. His compensation is dominated by equity (RSUs and performance-based PSUs), with cash salary held below $1M. All Other Compensation in FY2025 is dominated by Board-approved personal security services for Mr. Weingarten and his family at their residences and during personal travel, in addition to a small cell phone and internet perquisite available to executives.",
-  "badges": [{ "kind": "founder" }],
+  "badges": [
+    {
+      "kind": "founder"
+    }
+  ],
+  "beneficialOwnership": {
+    "sharesOwned": 7479116,
+    "percentageOwned": null,
+    "asOfDate": "2025-04-30",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+      "accessionNumber": "0001583708-25-000095",
+      "formType": "DEF 14A",
+      "filedDate": "2025-05-14",
+      "periodOfReport": "2025-01-31"
+    },
+    "breakdown": [
+      {
+        "label": "Class A common \u2014 direct",
+        "shares": 83991
+      },
+      {
+        "label": "Class A common \u2014 RSUs vesting within 60 days",
+        "shares": 95752
+      },
+      {
+        "label": "Class B common \u2014 direct",
+        "shares": 4251402
+      },
+      {
+        "label": "Class B common \u2014 held by trust",
+        "shares": 423629
+      },
+      {
+        "label": "Class B common \u2014 options exercisable within 60 days",
+        "shares": 2624342
+      }
+    ]
+  },
   "compRecords": [
     {
       "fiscalYear": 2025,
@@ -18,11 +56,17 @@
       "allOtherCompCents": 74662000,
       "totalCents": 1896546600,
       "allOtherBreakdown": [
-        { "label": "Personal security services", "cents": 74242000 },
-        { "label": "Cell phone and internet perquisite", "cents": 420000 }
+        {
+          "label": "Personal security services",
+          "cents": 74242000
+        },
+        {
+          "label": "Cell phone and internet perquisite",
+          "cents": 420000
+        }
       ],
       "footnotes": [
-        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay. Assuming maximum performance, the FY2025 PSU grant would have a grant-date fair value of $2,171,337.",
+        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 \u2014 an accounting figure, not realized pay. Assuming maximum performance, the FY2025 PSU grant would have a grant-date fair value of $2,171,337.",
         "Non-Equity Incentive reflects cash incentive paid under the FY2025 annual cash incentive plan based on achievement of predetermined performance goals.",
         "All Other Compensation consists of $742,420 for personal security services at residences and during personal travel (a Board-approved program in response to heightened risks tied to Middle East conflicts), plus $4,200 in cell phone and internet perquisite over the standard employee benefit."
       ],

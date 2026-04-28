@@ -6,7 +6,11 @@
   "photoPath": "/execs/panw/nir-zuk.jpg",
   "photoCredit": "Courtesy Palo Alto Networks, Inc. (editorial use)",
   "bio": "Nir Zuk is the co-founder of Palo Alto Networks and pioneered the next-generation firewall that defined the company. He announced his retirement in connection with the FY25 proxy and transitioned the CTO role to Lee Klarich. His FY25 compensation was paid in Israeli New Shekels for the period August 1, 2024 through June 30, 2025 and converted to USD using an average rate of 0.27 USD per ILS over that window; he permanently relocated from Israel to the United States during fiscal 2025.",
-  "badges": [{ "kind": "founder" }],
+  "badges": [
+    {
+      "kind": "founder"
+    }
+  ],
   "beneficialOwnership": {
     "sharesOwned": 3293136,
     "percentageOwned": null,
@@ -17,7 +21,22 @@
       "formType": "DEF 14A",
       "filedDate": "2025-11-07",
       "periodOfReport": "2025-07-31"
-    }
+    },
+    "breakdown": [
+      {
+        "label": "Direct",
+        "shares": 1854448
+      },
+      {
+        "label": "Hawk Family Trust (co-trustee)",
+        "shares": 1188936
+      },
+      {
+        "label": "PSUs vesting within 60 days",
+        "shares": 249620
+      }
+    ],
+    "discrepancyNote": "Proxy footnote (7) skips line item (iii); disclosed components (i)+(ii)+(iv) sum to 3,293,004, which is 132 shares short of the proxy-stated total 3,293,136. The omitted line item is undisclosed in the proxy."
   },
   "compRecords": [
     {
@@ -26,7 +45,7 @@
       "badges": [
         {
           "kind": "foreign-currency",
-          "detail": "Paid in Israeli New Shekels Aug 2024–June 2025; converted at 0.27 USD/ILS."
+          "detail": "Paid in Israeli New Shekels Aug 2024\u2013June 2025; converted at 0.27 USD/ILS."
         }
       ],
       "salaryCents": 40802600,
@@ -38,13 +57,34 @@
       "allOtherCompCents": 24384400,
       "totalCents": 1570759800,
       "allOtherBreakdown": [
-        { "label": "Regulatory filing fee", "cents": 10500000 },
-        { "label": "Israeli social security & pension contributions", "cents": 6583500 },
-        { "label": "Accrued vacation payout (relocation from Israel)", "cents": 3845000 },
-        { "label": "Israeli severance benefit contributions", "cents": 3382200 },
-        { "label": "Tax gross-up (employer health insurance)", "cents": 38700 },
-        { "label": "Tax gross-up (Company event gifts)", "cents": 29000 },
-        { "label": "Life insurance", "cents": 6000 }
+        {
+          "label": "Regulatory filing fee",
+          "cents": 10500000
+        },
+        {
+          "label": "Israeli social security & pension contributions",
+          "cents": 6583500
+        },
+        {
+          "label": "Accrued vacation payout (relocation from Israel)",
+          "cents": 3845000
+        },
+        {
+          "label": "Israeli severance benefit contributions",
+          "cents": 3382200
+        },
+        {
+          "label": "Tax gross-up (employer health insurance)",
+          "cents": 38700
+        },
+        {
+          "label": "Tax gross-up (Company event gifts)",
+          "cents": 29000
+        },
+        {
+          "label": "Life insurance",
+          "cents": 6000
+        }
       ],
       "footnotes": [
         "Salary, Non-Equity Incentive and All Other Compensation for FY25 were paid in Israeli New Shekels from August 1, 2024 through June 30, 2025; converted to USD at an average exchange rate of approximately 0.27 USD per ILS over that period.",
@@ -62,7 +102,12 @@
     {
       "fiscalYear": 2024,
       "fiscalYearEnd": "2024-07-31",
-      "badges": [{ "kind": "foreign-currency", "detail": "Paid in Israeli New Shekels." }],
+      "badges": [
+        {
+          "kind": "foreign-currency",
+          "detail": "Paid in Israeli New Shekels."
+        }
+      ],
       "salaryCents": 40014000,
       "bonusCents": 0,
       "stockAwardsCents": 1134978500,
@@ -72,7 +117,7 @@
       "allOtherCompCents": 7208600,
       "totalCents": 1230217900,
       "footnotes": [
-        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay.",
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 \u2014 an accounting figure, not realized pay.",
         "Mr. Zuk was based in Israel during fiscal 2024; his cash compensation was paid in Israeli New Shekels and converted to USD."
       ],
       "source": {
@@ -86,7 +131,12 @@
     {
       "fiscalYear": 2023,
       "fiscalYearEnd": "2023-07-31",
-      "badges": [{ "kind": "foreign-currency", "detail": "Paid in Israeli New Shekels." }],
+      "badges": [
+        {
+          "kind": "foreign-currency",
+          "detail": "Paid in Israeli New Shekels."
+        }
+      ],
       "salaryCents": 41951500,
       "bonusCents": 0,
       "stockAwardsCents": 696133400,
@@ -96,7 +146,7 @@
       "allOtherCompCents": 7609100,
       "totalCents": 808621200,
       "footnotes": [
-        "Stock Awards reflect grant-date fair value under ASC Topic 718 — an accounting figure, not realized pay.",
+        "Stock Awards reflect grant-date fair value under ASC Topic 718 \u2014 an accounting figure, not realized pay.",
         "Mr. Zuk was based in Israel during fiscal 2023; his cash compensation was paid in Israeli New Shekels and converted to USD."
       ],
       "source": {
