@@ -1,0 +1,66 @@
+{
+  "ticker": "AAPL",
+  "slug": "sabih-khan",
+  "name": "Sabih Khan",
+  "role": "Senior Vice President, Chief Operating Officer",
+  "bio": "Sabih Khan joined Apple in August 1995 and was promoted to Chief Operating Officer in July 2025, succeeding Jeff Williams. He oversees Apple's worldwide operations, supply chain, AppleCare, and environmental and social initiatives. Previous Apple roles include Senior Vice President, Operations and Vice President, Product Operations.",
+  "badges": [],
+  "beneficialOwnership": {
+    "sharesOwned": 1074404,
+    "percentageOwned": null,
+    "asOfDate": "2026-01-02",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+      "accessionNumber": "0001308179-26-000008",
+      "formType": "DEF 14A",
+      "filedDate": "2026-01-08",
+      "periodOfReport": "2025-09-27"
+    },
+    "breakdown": [
+      {
+        "label": "Direct",
+        "shares": 1042772
+      },
+      {
+        "label": "Held by Mr. Khan's family trust",
+        "shares": 31632
+      }
+    ]
+  },
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-09-27",
+      "salaryCents": 100000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 2200976600,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 400000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 2190500,
+      "totalCents": 2703167100,
+      "allOtherBreakdown": [
+        {
+          "label": "401(k) plan matching contributions",
+          "cents": 2042300
+        },
+        {
+          "label": "Term life insurance premiums",
+          "cents": 148200
+        }
+      ],
+      "footnotes": [
+        "Mr. Khan was promoted to COO in July 2025 (mid-FY2025); SCT base salary for FY2025 reflects the full $1,000,000 annual base from his existing SVP, Operations role.",
+        "Stock Awards reflect FASB ASC 718 grant-date fair value of time-based RSUs and PSUs; FY2025 long-term equity target was $20M.",
+        "Non-Equity Incentive reflects the Cash Incentive Plan payout. In FY2025, Apple exceeded the maximum performance goals for both net sales and operating income, resulting in maximum payout for each NEO."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "ticker": "AAPL",
+  "slug": "kevan-parekh",
+  "name": "Kevan Parekh",
+  "role": "Senior Vice President, Chief Financial Officer",
+  "bio": "Kevan Parekh joined Apple in June 2013 and was promoted to Senior Vice President, Chief Financial Officer in January 2025, succeeding Luca Maestri. He oversees accounting, financial planning and analysis, treasury, investor relations, internal audit, and tax. Previous Apple roles include Vice President, Financial Planning and Analysis.",
+  "badges": [],
+  "beneficialOwnership": {
+    "sharesOwned": 8765,
+    "percentageOwned": null,
+    "asOfDate": "2026-01-02",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+      "accessionNumber": "0001308179-26-000008",
+      "formType": "DEF 14A",
+      "filedDate": "2026-01-08",
+      "periodOfReport": "2025-09-27"
+    }
+  },
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-09-27",
+      "salaryCents": 89151900,
+      "bonusCents": 0,
+      "stockAwardsCents": 1843313500,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 312031700,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 2233800,
+      "totalCents": 2246730900,
+      "allOtherBreakdown": [
+        {
+          "label": "401(k) plan matching contributions",
+          "cents": 2100000
+        },
+        {
+          "label": "Term life insurance premiums",
+          "cents": 133800
+        }
+      ],
+      "footnotes": [
+        "FY2025 salary of $891,519 reflects a mid-year promotion to CFO (effective January 2025); the figure blends his prior Vice President base with the elevated CFO base. FY2025 long-term equity target was $16.75M (vs. $20M for the other Senior Vice President NEOs).",
+        "Non-Equity Incentive reflects the Cash Incentive Plan payout. In FY2025, Apple exceeded the maximum performance goals for both net sales and operating income, resulting in maximum payout for each NEO."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    }
+  ]
+}

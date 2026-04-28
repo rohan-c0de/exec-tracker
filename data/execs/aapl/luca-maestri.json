@@ -1,0 +1,107 @@
+{
+  "ticker": "AAPL",
+  "slug": "luca-maestri",
+  "name": "Luca Maestri",
+  "role": "Former Senior Vice President, Chief Financial Officer",
+  "bio": "Luca Maestri served as Apple's Senior Vice President, Chief Financial Officer from 2014 until January 2025, when he transitioned out of the CFO role and was succeeded by Kevan Parekh. He continues at Apple in an advisory capacity. Prior to Apple, he was CFO at Xerox and Nokia Siemens Networks, and held senior finance roles at General Motors.",
+  "badges": [
+    {
+      "kind": "former-officer",
+      "detail": "Stepped down as CFO in January 2025; FY2025 totals reflect the partial year in the principal financial officer role."
+    }
+  ],
+  "beneficialOwnership": {
+    "sharesOwned": 91304,
+    "percentageOwned": null,
+    "asOfDate": "2026-01-02",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+      "accessionNumber": "0001308179-26-000008",
+      "formType": "DEF 14A",
+      "filedDate": "2026-01-08",
+      "periodOfReport": "2025-09-27"
+    }
+  },
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-09-27",
+      "salaryCents": 81923100,
+      "bonusCents": 0,
+      "stockAwardsCents": 1300303100,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 163846200,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 2220400,
+      "totalCents": 1548292800,
+      "badges": [
+        {
+          "kind": "partial-year",
+          "detail": "Stepped down as CFO in January 2025; salary and cash incentive prorated for the portion of FY2025 served as a Section 16 officer."
+        }
+      ],
+      "allOtherBreakdown": [
+        {
+          "label": "401(k) plan matching contributions",
+          "cents": 2100000
+        },
+        {
+          "label": "Term life insurance premiums",
+          "cents": 120400
+        }
+      ],
+      "footnotes": [
+        "FY2025 salary of $819,231 and cash incentive of $1,638,462 reflect the partial-year period Mr. Maestri served as principal financial officer (FY2025 began September 29, 2024; he stepped down January 2025).",
+        "FY2025 long-term equity target was $12.5M (reduced from $20M in prior years), reflecting the planned mid-year transition.",
+        "Non-Equity Incentive reflects the Cash Incentive Plan payout. In FY2025, Apple exceeded the maximum performance goals for both net sales and operating income, resulting in maximum payout for each NEO."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-09-28",
+      "salaryCents": 100000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 2215707500,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 400000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 2218200,
+      "totalCents": 2717925700,
+      "footnotes": [],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-09-30",
+      "salaryCents": 100000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 2232364100,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 357115000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 4109200,
+      "totalCents": 2693588300,
+      "footnotes": [],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    }
+  ]
+}

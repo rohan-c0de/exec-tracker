@@ -1,0 +1,17 @@
+{
+  "ticker": "AAPL",
+  "legalName": "Apple Inc.",
+  "displayName": "Apple",
+  "exchange": "NASDAQ",
+  "secCik": "0000320193",
+  "fiscalYearEndMonthDay": "09-27",
+  "websiteUrl": "https://www.apple.com",
+  "neoSlugs": [
+    "tim-cook",
+    "kevan-parekh",
+    "deirdre-obrien",
+    "kate-adams",
+    "sabih-khan",
+    "luca-maestri"
+  ]
+}
