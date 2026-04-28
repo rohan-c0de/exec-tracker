@@ -1,0 +1,78 @@
+{
+  "ticker": "S",
+  "slug": "david-bernhardt",
+  "name": "David Bernhardt",
+  "role": "Former Chief Financial Officer",
+  "bio": "David Bernhardt served as SentinelOne's CFO until September 11, 2024, when he transitioned to an advisor role; he departed the Company on December 31, 2024. His FY2025 totals are inflated by the incremental ASC 718 expense from accelerated vesting of equity awards under his Separation and Release Agreement, plus the cash severance and pro-rated bonus disclosed under All Other Compensation.",
+  "badges": [{ "kind": "former-officer" }],
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-01-31",
+      "salaryCents": 42625000,
+      "bonusCents": 0,
+      "stockAwardsCents": 860701600,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 0,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 55163000,
+      "totalCents": 958489600,
+      "badges": [{ "kind": "partial-year", "detail": "Transitioned from CFO September 2024; departed December 2024" }],
+      "footnotes": [
+        "Mr. Bernhardt transitioned from his Chief Financial Officer role on September 11, 2024 and was no longer an executive officer of the Company; he departed on December 31, 2024.",
+        "Stock Awards include incremental ASC 718 expense from the accelerated vesting of certain equity grants in connection with his transition (modification date September 10, 2024). The accounting cost does not correspond to economic value received.",
+        "All Other Compensation includes severance benefits paid pursuant to Mr. Bernhardt's Separation and Release Agreement: a lump sum equal to six months' base salary, a pro-rated FY2025 cash incentive at target, and six months of COBRA premium reimbursement, plus consulting fees through the December 31, 2024 Consulting Termination Date.",
+        "Assuming maximum performance, the FY2025 PSU grant would have a grant-date fair value of $628,571."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-01-31",
+      "salaryCents": 42500000,
+      "bonusCents": 0,
+      "stockAwardsCents": 645205900,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 28050000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 639500,
+      "totalCents": 716395400,
+      "footnotes": [],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-01-31",
+      "salaryCents": 42500000,
+      "bonusCents": 28050000,
+      "stockAwardsCents": 400925600,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 0,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 356400,
+      "totalCents": 471832000,
+      "footnotes": [
+        "Bonus reflects a discretionary bonus earned in fiscal 2023 pursuant to Mr. Bernhardt's offer letter; FY2024 onward shifted to a formal cash incentive plan reported under Non-Equity Incentive."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    }
+  ]
+}

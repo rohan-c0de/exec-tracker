@@ -1,0 +1,82 @@
+{
+  "ticker": "S",
+  "slug": "tomer-weingarten",
+  "name": "Tomer Weingarten",
+  "role": "Co-Founder, President, Chief Executive Officer, and Chairman",
+  "bio": "Tomer Weingarten co-founded SentinelOne in 2013 and has served as CEO since inception. His compensation is dominated by equity (RSUs and performance-based PSUs), with cash salary held below $1M. All Other Compensation in FY2025 is dominated by Board-approved personal security services for Mr. Weingarten and his family at their residences and during personal travel, in addition to a small cell phone and internet perquisite available to executives.",
+  "badges": [{ "kind": "founder" }],
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-01-31",
+      "salaryCents": 70000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 1655634600,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 96250000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 74662000,
+      "totalCents": 1896546600,
+      "allOtherBreakdown": [
+        { "label": "Personal security services", "cents": 74242000 },
+        { "label": "Cell phone and internet perquisite", "cents": 420000 }
+      ],
+      "footnotes": [
+        "Stock Awards reflect grant-date fair value of RSUs and PSUs under FASB ASC Topic 718 — an accounting figure, not realized pay. Assuming maximum performance, the FY2025 PSU grant would have a grant-date fair value of $2,171,337.",
+        "Non-Equity Incentive reflects cash incentive paid under the FY2025 annual cash incentive plan based on achievement of predetermined performance goals.",
+        "All Other Compensation consists of $742,420 for personal security services at residences and during personal travel (a Board-approved program in response to heightened risks tied to Middle East conflicts), plus $4,200 in cell phone and internet perquisite over the standard employee benefit."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-01-31",
+      "salaryCents": 60000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 1505480800,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 66000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 22928000,
+      "totalCents": 1654408800,
+      "footnotes": [
+        "PSU performance criteria for fiscal 2024 were not met; payout for FY2024 PSUs was $0."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-01-31",
+      "salaryCents": 60000000,
+      "bonusCents": 66000000,
+      "stockAwardsCents": 1202780500,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 0,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 23455700,
+      "totalCents": 1352236200,
+      "footnotes": [
+        "Bonus reflects a discretionary bonus earned in fiscal 2023 pursuant to Mr. Weingarten's offer letter; FY2024 onward shifted to a formal cash incentive plan reported under Non-Equity Incentive."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000158370825000095/s-20250514.htm",
+        "accessionNumber": "0001583708-25-000095",
+        "formType": "DEF 14A",
+        "filedDate": "2025-05-14",
+        "periodOfReport": "2025-01-31"
+      }
+    }
+  ]
+}
