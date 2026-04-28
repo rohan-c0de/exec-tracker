@@ -1,0 +1,126 @@
+{
+  "ticker": "AAPL",
+  "slug": "tim-cook",
+  "name": "Tim Cook",
+  "role": "Chief Executive Officer",
+  "bio": "Tim Cook joined Apple in 1998 and has served as CEO since August 2011. His pay is dominated by equity — a $50M target long-term equity award for FY2025, split between time-based RSUs and performance-based RSUs that vest against three-year relative TSR — with cash held at $3M base salary plus an annual cash incentive tied to net sales and operating income. All Other Compensation is largely Board-mandated personal security and private aircraft usage.",
+  "badges": [],
+  "secCik": "0001214156",
+  "beneficialOwnership": {
+    "sharesOwned": 3280295,
+    "percentageOwned": null,
+    "asOfDate": "2026-01-02",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+      "accessionNumber": "0001308179-26-000008",
+      "formType": "DEF 14A",
+      "filedDate": "2026-01-08",
+      "periodOfReport": "2025-09-27"
+    },
+    "breakdown": [
+      {
+        "label": "Held in name of Mr. Cook's trust",
+        "shares": 3280295
+      }
+    ]
+  },
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-09-27",
+      "salaryCents": 300000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 5753529300,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 1200000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 175951800,
+      "totalCents": 7429481100,
+      "compActuallyPaidCents": 10842373300,
+      "allOtherBreakdown": [
+        {
+          "label": "Personal security services (incremental cost to Apple)",
+          "cents": 88787000
+        },
+        {
+          "label": "Personal use of private aircraft (Board-mandated for all travel)",
+          "cents": 78999100
+        },
+        {
+          "label": "Vacation cash-out",
+          "cents": 5769200
+        },
+        {
+          "label": "401(k) plan matching contributions",
+          "cents": 2100000
+        },
+        {
+          "label": "Term life insurance premiums",
+          "cents": 296400
+        },
+        {
+          "label": "Rounding",
+          "cents": 100
+        }
+      ],
+      "footnotes": [
+        "Stock Awards reflect FASB ASC 718 grant-date fair value of time-based RSUs and performance-based RSUs (PSUs); PSUs valued via Monte-Carlo. Mr. Cook's FY2025 long-term equity target was $50 million.",
+        "Non-Equity Incentive reflects the Cash Incentive Plan payout. In FY2025, Apple exceeded the maximum performance goals for both net sales and operating income, resulting in maximum payout for each NEO.",
+        "All Other Compensation breakdown sum is $1 below the reported aggregate due to proxy rounding; a 100-cent 'Rounding' line preserves exact reconciliation."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-09-28",
+      "salaryCents": 300000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 5808894600,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 1200000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 152085600,
+      "totalCents": 7460980200,
+      "compActuallyPaidCents": 16898056800,
+      "footnotes": [
+        "Mr. Cook's FY2024 long-term equity target was $50 million."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-09-30",
+      "salaryCents": 300000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 4697028300,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 1071345000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 252611200,
+      "totalCents": 6320984500,
+      "compActuallyPaidCents": 10664358800,
+      "footnotes": [
+        "Mr. Cook's FY2023 long-term equity target was $40 million (raised to $50 million in FY2024)."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "ticker": "AAPL",
+  "slug": "deirdre-obrien",
+  "name": "Deirdre O'Brien",
+  "role": "Senior Vice President, Retail + People",
+  "bio": "Deirdre O'Brien joined Apple in July 1988 and currently leads Apple's retail stores, online stores, and the People (HR) team. She first held the Retail + People role from February 2019 to May 2023 and resumed it in October 2024. Previous positions include Senior Vice President, Retail; Vice President, People; and Vice President, Operations.",
+  "badges": [],
+  "beneficialOwnership": {
+    "sharesOwned": 136687,
+    "percentageOwned": null,
+    "asOfDate": "2026-01-02",
+    "source": {
+      "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+      "accessionNumber": "0001308179-26-000008",
+      "formType": "DEF 14A",
+      "filedDate": "2026-01-08",
+      "periodOfReport": "2025-09-27"
+    }
+  },
+  "compRecords": [
+    {
+      "fiscalYear": 2025,
+      "fiscalYearEnd": "2025-09-27",
+      "salaryCents": 100000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 2200976600,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 400000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 3786700,
+      "totalCents": 2704763300,
+      "allOtherBreakdown": [
+        {
+          "label": "Vacation cash-out",
+          "cents": 1538500
+        },
+        {
+          "label": "401(k) plan matching contributions",
+          "cents": 2100000
+        },
+        {
+          "label": "Term life insurance premiums",
+          "cents": 148200
+        }
+      ],
+      "footnotes": [
+        "Stock Awards reflect FASB ASC 718 grant-date fair value of time-based RSUs and PSUs; FY2025 long-term equity target was $20M.",
+        "Non-Equity Incentive reflects the Cash Incentive Plan payout. In FY2025, Apple exceeded the maximum performance goals for both net sales and operating income, resulting in maximum payout for each NEO."
+      ],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    },
+    {
+      "fiscalYear": 2024,
+      "fiscalYearEnd": "2024-09-28",
+      "salaryCents": 100000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 2215707500,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 400000000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 2218200,
+      "totalCents": 2717925700,
+      "footnotes": [],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    },
+    {
+      "fiscalYear": 2023,
+      "fiscalYearEnd": "2023-09-30",
+      "salaryCents": 100000000,
+      "bonusCents": 0,
+      "stockAwardsCents": 2232364100,
+      "optionAwardsCents": 0,
+      "nonEquityIncentiveCents": 357115000,
+      "pensionAndNqdcCents": 0,
+      "allOtherCompCents": 4221900,
+      "totalCents": 2693701000,
+      "footnotes": [],
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl014016-def14a.htm",
+        "accessionNumber": "0001308179-26-000008",
+        "formType": "DEF 14A",
+        "filedDate": "2026-01-08",
+        "periodOfReport": "2025-09-27"
+      }
+    }
+  ]
+}
