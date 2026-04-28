@@ -5,6 +5,7 @@ import { BadgeRow } from "@/components/Badge";
 import { CompTotal } from "@/components/CompTotal";
 import { OwnershipBadge } from "@/components/OwnershipBadge";
 import { PayMixBar, PayMixLegend } from "@/components/PayMixBar";
+import { PvpTrajectory } from "@/components/PvpTrajectory";
 import { execBadges, recordBadges } from "@/lib/badges";
 import { listExecsForCompany, loadCompany } from "@/lib/data";
 import { latestRecord } from "@/lib/comp";
@@ -98,6 +99,23 @@ export default async function CompanyPage({ params }: { params: Promise<RoutePar
           ))}
         </ul>
       </section>
+
+      {company.pvpRecords && company.pvpRecords.length > 0 ? (
+        <section className="mt-16">
+          <SectionHeading
+            eyebrow="Pay vs. Performance"
+            title="Did the CEO's pay track the stock?"
+          />
+          <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
+            SEC-mandated &quot;Pay vs. Performance&quot; disclosure (Reg S-K Item 402(v)). One dot
+            per fiscal year of the Principal Executive Officer&apos;s tenure.{" "}
+            <em>Compensation Actually Paid</em> re-marks unvested equity to year-end fair value.
+          </p>
+          <div className="mt-6">
+            <PvpTrajectory records={company.pvpRecords} />
+          </div>
+        </section>
+      ) : null}
 
       <section className="mt-16 border-t border-zinc-200 pt-8 text-sm dark:border-zinc-800">
         <p className="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
