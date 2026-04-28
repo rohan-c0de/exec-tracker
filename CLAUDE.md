@@ -67,6 +67,7 @@ Directory names are convention — Claude understands them because they're descr
 4. **UI quality is a first-class concern, not polish-later.** The brand hook is "exec comp data that is actually pleasant to read." Hasty, ugly UI defeats the whole project. Treat design choices with the same care as data integrity.
 5. **Store currency unambiguously.** Use integer cents (`salaryCents: 125000000`) or an explicit `{ amount, currency }` pair. Never store floating-point dollars.
 6. **Fiscal year, not calendar year.** Record `fiscalYear: 2023` alongside `fiscalYearEnd: "2023-09-30"` where relevant.
+7. **Features must be S&P 500-automatable.** The endgame is automated coverage of all ~500 companies via the Phase 2 DEF 14A scraper. Every feature suggestion — schema, UI, data field — must therefore be sourced from a section the SEC mandates in standardized form (Item 402 SCT, Item 402(j) severance, Item 402(v) PvP, Form 4 XML, etc.) and structured so a parser can populate it. **Reject features that require per-company artisanal curation, hand-written editorial, judgment calls about a real exec's situation, or data not in a structured SEC disclosure.** Phase 1's manual transcription is a stand-in for the eventual scraper, not a license to build snowflakes. When proposing a feature, name the standardized SEC source it pulls from; if you can't, the feature is out of scope.
 
 ## Common pitfalls
 
