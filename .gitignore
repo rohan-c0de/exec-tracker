@@ -42,3 +42,4 @@ next-env.d.ts
 
 # Raw SEC filing cache — redownloadable, often large
 scripts/scrapers/_cache/
+data/scraped/
