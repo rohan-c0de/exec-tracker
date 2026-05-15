@@ -3,8 +3,93 @@
   "slug": "burt-podbere",
   "insiderCik": "0001778610",
   "insiderNameAtSec": "Podbere Burt W.",
-  "lastUpdated": "2026-04-27",
+  "lastUpdated": "2026-05-15",
   "transactions": [
+    {
+      "transactionDate": "2026-05-04",
+      "filedDate": "2026-05-05",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Class A common stock",
+      "isDerivative": false,
+      "shares": 200,
+      "pricePerShareCents": 45587,
+      "postTransactionShares": 182699,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000177861026000013/xslF345X06/form4-05052026_090504.xml",
+        "accessionNumber": "0001778610-26-000013",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-05-04",
+      "filedDate": "2026-05-05",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Class A common stock",
+      "isDerivative": false,
+      "shares": 1600,
+      "pricePerShareCents": 45690,
+      "postTransactionShares": 181099,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000177861026000013/xslF345X06/form4-05052026_090504.xml",
+        "accessionNumber": "0001778610-26-000013",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-05-04",
+      "filedDate": "2026-05-05",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Class A common stock",
+      "isDerivative": false,
+      "shares": 130,
+      "pricePerShareCents": 46300,
+      "postTransactionShares": 180969,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000177861026000013/xslF345X06/form4-05052026_090504.xml",
+        "accessionNumber": "0001778610-26-000013",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-05-04",
+      "filedDate": "2026-05-05",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Class A common stock",
+      "isDerivative": false,
+      "shares": 1,
+      "pricePerShareCents": 46441,
+      "postTransactionShares": 180968,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000177861026000013/xslF345X06/form4-05052026_090504.xml",
+        "accessionNumber": "0001778610-26-000013",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-05-04",
+      "filedDate": "2026-05-05",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Class A common stock",
+      "isDerivative": false,
+      "shares": 2,
+      "pricePerShareCents": 46551,
+      "postTransactionShares": 180966,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000177861026000013/xslF345X06/form4-05052026_090504.xml",
+        "accessionNumber": "0001778610-26-000013",
+        "formType": "4"
+      }
+    },
     {
       "transactionDate": "2026-03-26",
       "filedDate": "2026-03-27",
