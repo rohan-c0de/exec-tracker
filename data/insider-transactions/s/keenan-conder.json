@@ -3,8 +3,42 @@
   "slug": "keenan-conder",
   "insiderCik": "0001333280",
   "insiderNameAtSec": "Conder Keenan Michael",
-  "lastUpdated": "2026-04-28",
+  "lastUpdated": "2026-07-31",
   "transactions": [
+    {
+      "transactionDate": "2026-06-08",
+      "filedDate": "2026-06-10",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Class A Common Stock",
+      "isDerivative": false,
+      "shares": 8401,
+      "pricePerShareCents": 1570,
+      "postTransactionShares": 982732,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000133328026000013/xslF345X06/wk-form4_1781129689.xml",
+        "accessionNumber": "0001333280-26-000013",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-05-06",
+      "filedDate": "2026-05-08",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Class A Common Stock",
+      "isDerivative": false,
+      "shares": 4550,
+      "pricePerShareCents": 1565,
+      "postTransactionShares": 991133,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1583708/000133328026000010/xslF345X06/wk-form4_1778273628.xml",
+        "accessionNumber": "0001333280-26-000010",
+        "formType": "4"
+      }
+    },
     {
       "transactionDate": "2026-04-15",
       "filedDate": "2026-04-17",
