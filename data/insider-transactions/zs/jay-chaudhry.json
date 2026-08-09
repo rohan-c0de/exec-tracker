@@ -3,8 +3,25 @@
   "slug": "jay-chaudhry",
   "insiderCik": "0001374436",
   "insiderNameAtSec": "Jay Chaudhry (override)",
-  "lastUpdated": "2026-04-27",
+  "lastUpdated": "2026-08-09",
   "transactions": [
+    {
+      "transactionDate": "2026-06-16",
+      "filedDate": "2026-06-17",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 2878,
+      "pricePerShareCents": 12643,
+      "postTransactionShares": 343038,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000119/xslF345X06/wk-form4_1781741459.xml",
+        "accessionNumber": "0001713683-26-000119",
+        "formType": "4"
+      }
+    },
     {
       "transactionDate": "2026-03-17",
       "filedDate": "2026-03-18",
