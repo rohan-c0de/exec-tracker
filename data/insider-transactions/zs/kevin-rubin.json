@@ -3,8 +3,280 @@
   "slug": "kevin-rubin",
   "insiderCik": "0001198529",
   "insiderNameAtSec": "RUBIN KEVIN",
-  "lastUpdated": "2026-04-27",
+  "lastUpdated": "2026-09-04",
   "transactions": [
+    {
+      "transactionDate": "2026-08-25",
+      "filedDate": "2026-08-26",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 291,
+      "pricePerShareCents": 17253,
+      "postTransactionShares": 41107,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000132/xslF345X06/wk-form4_1787777837.xml",
+        "accessionNumber": "0001713683-26-000132",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-08-25",
+      "filedDate": "2026-08-26",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 92,
+      "pricePerShareCents": 17353,
+      "postTransactionShares": 41015,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000132/xslF345X06/wk-form4_1787777837.xml",
+        "accessionNumber": "0001713683-26-000132",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-08-25",
+      "filedDate": "2026-08-26",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 48,
+      "pricePerShareCents": 17454,
+      "postTransactionShares": 40967,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000132/xslF345X06/wk-form4_1787777837.xml",
+        "accessionNumber": "0001713683-26-000132",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-08-25",
+      "filedDate": "2026-08-26",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 66,
+      "pricePerShareCents": 17578,
+      "postTransactionShares": 40901,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000132/xslF345X06/wk-form4_1787777837.xml",
+        "accessionNumber": "0001713683-26-000132",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-08-25",
+      "filedDate": "2026-08-26",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 6,
+      "pricePerShareCents": 17649,
+      "postTransactionShares": 40895,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000132/xslF345X06/wk-form4_1787777837.xml",
+        "accessionNumber": "0001713683-26-000132",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-07-27",
+      "filedDate": "2026-07-28",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 72,
+      "pricePerShareCents": 14474,
+      "postTransactionShares": 41829,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000127/xslF345X06/wk-form4_1785282350.xml",
+        "accessionNumber": "0001713683-26-000127",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-07-27",
+      "filedDate": "2026-07-28",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 75,
+      "pricePerShareCents": 14571,
+      "postTransactionShares": 41754,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000127/xslF345X06/wk-form4_1785282350.xml",
+        "accessionNumber": "0001713683-26-000127",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-07-27",
+      "filedDate": "2026-07-28",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 96,
+      "pricePerShareCents": 14675,
+      "postTransactionShares": 41658,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000127/xslF345X06/wk-form4_1785282350.xml",
+        "accessionNumber": "0001713683-26-000127",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-07-27",
+      "filedDate": "2026-07-28",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 118,
+      "pricePerShareCents": 14774,
+      "postTransactionShares": 41540,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000127/xslF345X06/wk-form4_1785282350.xml",
+        "accessionNumber": "0001713683-26-000127",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-07-27",
+      "filedDate": "2026-07-28",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 142,
+      "pricePerShareCents": 14881,
+      "postTransactionShares": 41398,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000127/xslF345X06/wk-form4_1785282350.xml",
+        "accessionNumber": "0001713683-26-000127",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-06-25",
+      "filedDate": "2026-06-26",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 504,
+      "pricePerShareCents": 12318,
+      "postTransactionShares": 44397,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000123/xslF345X06/wk-form4_1782505470.xml",
+        "accessionNumber": "0001713683-26-000123",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-06-25",
+      "filedDate": "2026-06-26",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 1696,
+      "pricePerShareCents": 12407,
+      "postTransactionShares": 42701,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000123/xslF345X06/wk-form4_1782505470.xml",
+        "accessionNumber": "0001713683-26-000123",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-06-25",
+      "filedDate": "2026-06-26",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 560,
+      "pricePerShareCents": 12487,
+      "postTransactionShares": 42141,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000123/xslF345X06/wk-form4_1782505470.xml",
+        "accessionNumber": "0001713683-26-000123",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-06-25",
+      "filedDate": "2026-06-26",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 228,
+      "pricePerShareCents": 12597,
+      "postTransactionShares": 41913,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000123/xslF345X06/wk-form4_1782505470.xml",
+        "accessionNumber": "0001713683-26-000123",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-06-25",
+      "filedDate": "2026-06-26",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 12,
+      "pricePerShareCents": 12679,
+      "postTransactionShares": 41901,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000123/xslF345X06/wk-form4_1782505470.xml",
+        "accessionNumber": "0001713683-26-000123",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-06-16",
+      "filedDate": "2026-06-17",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 1686,
+      "pricePerShareCents": 12643,
+      "postTransactionShares": 44901,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000111/xslF345X06/wk-form4_1781741100.xml",
+        "accessionNumber": "0001713683-26-000111",
+        "formType": "4"
+      }
+    },
     {
       "transactionDate": "2026-03-17",
       "filedDate": "2026-03-18",
