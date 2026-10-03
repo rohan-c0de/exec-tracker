@@ -3,8 +3,42 @@
   "slug": "tim-cook",
   "insiderCik": "0001214156",
   "insiderNameAtSec": "Tim Cook (override)",
-  "lastUpdated": "2026-04-28",
+  "lastUpdated": "2026-10-03",
   "transactions": [
+    {
+      "transactionDate": "2026-09-27",
+      "filedDate": "2026-09-29",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 65969,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 65969,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038021/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038021",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-09-27",
+      "filedDate": "2026-09-29",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 65969,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 65969,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038021/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038021",
+        "formType": "4"
+      }
+    },
     {
       "transactionDate": "2026-04-02",
       "filedDate": "2026-04-03",
