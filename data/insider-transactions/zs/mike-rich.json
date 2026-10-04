@@ -3,8 +3,42 @@
   "slug": "mike-rich",
   "insiderCik": "0002009289",
   "insiderNameAtSec": "Mike Rich (override)",
-  "lastUpdated": "2026-04-27",
+  "lastUpdated": "2026-10-04",
   "transactions": [
+    {
+      "transactionDate": "2026-09-16",
+      "filedDate": "2026-09-17",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 4108,
+      "pricePerShareCents": 19276,
+      "postTransactionShares": 96193,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000174/xslF345X06/wk-form4_1789688583.xml",
+        "accessionNumber": "0001713683-26-000174",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-06-16",
+      "filedDate": "2026-06-17",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Commom Stock",
+      "isDerivative": false,
+      "shares": 4184,
+      "pricePerShareCents": 12643,
+      "postTransactionShares": 100301,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000114/xslF345X06/wk-form4_1781741218.xml",
+        "accessionNumber": "0001713683-26-000114",
+        "formType": "4"
+      }
+    },
     {
       "transactionDate": "2026-03-17",
       "filedDate": "2026-03-18",
