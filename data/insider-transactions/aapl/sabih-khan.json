@@ -3,8 +3,93 @@
   "slug": "sabih-khan",
   "insiderCik": "0002078476",
   "insiderNameAtSec": "Khan Sabih",
-  "lastUpdated": "2026-04-28",
+  "lastUpdated": "2026-10-10",
   "transactions": [
+    {
+      "transactionDate": "2026-10-01",
+      "filedDate": "2026-10-05",
+      "code": "M",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 99878,
+      "pricePerShareCents": null,
+      "postTransactionShares": 1173773,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038667/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038667",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-10-01",
+      "filedDate": "2026-10-05",
+      "code": "F",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 52854,
+      "pricePerShareCents": 33032,
+      "postTransactionShares": 1120919,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038667/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038667",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-10-01",
+      "filedDate": "2026-10-05",
+      "code": "M",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 99878,
+      "pricePerShareCents": null,
+      "postTransactionShares": 0,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038667/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038667",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-09-27",
+      "filedDate": "2026-09-29",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 47645,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 47645,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038028/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038028",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-09-27",
+      "filedDate": "2026-09-29",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 47645,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 47645,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038028/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038028",
+        "formType": "4"
+      }
+    },
     {
       "transactionDate": "2026-04-01",
       "filedDate": "2026-04-03",
