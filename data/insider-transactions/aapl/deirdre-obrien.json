@@ -3,8 +3,127 @@
   "slug": "deirdre-obrien",
   "insiderCik": "0001767094",
   "insiderNameAtSec": "O'BRIEN DEIRDRE",
-  "lastUpdated": "2026-04-28",
+  "lastUpdated": "2026-10-29",
   "transactions": [
+    {
+      "transactionDate": "2026-10-02",
+      "filedDate": "2026-10-05",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 40764,
+      "pricePerShareCents": 33335,
+      "postTransactionShares": 142435,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038672/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038672",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-10-02",
+      "filedDate": "2026-10-05",
+      "code": "S",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 5625,
+      "pricePerShareCents": 33391,
+      "postTransactionShares": 136810,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038672/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038672",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-10-01",
+      "filedDate": "2026-10-05",
+      "code": "M",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 99878,
+      "pricePerShareCents": null,
+      "postTransactionShares": 236688,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038672/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038672",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-10-01",
+      "filedDate": "2026-10-05",
+      "code": "F",
+      "acquiredOrDisposed": "D",
+      "securityTitle": "Common Stock",
+      "isDerivative": false,
+      "shares": 53489,
+      "pricePerShareCents": 33032,
+      "postTransactionShares": 183199,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038672/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038672",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-10-01",
+      "filedDate": "2026-10-05",
+      "code": "M",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 99878,
+      "pricePerShareCents": null,
+      "postTransactionShares": 0,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038672/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038672",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-09-27",
+      "filedDate": "2026-09-29",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 47645,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 47645,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038026/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038026",
+        "formType": "4"
+      }
+    },
+    {
+      "transactionDate": "2026-09-27",
+      "filedDate": "2026-09-29",
+      "code": "A",
+      "acquiredOrDisposed": "A",
+      "securityTitle": "Restricted Stock Unit",
+      "isDerivative": true,
+      "shares": 47645,
+      "pricePerShareCents": 0,
+      "postTransactionShares": 47645,
+      "ownershipNature": "D",
+      "source": {
+        "filingUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038026/xslF345X06/form4.xml",
+        "accessionNumber": "0001140361-26-038026",
+        "formType": "4"
+      }
+    },
     {
       "transactionDate": "2026-04-02",
       "filedDate": "2026-04-03",
