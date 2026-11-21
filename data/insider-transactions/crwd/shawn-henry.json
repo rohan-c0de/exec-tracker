@@ -3,7 +3,7 @@
   "slug": "shawn-henry",
   "insiderCik": "0001808553",
   "insiderNameAtSec": "Henry Shawn",
-  "lastUpdated": "2026-04-27",
+  "lastUpdated": "2026-11-21",
   "transactions": [
     {
       "transactionDate": "2025-03-24",
@@ -3062,108 +3062,6 @@
       "source": {
         "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000141588921006224/xslF345X03/form4-12272021_041201.xml",
         "accessionNumber": "0001415889-21-006224",
-        "formType": "4"
-      }
-    },
-    {
-      "transactionDate": "2021-12-21",
-      "filedDate": "2021-12-22",
-      "code": "C",
-      "acquiredOrDisposed": "A",
-      "securityTitle": "Class A common stock",
-      "isDerivative": false,
-      "shares": 3125,
-      "pricePerShareCents": 0,
-      "postTransactionShares": 299442,
-      "ownershipNature": "D",
-      "source": {
-        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000141588921006181/xslF345X03/form4-12222021_041212.xml",
-        "accessionNumber": "0001415889-21-006181",
-        "formType": "4"
-      }
-    },
-    {
-      "transactionDate": "2021-12-21",
-      "filedDate": "2021-12-22",
-      "code": "S",
-      "acquiredOrDisposed": "D",
-      "securityTitle": "Class A common stock",
-      "isDerivative": false,
-      "shares": 3,
-      "pricePerShareCents": 20297,
-      "postTransactionShares": 299439,
-      "ownershipNature": "D",
-      "source": {
-        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000141588921006181/xslF345X03/form4-12222021_041212.xml",
-        "accessionNumber": "0001415889-21-006181",
-        "formType": "4"
-      }
-    },
-    {
-      "transactionDate": "2021-12-21",
-      "filedDate": "2021-12-22",
-      "code": "S",
-      "acquiredOrDisposed": "D",
-      "securityTitle": "Class A common stock",
-      "isDerivative": false,
-      "shares": 7122,
-      "pricePerShareCents": 20733,
-      "postTransactionShares": 292317,
-      "ownershipNature": "D",
-      "source": {
-        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000141588921006181/xslF345X03/form4-12222021_041212.xml",
-        "accessionNumber": "0001415889-21-006181",
-        "formType": "4"
-      }
-    },
-    {
-      "transactionDate": "2021-12-21",
-      "filedDate": "2021-12-22",
-      "code": "C",
-      "acquiredOrDisposed": "D",
-      "securityTitle": "Class B common stock",
-      "isDerivative": true,
-      "shares": 3125,
-      "pricePerShareCents": 0,
-      "postTransactionShares": 0,
-      "ownershipNature": "D",
-      "source": {
-        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000141588921006181/xslF345X03/form4-12222021_041212.xml",
-        "accessionNumber": "0001415889-21-006181",
-        "formType": "4"
-      }
-    },
-    {
-      "transactionDate": "2021-12-20",
-      "filedDate": "2021-12-22",
-      "code": "M",
-      "acquiredOrDisposed": "D",
-      "securityTitle": "Restricted Stock Units",
-      "isDerivative": true,
-      "shares": 3125,
-      "pricePerShareCents": 0,
-      "postTransactionShares": 9375,
-      "ownershipNature": "D",
-      "source": {
-        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000141588921006181/xslF345X03/form4-12222021_041212.xml",
-        "accessionNumber": "0001415889-21-006181",
-        "formType": "4"
-      }
-    },
-    {
-      "transactionDate": "2021-12-20",
-      "filedDate": "2021-12-22",
-      "code": "M",
-      "acquiredOrDisposed": "A",
-      "securityTitle": "Class B common stock",
-      "isDerivative": true,
-      "shares": 3125,
-      "pricePerShareCents": 0,
-      "postTransactionShares": 3125,
-      "ownershipNature": "D",
-      "source": {
-        "filingUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000141588921006181/xslF345X03/form4-12222021_041212.xml",
-        "accessionNumber": "0001415889-21-006181",
         "formType": "4"
       }
     },
